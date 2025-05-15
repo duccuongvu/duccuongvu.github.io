@@ -1,39 +1,291 @@
-/* style.css */
+/* ===== Base Layout ===== */
 body {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 19px;
-    line-height: 1.6;
-    background: #bae9bf41;
-    color: #000000;
-    max-width: 1500px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    background: #f2f8f3;
+    color: #2c2c2c;
+    max-width: 1200px;
     margin: auto;
-    padding: 0px;
+    padding: 40px 20px;
 }
+
+/* ===== Containers ===== */
 header, section {
-    background: #fff;
-    padding: 20px;
-    margin-bottom: 0px;
-    border-radius:0px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    background: #ffffff;
+    padding: 25px 30px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
 }
-h1, h2 {
+
+/* ===== Headings ===== */
+h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 10px;
     color: #2c3e50;
-    font-size: 50px;
 }
+
+h2.section-title {
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 8px;
+    margin-bottom: 25px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #1a3e4c;
+}
+
+/* ===== Lists and Text ===== */
 ul {
-    padding-left: 20px;
+    padding-left: 25px;
+    margin-top: 8px;
 }
-.contact a {
-    color: #0098fd;
-    text-decoration: none;
+
+ul li {
+    margin-bottom: 6px;
 }
-.section-title {
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    margin-top: -30px;
-    font-size: 30px;
-}
+
+/* ===== Subsection Blocks ===== */
 .subsection {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.subsection:last-child {
+    border-bottom: none;
+}
+
+/* ===== Contact Info ===== */
+.contact a {
+    color: #007acc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact a:hover {
+    color: #005c99;
+}
+
+/* ===== Special Blocks (Awards, Conferences, etc.) ===== */
+.award-item,
+.conf-item,
+.pub-item,
+.project-item {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #bbb;
+}
+
+.award-item:last-child,
+.conf-item:last-child,
+.pub-item:last-child,
+.project-item:last-child {
+    border-bottom: none;
+}
+
+/* ===== Typography Utilities ===== */
+strong {
+    color: #1b1b1b;
+}
+
+em {
+    color: #666;
+}
+
+
+
+@media (max-width: 768px) {
+  .pub-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pub-info {
+    text-align: left;
+  }
+}
+
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+header > div {
+    flex: 1 1 300px;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header > div {
+        margin: 0;
+    }
+}
+
+
+
+
+
+.edu-item {
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.edu-item:last-child {
+  border-bottom: none;
+}
+
+.edu-degree {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.edu-school {
+  margin-top: 2px;
+  color: #444;
+}
+
+.edu-date {
+  font-style: italic;
+  color: #777;
+  margin-top: 5px;
+}
+
+.edu-details {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.edu-details li {
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+.project-item {
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.project-item:last-child {
+  border-bottom: none;
+}
+
+.project-role {
+  font-weight: bold;
+  color: #333;
+}
+
+.project-date {
+  font-style: italic;
+  color: #777;
+}
+
+.project-details {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.project-details li {
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+.pub-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #ccc;
+  align-items: flex-start;
+}
+
+.pub-img img {
+  width: 280px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.pub-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+
+
+
+.conf-item {
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.conf-item:last-child {
+  border-bottom: none;
+}
+
+.conf-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.conf-location {
+  color: #666;
+  font-style: italic;
+  margin-top: 3px;
+}
+
+
+
+
+.award-item {
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.award-item:last-child {
+  border-bottom: none;
+}
+
+.award-title {
+  font-weight: bold;
+  color: #333;
+}
+
+.award-org {
+  color: #666;
+  font-style: italic;
+  margin-top: 3px;
 }
