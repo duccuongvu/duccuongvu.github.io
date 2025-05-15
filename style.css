@@ -1,6 +1,7 @@
 /* style.css */
 body {
     font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
     line-height: 1.6;
     background: #bae9bf41;
     color: #000000;
@@ -30,6 +31,7 @@ ul {
     border-bottom: 2px solid #ddd;
     padding-bottom: 5px;
     margin-bottom: 10px;
+    margin-top: -30px;
     font-size: 30px;
 }
 .subsection {
