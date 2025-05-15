@@ -4,23 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Duc-Cuong VU | Automation & Control</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <link rel="stylesheet" href="style.css">
-<!-- 
-    <style>
-    
-</style> -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
 
 </head>
 
 
 <body>
-
+<script src="theme-toggle.js" defer></script>
 <!-- <nav style="text-align: right; margin-bottom: 30px;">
   <a href="index.html">Home</a> |
   <a href="html/cv.html">My CV</a> |
   <a href="html/blog.html">Blog</a> 
 </nav> -->
+
+<div class="bg-overlay"></div>
+<div class="content">
 
 <header style="display: flex; justify-content: space-between; align-items: flex-start;">
     <div>
@@ -32,10 +32,15 @@
         <a href="https://www.researchgate.net/profile/Duc-Cuong-Vu" target="_blank">ResearchGate</a> /
         <a href="https://scholar.google.com/citations?user=N35X_pEAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
         <p><a href="https://www.overleaf.com/read/dxcdnvnwswmy#3ba71d" target="_blank">[PDF version (Overleaf)]</a></p>
+        <button id="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+  <span class="toggle-icon">🌙</span>
+</button>
+
     </div>
     <div style="max-width: 300px;">
         <img src="images/avatar.jpg" alt="Duc-Cuong Vu">
     </div>
+
 </header>
 
 <section id="intro">
@@ -157,7 +162,7 @@
       <p><strong>CBFs-based Model Predictive Control for Obstacle Avoidance with Tilt Angle Limitation for Ball-Balancing Robots</strong></p>
       <p><em>Minh Duc Pham, <strong>Duc Cuong Vu</strong>, Thi Thuy Hang Nguyen, Minh Nhat Vu, and Tung Lam Nguyen</em></p>
       <p><strong>Journal:</strong> IEEE Access, 2025</p>
-      <p>[<a href="https://ieeexplore.ieee.org/abstract/document/10988790">Paper</a> | <a href="https://ieeexplore.ieee.org/abstract/document/10988790">PDF</a>]</p>
+      <p>[<a href="https://ieeexplore.ieee.org/abstract/document/10988790" target="_blank">Paper</a> | <a href="https://ieeexplore.ieee.org/abstract/document/10988790" target="_blank">PDF</a>]</p>
     </div>
   </div>
 
@@ -169,7 +174,7 @@
       <p><strong>A novel approach of Consensus-based Finite-time Distributed Sliding Mode Control for Stewart platform manipulators motion tracking</strong></p>
       <p><em><strong>Duc Cuong Vu</strong>, Danh Huy Nguyen, and Tung Lam Nguyen</em></p>
       <p><strong>Journal:</strong> Results in Engineering, 2025</p>
-      <p>[<a href="https://doi.org/10.1016/j.rineng.2024.103872">Paper</a> | <a href="https://doi.org/10.1016/j.rineng.2024.103872">PDF</a>]</p>
+      <p>[<a href="https://doi.org/10.1016/j.rineng.2024.103872" target="_blank">Paper</a> | <a href="https://doi.org/10.1016/j.rineng.2024.103872" target="_blank">PDF</a>]</p>
     </div>
   </div>
 
@@ -181,7 +186,7 @@
       <p><strong>Time-optimal trajectory generation and observer-based hierarchical sliding mode control for ballbots with system constraints</strong></p>
       <p><em><strong>Duc Cuong Vu</strong>, Minh Duc Pham, Thi Thuy Hang Nguyen, Thi Van Anh Nguyen, and Tung Lam Nguyen</em></p>
       <p><strong>Journal:</strong> International Journal of Robust and Nonlinear Control, 2024</p>
-      <p>[<a href="https://onlinelibrary.wiley.com/doi/10.1002/rnc.7358">Paper</a> | <a href="https://www.researchgate.net/publication/379811550_Time-optimal_trajectory_generation_and_observer-based_hierarchical_sliding_mode_control_for_ballbots_with_system_constraints">PDF</a>]</p>
+      <p>[<a href="https://onlinelibrary.wiley.com/doi/10.1002/rnc.7358" target="_blank">Paper</a> | <a href="https://www.researchgate.net/publication/379811550_Time-optimal_trajectory_generation_and_observer-based_hierarchical_sliding_mode_control_for_ballbots_with_system_constraints" target="_blank">PDF</a>]</p>
     </div>
   </div>
 
@@ -193,7 +198,7 @@
       <p><strong>Adaptive Mechanism Hierarchical Sliding Mode Control for Ballbot Systems</strong></p>
       <p><em>Minh Duc Pham, <strong>Duc Cuong Vu</strong>, Thi Thuy Hang Nguyen, Thi Van Anh Nguyen, Huu Bang Dang, and Tung Lam Nguyen</em></p>
       <p><strong>Conference:</strong> 2024 International Conference on Advanced Technologies for Communications (ATC), Ho Chi Minh City, Vietnam</p>
-      <p>[<a href="https://ieeexplore.ieee.org/document/10908289">Paper</a> | <a href="https://www.researchgate.net/publication/387994459_Adaptive_Mechanism_Hierarchical_Sliding_Mode_Control_for_ballbot_systems">PDF</a>]</p>
+      <p>[<a href="https://ieeexplore.ieee.org/document/10908289" target="_blank">Paper</a> | <a href="https://www.researchgate.net/publication/387994459_Adaptive_Mechanism_Hierarchical_Sliding_Mode_Control_for_ballbot_systems" target="_blank">PDF</a>]</p>
     </div>
   </div>
 
@@ -205,7 +210,7 @@
       <p><strong>Stewart Platform Motion Control: A Multi-Agent Consensus Approach</strong></p>
       <p><em><strong>Duc Cuong Vu</strong>, Hoai Bac Dang, Danh Huy Nguyen, and Tung Lam Nguyen</em></p>
       <p><strong>Conference:</strong> 2024 International Conference on Advanced Technologies for Communications (ATC), Ho Chi Minh City, Vietnam</p>
-      <p>[<a href="https://ieeexplore.ieee.org/document/10908317">Paper</a> | <a href="https://www.researchgate.net/publication/387994748_Stewart_Platform_motion_control_A_multi-agent_consensus_approach">PDF</a>]</p>
+      <p>[<a href="https://ieeexplore.ieee.org/document/10908317" target="_blank">Paper</a> | <a href="https://www.researchgate.net/publication/387994748_Stewart_Platform_motion_control_A_multi-agent_consensus_approach" target="_blank">PDF</a>]</p>
     </div>
   </div>
 
@@ -217,7 +222,7 @@
       <p><strong>Dynamic Obstacle Avoidance Using Nonlinear Model Predictive Control and Control Barrier Function for Ballbot Systems</strong></p>
       <p><em>Minh Duc Pham, <strong>Duc Cuong Vu</strong>, Thi Thuy Hang Nguyen, Thi Van Anh Nguyen, Danh Huy Nguyen, and Tung Lam Nguyen</em></p>
       <p><strong>Journal:</strong> International Journal of Robust and Nonlinear Control, 2024</p>
-      <p>[<a href="https://jst.hust.edu.vn/journals/jst.176.ssad.2024.34.3.5">Paper</a> | <a href="https://jst.hust.edu.vn/journals/jst.176.ssad.2024.34.3.5">PDF</a>]</p>
+      <p>[<a href="https://jst.hust.edu.vn/journals/jst.176.ssad.2024.34.3.5" target="_blank">Paper</a> | <a href="https://jst.hust.edu.vn/journals/jst.176.ssad.2024.34.3.5" target="_blank">PDF</a>]</p>
     </div>
   </div>
 
@@ -229,7 +234,7 @@
       <p><strong>Nonlinear Model Predictive Control for Ballbot systems: A benchmark with Hierarchical Sliding Mode and Linear Quadratic controls</strong></p>
       <p><em>Minh Duc Pham, <strong>Duc Cuong Vu</strong>, Thi Thuy Hang Nguyen, Thi Van Anh Nguyen, Dinh Dat Vu, and Tung Lam Nguyen</em></p>
       <p><strong>Conference:</strong> 12th International Conference on Control, Automation and Information Sciences (ICCAIS), Hanoi, Vietnam, 2023</p>
-      <p>[<a href="https://ieeexplore.ieee.org/document/10382349">Paper</a> | <a href="https://www.researchgate.net/publication/377325191_Nonlinear_Model_Predictive_Control_for_Ballbot_systems_A_benchmark_with_Hierarchical_Sliding_Mode_and_Linear_Quadratic_controls">PDF</a>]</p>
+      <p>[<a href="https://ieeexplore.ieee.org/document/10382349" target="_blank">Paper</a> | <a href="https://www.researchgate.net/publication/377325191_Nonlinear_Model_Predictive_Control_for_Ballbot_systems_A_benchmark_with_Hierarchical_Sliding_Mode_and_Linear_Quadratic_controls" target="_blank">PDF</a>]</p>
     </div>
   </div>
 </section>
@@ -264,14 +269,6 @@
 </section>
 
 
-<section id="awards">
-    <h2 class="section-title">Honors & Awards</h2>
-    <ul>
-        <li>Master, PhD Scholarship Programme of Vingroup Innovation Foundation</li>
-        <li>The best of Thesis defense awarded by Hanoi University of Science and Technology for the person who is the best defender.</li>
-    </ul>
-</section>
-
 
 <section id="awards">
   <h2 class="section-title">Honors & Awards</h2>
@@ -290,10 +287,16 @@
 
 
 
-<footer style="text-align: center; padding: 20px; background-color: #f0f0f0; color: #555; font-size: 14px; margin-top: 40px; border-top: 1px solid #ccc;">
-    <p>© 2025 Duc-Cuong VU. All rights reserved.</p>
-    <p>📧 <a href="mailto:vdcuong2002@gmail.com">vdcuong2002@gmail.com</a> | 🌐 <a href="https://cuong-vd.github.io">Personal Website</a></p>
+<footer>
+  <p>© 2025 Duc-Cuong VU. All rights reserved.</p>
+  <p>
+    <span class="contact-icons">📧</span><a href="mailto:vdcuong2002@gmail.com">vdcuong2002@gmail.com</a> |
+    <span class="contact-icons">🌐</span><a href="https://cuong-vd.github.io" target="_blank" rel="noopener noreferrer">Personal Website</a>
+  </p>
 </footer>
+
+
+</div>
 
 
 </body>
