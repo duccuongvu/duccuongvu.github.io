@@ -12,21 +12,21 @@
             line-height: 1.6;
             background: #f4f4f4;
             color: #333;
-            max-width: 900px;
+            max-width: 1800px;
             margin: auto;
-            padding: 20px;
+            padding: 0px;
         }
         header, section {
             background: #fff;
             padding: 20px;
             margin-bottom: 20px;
-            border-radius: 8px;
+            border-radius: 0px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         h1, h2 {
             color: #2c3e50;
             font-size: 50px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif */
         }
         ul {
             padding-left: 20px;
@@ -39,24 +39,79 @@
             border-bottom: 2px solid #ddd;
             padding-bottom: 5px;
             margin-bottom: 10px;
-            font-size: 20px;
+            font-size: 30px;
         }
         .subsection {
             margin-bottom: 10px;
         }
     </style>
+
+    <style>
+    .toc {
+        position: fixed;
+        top: 80px;
+        left: 20px;
+        width: 180px;
+        background-color: #f9f9f9;
+        padding: 15px;
+        border-radius: 10px;
+        font-size: 14px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+/* 
+    .toc h3 {
+        margin-top: 0;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .toc ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .toc ul li {
+        margin: 6px 0;
+    }
+
+    .toc ul li a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    @media (max-width: 800px) {
+        .toc {
+        display: none;
+        }
+    }
+
+    .main-content {
+        margin-left: 220px;
+    } */
+    </style>
+
 </head>
 
 
 
 <body>
+ <!-- <div class="toc">
+  <ul>
+    <li><a href="#intro">📄 Introduction</a></li>
+    <li><a href="#edu">🎓 Education</a></li>
+    <li><a href="#work">💼 Experience</a></li>
+    <li><a href="#projects">🚀 Projects</a></li>
+    <li><a href="#pubs">📚 Publications</a></li>
+    <li><a href="#skills">🧠 Skills</a></li>
+    <li><a href="#awards">🏅 Awards</a></li>
+  </ul>
+</div> -->
 
 
-<nav>
-  <a href="index.html">Home</a> |
+<nav style="text-align: right; margin-bottom: 30px;">
+  <a href="index.html">Home (My CV)</a> |
   <a href="blog.html">Blog</a>
 </nav>
-
 
 <header style="display: flex; justify-content: space-between; align-items: flex-start;">
     <div style="flex: 1;">
@@ -71,14 +126,14 @@
     </div>
 
     <div style="margin-right: 30px;">
-        <img src="figures/avatar.jpg" alt="Duc-Cuong Vu" style="width: 150px; border-radius: 8px;">
+        <img src="figures/avatar.jpg" alt="Duc-Cuong Vu" style="width: 300px; border-radius: 0px;">
     </div>
 </header>
 
 
 
-<section>
-    <h2 class="section-title">👋 Introduction</h2>
+<section id="intro">
+    <h2 class="section-title">Introduction</h2>
     <p>
         Greetings from my website, <br>
         To begin with, I would like to introduce myself. My name is Duc Cuong Vu, or in Vietnamese, Vũ Đức Cường. On August 28, 2002, I was born in Giao Thuy, Nam Dinh, Vietnam—a secluded seaside region southeast of Hanoi (the Vietnam capital) (see the above map and believe me, my hometown is very peaceful 😁). <br>
@@ -112,7 +167,7 @@
     </p>
 </section>
 
-<section>
+<section id="edu">
     <h2 class="section-title">🎓 Education</h2>
     <div class="subsection">
         <strong>Master of Science in Automation and Control</strong><br>
@@ -137,8 +192,8 @@
     </div>
 </section>
 
-<section>
-    <h2 class="section-title">💼 Work Experience</h2>
+<section id="work">
+    <h2 class="section-title">Work Experience</h2>
     <div class="subsection">
         <strong>Research Assistant</strong>, <br>
         <em>Oct 2021 – Present</em><br>
@@ -151,8 +206,8 @@
     </div>
 </section>
 
-<section>
-    <h2 class="section-title">🧠 Skills</h2>
+<section id="skills">
+    <h2 class="section-title">Skills</h2>
     <ul>
         <li>Languages: English (B2), Academic Writing</li>
         <li>Coding: Python, MATLAB, C/C++</li>
@@ -162,8 +217,8 @@
     </ul>
 </section>
 
-<section>
-    <h2 class="section-title">🚀 Projects</h2>
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
 
     <div class="subsection">
         <strong>Member/Researcher</strong><br>
@@ -187,8 +242,8 @@
     </div>
 </section>
 
-<section>
-    <h2 class="section-title">📚 Publications</h2>
+<section id="pubs">
+    <h2 class="section-title">Publications</h2>
 
     <div class="subsection">
         <strong>2024</strong>
@@ -227,8 +282,8 @@
         
 </section>
 
-<section>
-    <h2 class="section-title">🎤 Conferences</h2>
+<section id="confs">
+    <h2 class="section-title">Conferences</h2>
     <ul>
         <li>IEEE 12th International Conference on Control, Automation and Information Sciences (IEEE, ICCAIS 2023) – Hanoi, Vietnam</li>
         <li>National Conference on Smart Technologies and Application for Industry 4.0, Smart City and Sustainability 2023 (STAIS 2023) – Vinh, Vietnam</li>
@@ -239,8 +294,8 @@
 </section>
 
 
-<section>
-    <h2 class="section-title">🏅 Honors & Awards</h2>
+<section id="awards">
+    <h2 class="section-title">Honors & Awards</h2>
     <ul>
         <li>Master, PhD Scholarship Programme of Vingroup Innovation Foundation</li>
         <li>The best of Thesis defense awarded by Hanoi University of Science and Technology for the person who is the best defender.</li>
@@ -248,35 +303,9 @@
 </section>
 
 
-<section>
-    <h2 class="section-title">🏠 My hometown</h2>
-    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-        <img src="figures/hometown1.jpg" alt="hometown 1" style="width: 32%; border-radius: 8px;">
-        <img src="figures/hometown2.jpg" alt="hometown 2" style="width: 32%; border-radius: 8px;">
-        <img src="figures/hometown3.jpg" alt="hometown 3" style="width: 32%; border-radius: 8px;">
-        <img src="figures/hometown4.jpg" alt="hometown 1" style="width: 32%; border-radius: 8px;">
-        <img src="figures/hometown5.jpg" alt="hometown 2" style="width: 32%; border-radius: 8px;">
-        <img src="figures/hometown6.jpg" alt="hometown 3" style="width: 32%; border-radius: 8px;">
-    </div>
-    <div>
-        <p>My hometown is located in the coastal area of Bach Long, Giao Thuy, Nam Dinh, Vietnam. It is a peaceful and beautiful place with a rich culture and history. The people here are friendly and hospitable, and the scenery is breathtaking. I am proud to be from this wonderful place.</p>
-        <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d47671.82592607762!2d106.39738346107374!3d20.22714310784223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1747241398067!5m2!1svi!2s"
-        width="100%" 
-        height="350" 
-        style="border:0; border-radius: 8px;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-    </div>
-    
-</section>
 
-<footer style="text-align: center; padding: 20px; background-color: #f0f0f0; color: #555; font-size: 14px; margin-top: 40px; border-top: 1px solid #ccc;">
-    <p>© 2025 Duc-Cuong VU. All rights reserved.</p>
-    <p>📧 <a href="mailto:vdcuong2002@gmail.com">vdcuong2002@gmail.com</a> | 🌐 <a href="https://cuong-vd.github.io">Personal Website</a></p>
-</footer>
+
+
 
 
 
