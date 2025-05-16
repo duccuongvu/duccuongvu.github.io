@@ -1,25 +1,25 @@
-const toggleBtn = document.getElementById('darkModeToggle');
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.getElementById('darkModeToggle');
 
-function setTheme(theme) {
-  if(theme === 'dark') {
-    document.body.classList.add('dark-mode');
-    toggleBtn.textContent = '☀️';
-    localStorage.setItem('theme', 'dark');
-  } else {
-    document.body.classList.remove('dark-mode');
-    toggleBtn.textContent = '🌙';
-    localStorage.setItem('theme', 'light');
+  function setTheme(theme) {
+    if (theme === 'dark') {
+      document.body.classList.add('dark-mode');
+      if (toggleBtn) toggleBtn.textContent = '☀️';
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark-mode');
+      if (toggleBtn) toggleBtn.textContent = '🌙';
+      localStorage.setItem('theme', 'light');
+    }
   }
-}
 
-// Lấy theme đã lưu ở localStorage
-const savedTheme = localStorage.getItem('theme') || 'light';
-setTheme(savedTheme);
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  setTheme(savedTheme);
 
-toggleBtn.addEventListener('click', () => {
-  if(document.body.classList.contains('dark-mode')) {
-    setTheme('light');
-  } else {
-    setTheme('dark');
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', () => {
+      const isDark = document.body.classList.contains('dark-mode');
+      setTheme(isDark ? 'light' : 'dark');
+    });
   }
 });

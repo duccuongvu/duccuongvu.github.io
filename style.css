@@ -90,6 +90,18 @@ h2.section-title {
   border-bottom: 2px solid var(--border-color);
 }
 
+a {
+  color: #016bb1; 
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #339eff;
+  text-decoration: underline;
+}
+
+
 strong { color: var(--text-color); }
 em { color: #999; }
 
@@ -143,7 +155,7 @@ ul li {
   font-weight: bold;
   font-size: 1.0em;
 }
-.edu-school { color: #444; margin-top: 2px; }
+.edu-school { color: #777; margin-top: 2px; }
 .edu-date { font-style: italic; color: #777; margin-top: 5px; }
 .edu-details { margin-top: 10px; padding-left: 20px; }
 .edu-details li { margin-bottom: 5px; }
@@ -155,6 +167,23 @@ ul li {
 .project-date { font-style: italic; color: #777; }
 .project-details { margin-top: 10px; padding-left: 20px; }
 .project-details li { margin-bottom: 5px; }
+.project-works { margin-top: 10px;}
+
+.project-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+.project-img img {
+  width: 450px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+.project-info {
+  flex: 1;
+  min-width: 250px;
+}
 
 /* ===============================
    📚 Publications
