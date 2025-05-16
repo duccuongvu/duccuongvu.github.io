@@ -32,11 +32,11 @@ body.dark-mode {
 =================================*/
 body {
   font-family: 'Lora', serif;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.7;
   background: var(--bg-color);
   color: var(--text-color);
-  max-width: 1500px;
+  max-width: 1200px;
   margin: auto;
   padding: 40px 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -123,8 +123,8 @@ ul li {
 .conf-item,
 .award-item,
 .edu-item {
-  margin-bottom: 30px;
-  padding-bottom: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
   border-bottom: 1px dashed var(--border-color);
 }
 .subsection:last-child,
@@ -141,7 +141,7 @@ ul li {
 =================================*/
 .edu-degree {
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1.0em;
 }
 .edu-school { color: #444; margin-top: 2px; }
 .edu-date { font-style: italic; color: #777; margin-top: 5px; }
