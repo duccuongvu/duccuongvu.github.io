@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Glocal Trajectories for AUVs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fafc;
+      color: #333;
+    }
+    header {
+      background-color: #007BFF;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    header h2 {
+      margin: 10px 0 0;
+      font-weight: 300;
+      font-size: 18px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .button {
+      background: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin: 20px auto;
+      text-align: center;
+    }
+    .button:hover {
+      background: #0056b3;
+    }
+    section {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    h3 {
+      color: #007BFF;
+    }
+    img, video {
+      display: block;
+      margin: 15px auto;
+      max-width: 100%;
+      border-radius: 6px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    nav a {
+      margin: 0 10px;
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #f0f0f0;
+      color: #555;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      border-top: 1px solid #ddd;
+      margin-top: 40px;
+    }
+    footer a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Glocal trajectories generation with tracking control for integrated-sensors AUVs distribution</h1>
+    <h2>Duc Cuong Vu, Son Tran, Tung Lam Nguyen, and Duc Chinh Hoang</h2>
+    Motion Control and Applied Robots (MoCAR), Hanoi University of Science and Technology (HUST), Vietnam
+  </header>
+
+  <div class="container">
+    
+    <nav>
+      <a href="#abstract">Abstract</a> |
+      <a href="#control">Control</a> |
+      <a href="#sim">Simulation</a> |
+      <a href="#results">Results</a> |
+      <a class="button" href="https://github.com/cuong-vd/AUV-ODIN-mujoco" target="_blank">🔗 GitHub</a>
+    </nav>
+
+    <section id="abstract">
+      <h3>🏆 Abstract</h3>
+      <p>
+        This paper presents a comprehensive framework for glocal trajectory generation with real-time tracking control for a large group of Autonomous Underwater Vehicles (AUVs) equipped with distributed sensors. A two-stage approach is proposed to maximize the underwater area coverage of sensor systems while ensuring network connectivity between AUVs and free collision with terrains and floating obstacles. At the global level, a heuristic algorithm named Global Trajectory to Maximize Coverage (GT-MC), which optimizes the AUVs distribution, is introduced. At the local level, a safety-critical trajectory generation method is developed by using a Model Predictive Control (MPC) scheme for a virtual AUV system with Control Barrier Functions (CBF) as constraints for floating obstacle avoidance. The generated trajectories are tracked by the actual AUVs using a classical Sliding Mode Controller (SMC) combined with a thruster force allocation optimizer for the robustness. The complete framework is validated via simulation studies using an open-source advanced physics tool called MuJoCo. The suggested methodology can facilitate the autonomy, scalability, and safety of integrated-sensor AUVs distribution missions, making it a promising tool for intelligent marine sensing and monitoring.
+      </p>
+      <img src="output/figure_ODIN_mujoco.png" alt="ODIN MuJoCo Simulation" style="width: 60%;">
+    </section>
+
+    <section id="control">
+      <h3>🧠 Control Architecture</h3>
+      <ul>
+        <li>MPC for optimal motion planning</li>
+        <li>SMC for robust tracking in noisy environments</li>
+        <li>CBF to ensure collision-free trajectories</li>
+      </ul>
+      <img src="output/Algorithm.png" alt="Hybrid Control Framework" style="width: 60%;">
+    </section>
+
+    <section id="sim">
+      <h3>🌊 Simulation Environment</h3>
+      <ul>
+        <li>MuJoCo-based physics simulation</li>
+        <li>Ocean current effects modeled</li>
+        <li>Real-time 2D/3D visualization</li>
+      </ul>
+      <img src="output/ControlStructure.png" alt="Simulation Environment" style="width: 70%;">
+    </section>
+
+    <section id="results">
+      <h3>👉 Results</h3>
+      <h4>2D Trajectory Tracking</h4>
+      <img src="output/tracking_2D.png" alt="2D trajectory tracking">
+      <video controls>
+        <source src="output/circle_tracking.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <h4>3D Trajectory Tracking</h4>
+      <img src="output/tracking_3D.png" alt="3D trajectory tracking"> 
+      <video controls>
+        <source src="output/results.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
+      <h4>Obstacle Attack Scenario</h4>
+      <img src="output/obstacles_attack.png" alt="Obstacles attack the AUV">
+      <video controls>
+        <source src="output/attack.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
+  </div>
+
+
+
+  <footer>
+    <p>&copy; 2025 Duc Cuong Vu & Team. All rights reserved.</p>
+    <p>
+      <a href="mailto:vdcuong2002@gmail.com">Contact</a> |
+      <a href="https://github.com/cuong-vd/AUV-ODIN-mujoco" target="_blank">GitHub</a> |
+      <a href="#top">Back to Top</a>
+    </p>
+  </footer>
+
+
+</body>
+</html>
