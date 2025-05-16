@@ -160,6 +160,22 @@ ul li {
 .edu-details { margin-top: 10px; padding-left: 20px; }
 .edu-details li { margin-bottom: 5px; }
 
+.edu-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+.edu-img img {
+  width: 50px;
+  max-width: 100%;
+  border-radius: 0px;
+}
+.edu-info {
+  flex: 1;
+  min-width: 250px;
+}
+
 /* ===============================
    🚀 Projects
 =================================*/
