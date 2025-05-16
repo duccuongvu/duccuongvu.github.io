@@ -1,4 +1,6 @@
-/* ===== CSS Variables cho Light/Dark Mode ===== */
+/* ===============================
+   🌗 Light/Dark Mode Variables
+=================================*/
 :root {
   --bg-color: #f2f8f3;
   --text-color: #2c2c2c;
@@ -25,8 +27,9 @@ body.dark-mode {
   --box-shadow-color: rgba(0, 0, 0, 0.8);
 }
 
-
-/* ===== Base Layout ===== */
+/* ===============================
+   🧱 Base Layout
+=================================*/
 body {
   font-family: 'Lora', serif;
   font-size: 18px;
@@ -39,23 +42,15 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
 .bg-overlay {
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
-  background-image: url('images/bg.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-
-  /* Làm mờ ảnh nền */
+  background: url('images/bg.jpg') center/cover no-repeat;
   filter: blur(8px);
   opacity: 0.4;
-
   z-index: -1;
   transition: filter 0.3s ease, opacity 0.3s ease;
 }
-
 body.dark-mode .bg-overlay {
   filter: blur(10px) brightness(0.5);
   opacity: 0.3;
@@ -64,112 +59,154 @@ body.dark-mode .bg-overlay {
 .content {
   position: relative;
   padding: 20px;
-  color: var(--text-color);
   min-height: 100vh;
-  transition: color 0.3s ease;
 }
 
-
-/* ===== Containers ===== */
+/* ===============================
+   📦 Containers & Sections
+=================================*/
 header, section {
   background: var(--section-bg);
   padding: 25px 30px;
   margin-bottom: 30px;
   border-radius: 12px;
   box-shadow: 0 4px 10px var(--box-shadow-color);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ===== Headings ===== */
+/* ===============================
+   📝 Typography
+=================================*/
 h1 {
   font-size: 42px;
   font-weight: 700;
   margin-bottom: 10px;
-  color: var(--text-color);
 }
 
 h2.section-title {
-  border-bottom: 2px solid var(--border-color);
-  padding-bottom: 8px;
-  margin-bottom: 25px;
   font-size: 28px;
   font-weight: 600;
-  color: var(--text-color);
+  margin-bottom: 25px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--border-color);
 }
 
-/* ===== Lists and Text ===== */
-ul {
-  padding-left: 25px;
-  margin-top: 8px;
-}
+strong { color: var(--text-color); }
+em { color: #999; }
 
-ul li {
-  margin-bottom: 6px;
-}
-
-/* ===== Subsection Blocks ===== */
-.subsection {
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-  border-bottom: 1px dashed var(--border-color);
-}
-
-.subsection:last-child {
-  border-bottom: none;
-}
-
-/* ===== Contact Info ===== */
-.contact a {
+/* ===============================
+   🔗 Links
+=================================*/
+.contact a, footer a {
   color: var(--link-color);
   text-decoration: none;
   transition: color 0.3s;
 }
-
-.contact a:hover {
+.contact a:hover, footer a:hover, footer a:focus {
   color: var(--link-hover-color);
+  text-decoration: underline;
 }
 
-/* ===== Special Blocks (Awards, Conferences, etc.) ===== */
-.award-item,
-.conf-item,
+/* ===============================
+   📄 Lists & Blocks
+=================================*/
+ul {
+  padding-left: 25px;
+  margin-top: 8px;
+}
+ul li {
+  margin-bottom: 6px;
+}
+
+.subsection,
+.project-item,
 .pub-item,
-.project-item {
-  margin-bottom: 25px;
+.conf-item,
+.award-item,
+.edu-item {
+  margin-bottom: 30px;
   padding-bottom: 20px;
   border-bottom: 1px dashed var(--border-color);
 }
-
-.award-item:last-child,
-.conf-item:last-child,
+.subsection:last-child,
+.project-item:last-child,
 .pub-item:last-child,
-.project-item:last-child {
+.conf-item:last-child,
+.award-item:last-child,
+.edu-item:last-child {
   border-bottom: none;
 }
 
-/* ===== Typography Utilities ===== */
-strong {
-  color: var(--text-color);
+/* ===============================
+   🎓 Education
+=================================*/
+.edu-degree {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.edu-school { color: #444; margin-top: 2px; }
+.edu-date { font-style: italic; color: #777; margin-top: 5px; }
+.edu-details { margin-top: 10px; padding-left: 20px; }
+.edu-details li { margin-bottom: 5px; }
+
+/* ===============================
+   🚀 Projects
+=================================*/
+.project-role { font-weight: bold; }
+.project-date { font-style: italic; color: #777; }
+.project-details { margin-top: 10px; padding-left: 20px; }
+.project-details li { margin-bottom: 5px; }
+
+/* ===============================
+   📚 Publications
+=================================*/
+.pub-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+.pub-img img {
+  width: 280px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+.pub-info {
+  flex: 1;
+  min-width: 250px;
 }
 
-em {
-  color: #999;
+/* ===============================
+   📍 Conferences & Awards
+=================================*/
+.conf-name, .award-title {
+  font-weight: bold;
+}
+.conf-location, .award-org {
+  font-style: italic;
+  color: #666;
+  margin-top: 3px;
 }
 
-
-
-/* ===== Responsive ===== */
+/* ===============================
+   📱 Responsive
+=================================*/
 @media (max-width: 768px) {
   .pub-item {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-
-  .pub-info {
-    text-align: left;
+  .pub-info { text-align: left; }
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }
 
+/* ===============================
+   🧱 Header Layout
+=================================*/
 header {
   display: flex;
   flex-wrap: wrap;
@@ -177,164 +214,18 @@ header {
   align-items: flex-start;
   gap: 20px;
 }
-
 header > div {
   flex: 1 1 300px;
 }
-
 header img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  header > div {
-    margin: 0;
-  }
-}
-
-
-/* ===== Education Items ===== */
-.edu-item {
-  border-bottom: 1px dashed var(--border-color);
-  padding-bottom: 20px;
-  margin-bottom: 30px;
-}
-
-.edu-item:last-child {
-  border-bottom: none;
-}
-
-.edu-degree {
-  font-weight: bold;
-  font-size: 1.1em;
-  color: var(--text-color);
-}
-
-.edu-school {
-  margin-top: 2px;
-  color: #444;
-}
-
-.edu-date {
-  font-style: italic;
-  color: #777;
-  margin-top: 5px;
-}
-
-.edu-details {
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
-.edu-details li {
-  margin-bottom: 5px;
-}
-
-/* ===== Project Items ===== */
-.project-item {
-  border-bottom: 1px dashed var(--border-color);
-  padding-bottom: 20px;
-  margin-bottom: 30px;
-}
-
-.project-item:last-child {
-  border-bottom: none;
-}
-
-.project-role {
-  font-weight: bold;
-  color: var(--text-color);
-}
-
-.project-date {
-  font-style: italic;
-  color: #777;
-}
-
-.project-details {
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
-.project-details li {
-  margin-bottom: 5px;
-}
-
-/* ===== Publication Items ===== */
-.pub-item {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-  border-bottom: 1px dashed var(--border-color);
-  align-items: flex-start;
-}
-
-.pub-img img {
-  width: 280px;
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-.pub-info {
-  flex: 1;
-  min-width: 250px;
-}
-
-/* ===== Conference Items ===== */
-.conf-item {
-  padding-bottom: 15px;
-  margin-bottom: 20px;
-  border-bottom: 1px dashed var(--border-color);
-}
-
-.conf-item:last-child {
-  border-bottom: none;
-}
-
-.conf-name {
-  font-weight: bold;
-  color: var(--text-color);
-}
-
-.conf-location {
-  color: #666;
-  font-style: italic;
-  margin-top: 3px;
-}
-
-/* ===== Award Items ===== */
-.award-item {
-  padding-bottom: 15px;
-  margin-bottom: 20px;
-  border-bottom: 1px dashed var(--border-color);
-}
-
-.award-item:last-child {
-  border-bottom: none;
-}
-
-.award-title {
-  font-weight: bold;
-  color: var(--text-color);
-}
-
-.award-org {
-  color: #666;
-  font-style: italic;
-  margin-top: 3px;
-}
-
-/* ===== Footer ===== */
+/* ===============================
+   🦶 Footer
+=================================*/
 footer {
   text-align: center;
   padding: 20px 10px;
@@ -344,31 +235,17 @@ footer {
   margin-top: 40px;
   border-top: 1px solid var(--border-color);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
-
-footer p {
-  margin: 5px 0;
-}
-
-footer a {
-  color: var(--link-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-footer a:hover,
-footer a:focus {
-  color: var(--link-hover-color);
-  text-decoration: underline;
-}
-
+footer p { margin: 5px 0; }
 footer .contact-icons {
   font-size: 16px;
   margin-right: 6px;
   vertical-align: middle;
 }
 
+/* ===============================
+   🌙 Dark Mode Toggle
+=================================*/
 #darkModeToggle {
   position: fixed;
   top: 20px;
@@ -377,33 +254,28 @@ footer .contact-icons {
   height: 50px;
   border: none;
   border-radius: 25px;
-  background: #007acc; /* Màu xanh chủ đạo */
+  background: var(--link-color);
   color: white;
   font-size: 24px;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease, transform 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   user-select: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
 #darkModeToggle:hover {
-  background: #005a9e;
+  background: var(--link-hover-color);
   transform: scale(1.1);
 }
-
 #darkModeToggle:active {
   transform: scale(0.95);
 }
-
-/* Thay icon khi bật dark mode */
 body.dark-mode #darkModeToggle {
   background: #444;
   color: #f0e68c;
 }
-
 body.dark-mode #darkModeToggle:hover {
   background: #666;
 }
