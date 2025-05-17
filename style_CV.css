@@ -163,9 +163,13 @@ footer a:hover {
   text-decoration: underline;
 }
 
+
+
+
 /* ===== Print Only ===== */
 @media print {
   #darkModeToggle,
+  #toggleCV,
   .toggle-icon,
   .bg-overlay {
     display: none !important;
