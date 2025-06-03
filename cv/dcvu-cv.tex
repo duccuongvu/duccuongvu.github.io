@@ -83,7 +83,7 @@
 % Personal info entries
 \newcommand{\info}[2]{%
 	\noindent\hangindent=2em\hangafter=0
-	\parbox{\spacebox}{\textsl{#1}} #2 \par
+	\parbox{\spacebox}{\textsl{#1}} #2 \vspace{0.2em}\par
 }
 
 % Skill entry
@@ -127,7 +127,7 @@
 
 % Publication entry
 \newcommand{\publication}[5]{%
-	\noindent \textbf{#1} \hspace{0.5cm} (#2) \par
+	\noindent \textbf{#1} \hspace{0.1cm} #2 \par
 	\vspace{0.5em}
 	\noindent #3 \par
 	\vspace{0.5em}
@@ -149,24 +149,21 @@
 
 \begin{document}
 	
-	
-	% Create a box in the top-right corner
-	\begin{textblock*}{5cm}(15.5cm,0.3cm) % Adjust the position and size as needed\
+	\begin{textblock*}{5cm}(15.5cm,0.3cm) 
 		\centering
 		\begin{tcolorbox}[colframe=black, colback=white, sharp corners]
 			\fontfamily{phv}\selectfont \centering\footnotesize \textit{Last update: May 2025} \normalsize\normalfont
 		\end{tcolorbox}
 	\end{textblock*}
 	
-	% name and motto
+	
 	\name{Duc-Cuong VU, BSc}
 	\sepspace
 	\info{Email}{\href{mailto:vdcuong2002@gmail.com}{\texttt{vdcuong2002 [at] gmail.com}}}
 	\info{Phone}{+84 865 280 802}
 	\info{Address}{Giao Thuy, Nam Dinh, Vietnam}
-	\info{Sites}{\href{https://cuong-vd.github.io}{https://cuong-vd.github.io}}
+	\info{Sites}{\href{https://dc-vu.github.io}{https://dc-vu.github.io}}
 	
-	% education
 	
 	
 	\section*{Education}
@@ -181,11 +178,13 @@
 	
 	\sepspace
 	
-	\education{Bachelor of Science in Automation and Control}{Oct 2020 - Mar 2024}{School of Electrical - Electronics Engineering, \\Hanoi University of Science and Technology (HUST), Hanoi, Vietnam}
+	\education{Bachelor of Science in Automation and Control}
+	{Oct 2020 - Mar 2024}{School of Electrical - Electronics Engineering, \\Hanoi University of Science and Technology (HUST), Hanoi, Vietnam}
 	{\begin{soloitemize}
 			\item \textbf{Excellent degree}, GPA: 3.71/4. Finished the 4-year BSc program in \textbf{just 3.5 years}.
 			\item \textbf{Ranking:} 27/499 in the same cohort.
-			\item \textbf{Bachelor Thesis:} \textit{Balancing, motion planning, and tracking control for ballbot systems}. \\
+			\item \textbf{Bachelor Thesis:} \textit{Balancing, motion planning, and tracking control for ballbot systems} [\href{https://drive.google.com/file/d/14nDBzQam5qdcvj9y6AuS6N0fQ292AwWj/view?usp=sharing}{PDF}]
+			. \\
 			\textbf{Thesis score:} 9.9/10 - The best thesis defense
 		\end{soloitemize}
 	}
@@ -195,7 +194,10 @@
 	% work experience
 	\section*{Work Experience}
 	
-	\work{Research Assistant}{Oct 2021 - present}{The Mechatronics Engineering Group, \\School of Electrical - Electronic Engineering,\\Hanoi University of Science and Technology (HUST), Hanoi, Vietnam}{ \begin{soloitemize}
+	\work{Research Assistant}
+	{Oct 2021 - present}
+	{The Mechatronics Engineering Group, \\School of Electrical - Electronic Engineering,\\Hanoi University of Science and Technology (HUST), Hanoi, Vietnam}
+	{ \begin{soloitemize}
 			\item \textbf{Research topics:} Automation, Control Design, Robotics, Multi-agent Systems, Modeling and Simulation, Experiment systems.
 			\item \textbf{Supervisor:} Assoc.Prof.PhD. Tung Lam Nguyen
 			% , PhD. Danh Huy Nguyen , PhD. Thi Van Anh Nguyen  
@@ -203,19 +205,20 @@
 			% , {\href{mailto:huy.nguyendanh@hust.edu.vn}{\texttt{huy.nguyendanh}}}, {\href{mailto:anh.nguyenthivan1@hust.edu.vn}{\texttt{anh.nguyenthivan1}}} 
 			\texttt{[at] hust.edu.com}).
 			\item \textbf{Skills acquired:}  hardware design, numerical simulation and modeling, analysis, and interpretation of results, study conception, and design, draft manuscript preparation, ...
-			% \item \textbf{Projets:} Generating trajectory and balancing control of technical systems
 		\end{soloitemize}
 	}
 	
-	
-	% work experience
+
+
 	\section*{Projects}
 	
 	\begin{minipage}[c]{0.68\textwidth}
-		\project{Member/Researcher}{Mar 2025 - Dec 2025}{Advanced Control of a Ship-Mounted Stewart Platform for Marine Applications}{\begin{soloitemize}
+		\project{Member/Researcher}
+		{Mar 2025 - Dec 2025}
+		{Advanced Control of a Ship-Mounted Stewart Platform for Marine Applications}{\begin{soloitemize}
 				\item Field: Marine Robotics and Control Systems.
 				\item International Collaboration of Korea Institute of Science and Technology and Institute for Control Engineering and Automation (HUST).
-				\item Supervisors: PhD. Minh Nhat Vu and Assoc.Prof.PhD. Tung Lam Nguyen
+				\item Supervisors: \href{https://scholar.google.com/citations?user=qyExc4QAAAAJ&hl=en}{PhD. Minh Nhat Vu} and \href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{Assoc.Prof.PhD. Tung Lam Nguyen}
 			\end{soloitemize}
 		}
 	\end{minipage}
@@ -228,7 +231,9 @@
 		\project{Member/Researcher}{Jan 2025 - Dec 2027}{Robot navigation system integrating sensor network and wireless communication}{\begin{soloitemize}
 				\item Field: Robotics and Control systems.
 				\item Funded by Hanoi University of Science and Technology.
-				\item Supervisors: PhD. Duc Chinh Hoang and Assoc.Prof.PhD. Tung Lam Nguyen.
+				\item Supervisors: \href{https://scholar.google.com/citations?user=mI561CkAAAAJ&hl=en}{PhD. Chinh Hoang Duc} 
+				and 
+				\href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{Assoc.Prof.PhD. Tung Lam Nguyen}.
 			\end{soloitemize}
 		}
 	\end{minipage}
@@ -246,7 +251,7 @@
 	\end{minipage}
 	\hfill
 	\noindent\begin{minipage}[c]{0.68\textwidth}
-		\publication{Journal}{IEEE Acess (ISI-Q2) (2025)}{CBFs-based Model Predictive Control for Obstacle Avoidance with Tilt Angle Limitation for Ball-Balancing Robots}{Minh Duc Pham, \hl{Duc Cuong Vu}, Thi Thuy Hang Nguyen, Thi Van Anh Nguyen, Minh Nhat Vu, and Tung Lam Nguyen}{ 10.1109/ACCESS.2025.3567474}
+		\publication{Journal}{IEEE Acess (ISI-Q2) (2025)}{CBFs-based Model Predictive Control for Obstacle Avoidance with Tilt Angle Limitation for Ball-Balancing Robots}{Minh Duc Pham, \hl{Duc Cuong Vu}, Thi Thuy Hang Nguyen, Thi Van Anh Nguyen, Minh Nhat Vu, and Tung Lam Nguyen}{10.1109/ACCESS.2025.3567474}
 	\end{minipage}
 	\sepspace
 	
@@ -277,7 +282,7 @@
 	
 	\sepspace
 	
-	\conference{2024 International Conference on Advanced Technologies for Communications (ATC2024)}{Hanoi, Vietnam}
+	\conference{2024 International Conference on Advanced Technologies for Communications (IEEE ATC2024)}{Hanoi, Vietnam}
 	
 	\sepspace
 	
