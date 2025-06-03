@@ -1,0 +1,295 @@
+% CV in LaTeX
+\documentclass[10pt]{article}
+
+%% PACKAGES %%
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	left=10mm,
+	right=10mm,
+	top=10mm,
+	bottom=10mm
+}
+\pagestyle{empty}
+
+% Section formatting
+\usepackage{sectsty}
+\sectionfont{%
+	\large
+	\fontfamily{qag}\selectfont
+	\sectionrule{0pt}{0pt}{-5pt}{1pt}
+}
+
+\usepackage[shortlabels]{enumitem}
+\newlist{soloitemize}{itemize}{1}
+\setlist[soloitemize]{
+	nosep,
+	topsep=0pt,
+	itemsep=4pt,
+	left=2pt,
+	label=$\bullet$,
+}
+
+% For positioning and boxes
+\usepackage[absolute,overlay]{textpos}
+\usepackage{tcolorbox}
+
+% Misc packages
+\usepackage{calc}
+\usepackage[shortcuts]{extdash}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	urlcolor=black,
+	citecolor=black,
+	pdfborder={0 0 0}
+}
+\usepackage{soul}
+\usepackage{tikz}
+
+% Underlined hyperlinks
+\let\oldhref\href
+\renewcommand{\href}[2]{\oldhref{#1}{\ul{#2}}}
+
+% Separator line command
+\newcommand{\sepspace}{%
+	\par\vspace{0.5em}
+	\noindent
+	\tikz{\draw[gray, dashed, line width=0.5pt] (0,0) -- (\linewidth,0);}
+	\par\vspace{0.5em}
+}
+
+% Length for alignment boxes
+\newlength{\spacebox}
+\settowidth{\spacebox}{123456789}
+
+%% MACROS %%
+
+% Name
+\newcommand{\name}[1]{%
+	\Huge
+	\fontfamily{phv}\selectfont
+	\textbf{#1}%
+	\par\normalsize\normalfont
+}
+
+% Personal info entries
+\newcommand{\info}[2]{%
+	\noindent\hangindent=2em\hangafter=0
+	\parbox{\spacebox}{\textsl{#1}} #2 \par
+}
+
+% Skill entry
+\newcommand{\skill}[2]{%
+	\noindent\hangindent=1em\hangafter=0
+	\parbox{2.5\spacebox}{\textbf{#1}} #2 \par\vspace{0.15cm}
+}
+
+% Language level
+\newcommand{\lan}[2]{%
+	\noindent\hangindent=2em\hangafter=0
+	\parbox{\spacebox}{\textbf{#1}} #2 \par
+}
+
+% Education entry
+\newcommand{\education}[4]{%
+	\noindent \textbf{#1} (\textit{#2})\par
+	\vspace{0.5em}
+	\noindent \textit{#3}\par
+	\vspace{0.5em}
+	\noindent\hangindent=2em\hangafter=0 #4 \par\normalsize
+}
+
+% Work experience entry
+\newcommand{\work}[4]{%
+	\noindent \textbf{#1} (\textit{#2})\par
+	\vspace{0.5em}
+	\noindent \textit{#3}\par
+	\vspace{0.5em}
+	\noindent\hangindent=2em\hangafter=0 #4 \par\normalsize
+}
+
+% Project entry
+\newcommand{\project}[4]{%
+	\noindent \textbf{#1} (\textit{#2})\par
+	\vspace{0.5em}
+	\noindent \textit{#3}\par
+	\vspace{0.5em}
+	\noindent\hangindent=2em\hangafter=0 #4 \par\normalsize
+}
+
+% Publication entry
+\newcommand{\publication}[5]{%
+	\noindent \textbf{#1} \hspace{0.5cm} (#2) \par
+	\vspace{0.5em}
+	\noindent #3 \par
+	\vspace{0.5em}
+	\noindent \textit{#4} \par
+	\vspace{0.5em}
+	\noindent DOI: \href{https://doi.org/#5}{#5} \par
+}
+
+% Conference entry
+\newcommand{\conference}[2]{%
+	\noindent \textbf{#1} \par
+	\vspace{0.5em}
+	\noindent #2 \par
+}
+
+
+\graphicspath{{../images/}}
+
+
+\begin{document}
+	
+	
+	% Create a box in the top-right corner
+	\begin{textblock*}{5cm}(15.5cm,0.3cm) % Adjust the position and size as needed\
+		\centering
+		\begin{tcolorbox}[colframe=black, colback=white, sharp corners]
+			\fontfamily{phv}\selectfont \centering\footnotesize \textit{Last update: May 2025} \normalsize\normalfont
+		\end{tcolorbox}
+	\end{textblock*}
+	
+	% name and motto
+	\name{Duc-Cuong VU, BSc}
+	\sepspace
+	\info{Email}{\href{mailto:vdcuong2002@gmail.com}{\texttt{vdcuong2002 [at] gmail.com}}}
+	\info{Phone}{+84 865 280 802}
+	\info{Address}{Giao Thuy, Nam Dinh, Vietnam}
+	\info{Sites}{\href{https://cuong-vd.github.io}{https://cuong-vd.github.io}}
+	
+	% education
+	
+	
+	\section*{Education}
+	
+	\education{Master of Science in Automation and Control}{Jul 2024 - present}{School of Electrical - Electronics Engineering, \\Hanoi University of Science and Technology (HUST), Hanoi, Vietnam}
+	{
+		\begin{soloitemize}
+			\item \textbf{Research project:} \textit{Design control structures for Parallel Platforms in Maritime applications}
+			\item \textbf{Funded by:} \textit{Master, PhD Scholarship Programme of Vingroup Innovation Foundation (VINIF)} 
+		\end{soloitemize}
+	}
+	
+	\sepspace
+	
+	\education{Bachelor of Science in Automation and Control}{Oct 2020 - Mar 2024}{School of Electrical - Electronics Engineering, \\Hanoi University of Science and Technology (HUST), Hanoi, Vietnam}
+	{\begin{soloitemize}
+			\item \textbf{Excellent degree}, GPA: 3.71/4. Finished the 4-year BSc program in \textbf{just 3.5 years}.
+			\item \textbf{Ranking:} 27/499 in the same cohort.
+			\item \textbf{Bachelor Thesis:} \textit{Balancing, motion planning, and tracking control for ballbot systems}. \\
+			\textbf{Thesis score:} 9.9/10 - The best thesis defense
+		\end{soloitemize}
+	}
+	
+	
+	
+	% work experience
+	\section*{Work Experience}
+	
+	\work{Research Assistant}{Oct 2021 - present}{The Mechatronics Engineering Group, \\School of Electrical - Electronic Engineering,\\Hanoi University of Science and Technology (HUST), Hanoi, Vietnam}{ \begin{soloitemize}
+			\item \textbf{Research topics:} Automation, Control Design, Robotics, Multi-agent Systems, Modeling and Simulation, Experiment systems.
+			\item \textbf{Supervisor:} Assoc.Prof.PhD. Tung Lam Nguyen
+			% , PhD. Danh Huy Nguyen , PhD. Thi Van Anh Nguyen  
+			({\href{mailto:lam.nguyentung@hust.edu.vn}{\texttt{lam.nguyentung}}}
+			% , {\href{mailto:huy.nguyendanh@hust.edu.vn}{\texttt{huy.nguyendanh}}}, {\href{mailto:anh.nguyenthivan1@hust.edu.vn}{\texttt{anh.nguyenthivan1}}} 
+			\texttt{[at] hust.edu.com}).
+			\item \textbf{Skills acquired:}  hardware design, numerical simulation and modeling, analysis, and interpretation of results, study conception, and design, draft manuscript preparation, ...
+			% \item \textbf{Projets:} Generating trajectory and balancing control of technical systems
+		\end{soloitemize}
+	}
+	
+	
+	% work experience
+	\section*{Projects}
+	
+	\begin{minipage}[c]{0.68\textwidth}
+		\project{Member/Researcher}{Mar 2025 - Dec 2025}{Advanced Control of a Ship-Mounted Stewart Platform for Marine Applications}{\begin{soloitemize}
+				\item Field: Marine Robotics and Control Systems.
+				\item International Collaboration of Korea Institute of Science and Technology and Institute for Control Engineering and Automation (HUST).
+				\item Supervisors: PhD. Minh Nhat Vu and Assoc.Prof.PhD. Tung Lam Nguyen
+			\end{soloitemize}
+		}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[c]{0.3\textwidth}
+		\includegraphics[width=\linewidth]{hexapod.png} % Replace with your image file
+	\end{minipage}
+	\sepspace
+	\noindent\begin{minipage}[c]{0.68\textwidth}
+		\project{Member/Researcher}{Jan 2025 - Dec 2027}{Robot navigation system integrating sensor network and wireless communication}{\begin{soloitemize}
+				\item Field: Robotics and Control systems.
+				\item Funded by Hanoi University of Science and Technology.
+				\item Supervisors: PhD. Duc Chinh Hoang and Assoc.Prof.PhD. Tung Lam Nguyen.
+			\end{soloitemize}
+		}
+	\end{minipage}
+	\hfill
+	\begin{minipage}[c]{0.30\textwidth}
+		\includegraphics[width=\linewidth]{ProjectTD.png} % Replace with your image file
+	\end{minipage}
+	
+	
+	
+	
+	\section*{Highlighted Publications}
+	\begin{minipage}[c]{0.3\textwidth}
+		\includegraphics[width=\linewidth]{IEEEAccess.png} % Replace with your image file
+	\end{minipage}
+	\hfill
+	\noindent\begin{minipage}[c]{0.68\textwidth}
+		\publication{Journal}{IEEE Acess (ISI-Q2) (2025)}{CBFs-based Model Predictive Control for Obstacle Avoidance with Tilt Angle Limitation for Ball-Balancing Robots}{Minh Duc Pham, \hl{Duc Cuong Vu}, Thi Thuy Hang Nguyen, Thi Van Anh Nguyen, Minh Nhat Vu, and Tung Lam Nguyen}{ 10.1109/ACCESS.2025.3567474}
+	\end{minipage}
+	\sepspace
+	
+	
+	% Second publication block
+	\begin{minipage}[c]{0.3\textwidth}
+		\includegraphics[width=\linewidth]{RIENG.png} % Replace with your image file
+	\end{minipage}
+	\hfill
+	\begin{minipage}[c]{0.68\textwidth}
+		\publication{Journal}{Results in Engineering (ISI-Q1) (2025)}{A novel approach of Consensus-based Finite-time Distributed Sliding Mode Control for Stewart platform manipulators motion tracking}{\hl{Duc Cuong Vu}, Danh Huy Nguyen, and Tung Lam Nguyen}{10.1016/j.rineng.2024.103872}
+	\end{minipage}
+	
+	\sepspace
+	% Third publication block
+	\begin{minipage}[c]{0.3\textwidth}
+		\includegraphics[width=\linewidth]{RNC.png} % Replace with your image file
+	\end{minipage}
+	\hfill
+	\begin{minipage}[c]{0.68\textwidth}
+		\publication{Journal}{International Journal of Robust and Nonlinear Control (ISI-Q1) (2024)}{Time-optimal trajectory generation and observer-based hierarchical sliding mode control for ballbots with system constraints}{\hl{Duc Cuong Vu}, Minh Duc Pham, Thi Thuy Hang Nguyen, Thi Van Anh Nguyen, and Tung Lam Nguyen}{10.1002/rnc.7358}
+	\end{minipage}
+	
+	
+	
+	\section*{Conferences}
+	\conference{IEEE 12th International Conference on Control, Automation and Information Sciences (IEEE ICCAIS 2023)}{Hanoi, Vietnam}
+	
+	\sepspace
+	
+	\conference{2024 International Conference on Advanced Technologies for Communications (ATC2024)}{Hanoi, Vietnam}
+	
+	\sepspace
+	
+	\conference{International Conference on Intelligent Systems and Networks (Springer ICISN 2023)}{Hanoi, Vietnam}
+	
+	
+	\section*{Honours \& awards}
+	
+	\conference{Master, PhD Scholarship Programme}{Vingroup Innovation Foundation (VINIF)}
+	
+	\sepspace
+	
+	\conference{Best Thesis Defense Award}{Hanoi University of Science and Technology}
+	
+\end{document}
