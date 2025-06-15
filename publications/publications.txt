@@ -1,3 +1,13 @@
+% #14
+@article{pham2025cbfs,
+  title={CBFs-based Model Predictive Control for Obstacle Avoidance with Tilt Angle Limitation for Ball-Balancing Robots},
+  author={Pham, Minh Duc and Vu, Duc Cuong and Nguyen, Thi Thuy Hang and Nguyen, Thi-Van-Anh and Vu, Minh Nhat and Nguyen, Tung Lam},
+  journal={IEEE Access},
+  year={2025},
+  publisher={IEEE}
+}
+
+% #13
 @article{vu2024consensus,
   author = {Vu, D. C. and Nguyen, T. L. and Nguyen, D. H.},
   title = {A novel approach of Consensus-based Finite-time Distributed Sliding Mode Control for Stewart platform manipulators motion tracking},
@@ -5,6 +15,7 @@
   year = {2024}
 }
 
+% #12
 @article{vu2024timeoptimal,
   author = {Vu, D. C. and Pham, M. D. and Nguyen, T. T. H. and Nguyen, T. V. A. and Nguyen, T. L.},
   title = {Time-optimal trajectory generation and observer-based Hierarchical Sliding Mode Control for ballbots with system constraints},
@@ -12,6 +23,7 @@
   year = {2024}
 }
 
+% #11
 @article{kien2024dieukhien,
   author = {Kiên, T. T. and Cường, V. Đ. and Huy, N. D. and Kiên, N. T.},
   title = {Điều khiển chế độ trượt cho robot Stewart Platform: Tiếp cận dựa trên mô hình bán vật lý},
@@ -21,6 +33,7 @@
   year = {2024}
 }
 
+% #10
 @article{hang2024adaptive,
   author = {Hang, N. T. T. and Cuong, V. D. and Duc, P. M. and Van Anh, N. T. and Lam, N. T.},
   title = {Adaptive-based hierarchical sliding mode control for ball-balancing robots moving on an inclined plane},
@@ -30,6 +43,7 @@
   year = {2024}
 }
 
+% #9
 @inproceedings{pham2024adaptive,
   author = {Pham, M. D. and Vu, D. C. and Nguyen, T. T. Hang and Nguyen, T. V. A. and Bang, D. H. and Nguyen, T. L.},
   title = {Adaptive Mechanism Hierarchical Sliding Mode Control for Ballbot Systems},
@@ -40,6 +54,7 @@
   year = {2024}
 }
 
+% #8
 @inproceedings{vu2024stewart,
   author = {Vu, D. C. and Nguyen, D. H. and Dang, H. B. and Nguyen, T. L.},
   title = {Stewart Platform Motion Control: A Multi-Agent Consensus Approach},
@@ -50,6 +65,7 @@
   year = {2024}
 }
 
+% #7
 @article{pham2024nmpc,
   author = {Pham, M. D. and Vu, D. C. and Nguyen, T. T. H. and Nguyen, T. V. A. and Nguyen, T. L.},
   title = {Dynamic obstacle avoidance using Nonlinear Model Predictive Control and Control Barrier Function for ballbot systems},
@@ -57,6 +73,7 @@
   year = {2024}
 }
 
+% #6
 @inproceedings{vu2024formation,
   author = {Vu, D. C. and Pham, M. D. and Nguyen, T. T. H. and Nguyen, T. V. A. and Nguyen, D. H. and Nguyen, T. L.},
   title = {Modeling and Formation control for the multiple ballbots system},
@@ -64,6 +81,7 @@
   year = {2024}
 }
 
+% #5
 @inproceedings{nguyen2024inclined,
   author = {Nguyen, T. T. H. and Pham, M. D. and Vu, D. C. and Nguyen, T. V. A. and Nguyen, T. L.},
   title = {Modeling and control ballbot on an inclined plane},
@@ -71,6 +89,7 @@
   year = {2024}
 }
 
+% #4
 @inproceedings{pham2023nmpc,
   author = {Pham, M. D. and Vu, D. C. and Nguyen, T. T. H. and Nguyen, T. V. A. and Vu, D. D. and Nguyen, T. L.},
   title = {Nonlinear Model Predictive Control for Ballbot systems: A benchmark with Hierarchical Sliding Mode and Linear Quadratic controls},
@@ -81,6 +100,7 @@
   year = {2023}
 }
 
+% #3
 @inproceedings{nguyen2023flatness,
   author = {Nguyen, T. T. H. and Pham, M. D. and Vu, D. C. and Nguyen, T. V. A. and Nguyen, T. L.},
   title = {A method based on flatness theory to generate a time-optimal trajectory for the ballbot},
@@ -88,6 +108,7 @@
   year = {2023}
 }
 
+% #2
 @incollection{vu2023hinfconf,
   author = {Vu, D. C. and Nguyen, T. T. H. and Vu, D. D. and Pham, V. P. and Nguyen, D. H. and Nguyen, T. L.},
   title = {H∞ Optimal Full-State Feedback Control for a Ball-Balancing Robot},
@@ -98,6 +119,7 @@
   doi = {10.1007/978-981-99-4725-6_41}
 }
 
+% #1
 @article{vu2023hinfjournal,
   author = {Vu, D. C. and Nguyen, T. T. H. and Vu, D. D. and Nguyen, T. L. and Nguyen, D. H.},
   title = {H-infinity full-state feedback control for a ball-balancing robot},
