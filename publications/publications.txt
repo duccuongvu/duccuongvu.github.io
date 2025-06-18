@@ -1,3 +1,15 @@
+% #15
+@article{Tran_Vu_Nguyen_Nguyen_Nguyen_Nguyen_2025, 
+  title={Load adaptive sliding mode control for 6-degree-of-freedom parallel robot system Stewart platform}, 
+  volume={29}, 
+  url={https://mca-journal.org/index.php/mca/article/view/257}, 
+  DOI={10.64032/mca.v29i2.257}, 
+  journal={Journal of Measurement, Control, and Automation}, 
+  author={Tran, Trung Kiên and Vu, Đức Cường and Nguyen, Danh Huy and Nguyen, Tùng Lâm and Nguyen, Trung Kiên and Nguyen, Vũ}, 
+  year={2025}, 
+  month={Jun.}, 
+  pages={1–8}}
+
 % #14
 @article{pham2025cbfs,
   title={CBFs-based Model Predictive Control for Obstacle Avoidance with Tilt Angle Limitation for Ball-Balancing Robots},
