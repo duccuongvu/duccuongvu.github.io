@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NMPC-Based Obstacle Avoidance for Omni-Directional Intelligent Navigator Using APF</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #00b894;
+      --dark-color: #2d3436;
+      --light-bg: #f9fafc;
+      --section-bg: #ffffff;
+      --text-color: #2d3436;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--light-bg);
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.5;
+    }
+
+    header h2 {
+      margin-top: 10px;
+      font-weight: 300;
+      font-size: 18px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    nav {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #098e6d;
+    }
+
+    section {
+      background: var(--section-bg);
+      border-radius: 10px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    }
+
+    h3 {
+      color: var(--primary-color);
+      margin-top: 0;
+    }
+
+    .button {
+      background: var(--primary-color);
+      color: white;
+      padding: 10px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      display: inline-block;
+      margin: 20px auto;
+      text-align: center;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background: #019a7d;
+    }
+
+    img, video {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    footer {
+      background-color: #f0f0f0;
+      color: #555;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+      border-top: 1px solid #ddd;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    pre {
+      background-color: #f4f4f4;
+      padding: 15px;
+      overflow-x: auto;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    code {
+      font-family: monospace;
+      font-size: 14px;
+    }
+
+    video {
+      width: 60%;
+      display: block;
+      margin: 20px auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    .container img {
+      width: 60%;
+      display: block;
+      margin: 20px auto;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>NMPC-Based Obstacle Avoidance for Omni-Directional Intelligent Navigator Using APF</h1>
+    <h2>Tuan Minh Dang, Duc Cuong Vu, Tung Lam Nguyen , Duc Chinh Hoang*
+</h2>
+    <p>Motion Control and Applied Robots (MoCAR), Hanoi University of Science and Technology (HUST), Vietnam</p>
+  </header>
+
+  <div class="container">
+    
+<nav>
+  <a href="#abstract">Abstract</a>
+  <a href="#control">Contributions</a>
+  <a href="#results">Simulation Results</a>
+  <a href="https://github.com/minhdt0807/NMPC-APF-for-ODIN" target="_blank" title="GitHub Repository" style="display: inline-flex; align-items: center; gap: 6px; text-decoration: none;">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+         alt="GitHub" style="height: 20px;">
+    GitHub
+  </a>
+</nav>
+
+
+
+    <section id="abstract">
+      <h3>🏆 Abstract</h3>
+      <p>
+        This paper presents the Nonlinear Model Predictive Control (NMPC) strategy for controlling the Omni Directional Intelligent Navigator (ODIN) embedded with an Artificial Potential Field (APF) algorithm for obstacle avoidance. NMPC is an optimal control method suitable for highly nonlinear systems like ODIN. The APF provides a simple yet effective approach for ODIN to operate safely in obstacle-dense marine environments. MATLAB simulations demonstrate effective trajectory tracking and obstacle avoidance with the proposed controller.
+      </p>
+    </section>
+
+    <section id="control">
+      <h3>🧠 Contributions</h3>
+      <ul>
+        <li> ----------</li>
+        <li> ----------</li>
+        <li> ----------</li>
+      </ul>
+    </section>
+
+    <section id="results">
+      <h3>👉 Scenario: General 3D Navigation</h3>
+      <video controls>
+        <source src="3D/ODIN_Simulation.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <img src="3D/State Evolution 3D.png" alt="OState Evolution" />
+      <img src="3D/thurster force 3D.png" alt="Thurster forces" />
+      <img src="3D/3D Barrier Function.png" alt="Barrier Values" />
+      <p>ODIN navigates a cluttered 3D underwater environment using NMPC + APF.</p>
+
+      <h3>👉 Scenario: Climbing Motion</h3>
+      <video controls>
+        <source src="Climb_motion/ODIN_Simulation_travel_up.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <img src="Climb_motion/Climb_motion_state_evolution.png" alt="OState Evolution" />
+      <img src="Climb_motion/Climb_motion_thruster.png" alt="Thurster forces" />
+      <img src="Climb_motion/Climb_motion_barrier_function.png" alt="Barrier Values" />
+      <p>Comment here.</p>
+
+      <h3>👉 Scenario: XY-Plane with Obstacle Avoidance</h3>
+      <video controls>
+        <source src="XY-plane constrained-motion/ODIN_Simulation_XY-plane_obstacles.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <img src="XY-plane constrained-motion/XY-plane_obstacles_state_evolution.png" alt="OState Evolution" />
+      <img src="XY-plane constrained-motion/XY-plane_obstacles_thruster.png" alt="Thurster forces" />
+      <img src="XY-plane constrained-motion/XY-plane_obstacles_barrier_function.png" alt="Barrier Values" />
+      <p>Comment here</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Duc Cuong Vu & Team. All rights reserved.</p>
+    <p>
+      <a href="mailto:vdcuong2002@gmail.com">Contact</a> |
+      <a href="https://github.com/cuong-vd/AUV-ODIN-mujoco" target="_blank">GitHub</a> |
+      <a href="#top">Back to Top</a>
+    </p>
+  </footer>
+
+</body>
+</html>
