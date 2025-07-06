@@ -195,7 +195,7 @@ ul li {
 .project-img img {
   width: 450px;
   max-width: 100%;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 .project-info {
   flex: 1;
@@ -214,7 +214,7 @@ ul li {
 .pub-img img {
   width: 280px;
   max-width: 100%;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 .pub-info {
   flex: 1;
@@ -266,7 +266,7 @@ header > div {
 header img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 /* ===============================
