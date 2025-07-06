@@ -3,7 +3,8 @@
    🌗 Light/Dark Mode Variables
 =================================*/
 :root {
-  --bg-color: #f2f8f3;
+  /* --bg-color: #f2f8f3; */
+  --bg-color: #ffffff;
   --text-color: #2c2c2c;
   --header-bg: #ffffff;
   --section-bg: #ffffff;
@@ -33,11 +34,11 @@ body.dark-mode {
 =================================*/
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.7;
   background: var(--bg-color);
   color: var(--text-color);
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   /* padding: 10px 10px; */
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -66,26 +67,26 @@ body.dark-mode .bg-overlay {
 /* ===============================
    📦 Containers & Sections
 =================================*/
-header, section {
-  background: var(--section-bg);
-  padding: 25px 30px;
-  margin-bottom: 30px;
-  border-radius: 0px;
-  box-shadow: 0 4px 10px var(--box-shadow-color);
-}
+/* header, section { */
+  /* background: var(--section-bg); */
+  /* padding: 25px 30px; */
+  /* margin-bottom: 30px; */
+  /* border-radius: 0px; */
+  /* box-shadow: 0 4px 10px var(--box-shadow-color); */
+/* } */
 
 /* ===============================
    📝 Typography
 =================================*/
 h1 {
-  font-size: 42px;
-  font-weight: 700;
+  font-size: 35px;
+  font-weight: 200;
   margin-bottom: 10px;
 }
 
 h2.section-title {
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 25px;
+  font-weight: 200;
   margin-bottom: 25px;
   padding-bottom: 8px;
   border-bottom: 2px solid var(--border-color);
@@ -135,6 +136,7 @@ ul li {
 .pub-item,
 .conf-item,
 .award-item,
+.skill-item,
 .edu-item {
   margin-bottom: 10px;
   padding-bottom: 10px;
@@ -145,6 +147,7 @@ ul li {
 .pub-item:last-child,
 .conf-item:last-child,
 .award-item:last-child,
+.skill-item:last-child,
 .edu-item:last-child {
   border-bottom: none;
 }
@@ -224,15 +227,14 @@ ul li {
 /* ===============================
    📍 Conferences & Awards
 =================================*/
-.conf-name, .award-title {
+.skill, .award-title {
   font-weight: bold;
 }
-.conf-location, .award-org {
+.skill-detail, .award-org {
   font-style: italic;
   color: #666;
   margin-top: 3px;
 }
-
 /* ===============================
    📱 Responsive
 =================================*/
@@ -275,7 +277,7 @@ header img {
 footer {
   text-align: center;
   padding: 20px 10px;
-  background-color: var(--footer-bg);
+  /* background-color: var(--footer-bg); */
   color: var(--footer-text-color);
   font-size: 14px;
   margin-top: 40px;
