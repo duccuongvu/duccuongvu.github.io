@@ -80,13 +80,13 @@ body.dark-mode .bg-overlay {
 =================================*/
 h1 {
   font-size: 35px;
-  font-weight: 200;
+  font-weight: 540;
   margin-bottom: 10px;
 }
 
 h2.section-title {
   font-size: 25px;
-  font-weight: 200;
+  font-weight: 540;
   margin-bottom: 25px;
   padding-bottom: 8px;
   border-bottom: 2px solid var(--border-color);
@@ -105,8 +105,19 @@ a:hover {
 
 
 strong { color: var(--text-color); }
+b {
+  font-weight: 550;
+  color: var(--text-color);
+}
 em { color: #999; }
+i { color: var(--text-color); }
 
+
+.pub-info p {
+  margin: 5px 0;
+  font-size: 1em;
+  line-height: 1.5;
+}
 /* ===============================
    🔗 Links
 =================================*/
@@ -156,7 +167,7 @@ ul li {
    🎓 Education
 =================================*/
 .edu-degree {
-  font-weight: bold;
+  font-weight: 540;
   font-size: 1.0em;
 }
 .edu-school { color: #777; margin-top: 2px; }
@@ -183,7 +194,7 @@ ul li {
 /* ===============================
    🚀 Projects
 =================================*/
-.project-role { font-weight: bold; }
+.project-role { font-weight: 540; }
 .project-date { font-style: italic; color: #777; }
 .project-details { margin-top: 10px; padding-left: 20px; }
 .project-details li { margin-bottom: 5px; }
@@ -228,11 +239,11 @@ ul li {
    📍 Conferences & Awards
 =================================*/
 .skill, .award-title {
-  font-weight: bold;
+  font-weight: 540;
 }
 .skill-detail, .award-org {
   font-style: italic;
-  color: #666;
+  color: var (--text-color);
   margin-top: 3px;
 }
 /* ===============================
