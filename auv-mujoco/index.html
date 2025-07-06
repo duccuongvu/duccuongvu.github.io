@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Glocal Trajectories for AUVs</title>
+  <link rel="icon" type="image/png" href="figure_ODIN_mujoco-removebg-preview.png" sizes="128x128"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #ffffff;
+      color: #111;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    header h1 {
+      font-size: 22px;
+      margin: 0 0 10px;
+      font-weight: 600;
+      text-align: center;
+      margin: 0 auto;
+      max-width: 1000px;
+    }
+
+    header h2 {
+      font-size: 16px;
+      font-weight: 400;
+      margin: 0 0 8px;
+    }
+
+
+    header p {
+      font-size: 14px;
+      color: #444;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px 20px;
+    }
+
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+    }
+    
+    a {
+      color: #016bb1; 
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #339eff;
+      text-decoration: underline;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    section h4 {
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    img, video {
+      max-width: 100%;
+      margin: 15px 0;
+      display: block;
+    }
+
+    pre {
+      background: #f2f2f2;
+      padding: 10px;
+      overflow-x: auto;
+      font-size: 13px;
+    }
+
+    footer {
+      border-top: 1px solid #ccc;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #555;
+    }
+
+    footer a {
+      color: #111;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Glocal trajectory generation and tracking control for Autonomous Underwater Vehicles in sensor-augmented environments</h1>
+    <h2>
+      <a href="https://dc-vu.github.io/" target="_blank"">Duc Cuong Vu</a>, 
+      Son Tran, 
+      <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ" target="_blank"">Tung Lam Nguyen</a>, 
+      <a href="https://scholar.google.com/citations?user=mI561CkAAAAJ" target="_blank"">Duc Chinh Hoang</a>
+    </h2>
+    <p>Motion Control and Applied Robots (MoCAR)</p>
+    <p><em>School of Electrical and Electronics (SEEE), Hanoi University of Science and Technology (HUST)</em></p>
+    <p><em>Hanoi, Vietnam</em></p>
+  </header>
+
+  
+
+
+  <div class="container">
+    <section id="resource">
+      <h3>resources</h3>
+      <ul>
+        <li>
+          <a href="https://www.sciencedirect.com/science/article/pii/S002980182400XXX" target="_blank">[paper] Glocal trajectory generation and tracking control for Autonomous Underwater Vehicles in sensor-augmented environments [submited to Ocean Engineering] </a>
+        </li>
+        <li>
+          <a href="https://github.com/cuong-vd/AUV-ODIN-mujoco" target="_blank" style="display: inline-flex; align-items: center;">
+            <svg height="18" width="18" viewBox="0 0 16 16" fill="currentColor" style="margin-right: 6px; vertical-align: middle;">
+              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+              0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+              -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2
+              -3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64
+              -.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08
+              2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01
+              1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+            </svg>
+            [GitHub] AUV-ODIN-mujoco: Code and Resources [Open access upon Accepted paper]
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="results">
+      <h3>video illustations</h3>
+      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+        <div style="display: flex; flex-direction: column; align-items: center; max-width: 30%;">
+          <img src="2d.gif" alt="Video 1" style="width: 100%; height: auto; border: 1px solid #ccc;">
+          <div style="font-size: 13px; color: #555; margin-top: 6px; text-align: center;">2D Trajectory Tracking</div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; max-width: 30%;">
+          <img src="3d.gif" alt="Video 2" style="width: 100%; height: auto; border: 1px solid #ccc;">
+          <div style="font-size: 13px; color: #555; margin-top: 6px; text-align: center;">3D Trajectory Tracking</div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; max-width: 30%;">
+          <img src="attack.gif" alt="Video 3" style="width: 100%; height: auto; border: 1px solid #ccc;">
+          <div style="font-size: 13px; color: #555; margin-top: 6px; text-align: center;">Obstacle attack stable AUV</div>
+        </div>
+      </div>
+    </section>
+    
+    
+
+    <section id="abstract">
+      <h3>abstract</h3>
+      <p style="text-align: justify;">
+        This paper presents a comprehensive framework for glocal trajectory generation with real-time tracking control for a group of Autonomous Underwater Vehicles (AUVs) equipped with distributed sensors. A two-stage approach is proposed to maximize the underwater area coverage of sensor systems while ensuring network connectivity between AUVs and free collision with terrains and floating obstacles. At the global level, a heuristic algorithm named Global Trajectory to Maximize Coverage (GT-MC) is introduced, which generate trajectory to optimize the final AUVs distribution. After that, the trajectory is further optimized to produce the final set of waypoints for the AUVs group. At the local level, a safety-critical trajectory generation method is developed by using a Model Predictive Control (MPC) scheme for a virtual AUV system with Control Barrier Functions (CBF) as constraints for floating obstacle avoidance. The generated trajectories are tracked by the actual AUVs using a classical Sliding Mode Controller (SMC) combined with a thruster force allocation optimizer for the robustness. The complete framework is validated via simulation studies using an open-source advanced physics tool called MuJoCo. The suggested methodology can facilitate the autonomy, scalability, and safety of sensor-AUVs distribution missions, making it a promising tool for intelligent marine sensing and monitoring.
+      </p>
+      <img src="intro.png" alt="ODIN MuJoCo Simulation" style="max-width:600px; width:100%; height:auto; display:block; margin: 20px auto;">
+      <p style="text-align: justify; font-style: italic;">
+        [Description] Study’s main results illustration. First of all, by using the input terrain, a robot-sensor distributed map as well as the trajectories of the robot-sensor nodes are generated. The robots are controlled to track the above-generated trajectories in order to go to the desired positions. If obstacles that hinder the AUV are found, a local path is generated for obstacle avoidance.
+      </p>
+    </section>
+
+    <section id="path">
+      <h3>global path generation algorithm</h3>
+      <img src="global.gif" alt="global">
+      <p style="text-align: justify;">Sensors distribution and correspond trajectories in three study cases. All three scenarios reaches up to over 80 percentage of coverage ratio. In study case 1, AUV team travels total 836 m in over 250 time steps, which is 500 m shorter than the unoptimized path and 300 m longer than the sum of straight-line distances. Furthurmore, in the second case, the total travel distance of the group is 300 m just 150 m longer than the sum of straight paths. Finally, AUV team covers the tunnel in nearly 300 time steps, moving a total distance of 300m, which reduces by over 600 m compared to the case without trajectory optimization.</p>
+    </section>
+
+    <section id="control">
+      <h3>local path generation architecture</h3>
+      <!-- Load MathJax for LaTeX rendering -->
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+      <img src="local.png" alt="local" style="max-width:500px; width:100%; height:auto; display:block; margin: 20px auto;">
+      <p style="text-align: justify;">Block diagram of the MPC-CBF framework for obstacle avoidance with virtual model-based prediction. The predicted model is integrated using RK4 over the MPC horizon \(\Delta t_{\mathrm{mpc}}\) to compute future virtual states while considering obstacle constraints. The MPC solver generates reference trajectories that are fed into a nominal controller, which operates over a smaller control loop interval \(\Delta t\).</p>
+    </section>
+
+    <section id="sim">
+      <h3>simulation setup</h3>
+      <img src="ControlArchitecture.png" alt="Simulation setup">
+      <p style="text-align: justify;">Overview of the hierarchical control architecture for AUV navigation. The global path is generated offline and provided as a reference to the MPC solver for local path planning, which operates in the outer loop. A virtual model is used to predict a new reference trajectory. Then, it is passed to a Sliding Mode Controller (SMC) and a force allocation block running in the inner control loop. The control signal is applied to the MuJoCo-based AUV model, which includes hydrodynamic effects.</p>
+      
+    </section>
+
+    <section id="results">
+      <h3>advanced simulation results</h3>
+      <img src="2d.png" alt="2D Tracking"  style="max-width:1000px; width:100%; height:auto; display:block; margin: 20px auto;">
+      <p style="text-align: justify; font-style: italic;">
+        [Description] Trajectory tracking and obstacle avoidance performance at different time instances (0.5s, 3.0s, 6.5s, 8.0s, and 9.5s). Top row: 2D plots showing the reference trajectory, predicted reference, and actual response with circular obstacles. Bottom row: corresponding 3D simulation using MuJoCo.
+      </p>
+      <hr style="border: none; border-top: 1px dashed #eee; margin: 40px 0;">
+      <img src="3d.png" alt="3D Tracking"  style="max-width:1000px; width:100%; height:auto; display:block; margin: 20px auto;">
+      <p style="text-align: justify; font-style: italic;">
+        [Description] The simulation results present a series of snapshots of the AUV’s behavior at several time instances: 2s, 5s, 12s, and 14s. These snapshots demonstrate the AUV’s ability to follow the example global path while dynamically reacting to nearby obstacles. At each stage, the AUV closely follows the global path as well as maintaining a heading direction aligned with the trajectory.
+      </p>
+      <hr style="border: none; border-top: 1px dashed #eee; margin: 40px 0;">
+      <img src="attack.png" alt="Obstacle Attack">
+      <p style="text-align: justify; font-style: italic;">
+        [Description] It is easy to observe that at the initial time, the AUV is stable at the origin of the NED coordinate with a balanced orientation. The AUV avoids the first obstacle by decreasing the depth. After passing the first obstacle, the AUV still tends to return to the origin. Before being stable at the origin, the second obstacle comes. With the proposed control strategy for obstacle avoidance, the second one could be avoided easily. Thus, the AUV could avoid the obstacles and threats while maintaining balancing at a predefined position.
+      </p>
+      <hr style="border: none; border-top: 1px dashed #eee; margin: 40px 0;">
+      <img src="full.png" alt="Full">
+      <p style="text-align: justify; font-style: italic;">
+        [Description] In this simulation case, a trajectory from the generated trajectory of Section 3 is selected for individual AUV tracking. It shows the simulation setup and the simulation results. First, the simulation setup subfigures illustrate the initial position of the AUV, which is selected randomly, and the goal position, which depends on the terrain and integrated sensor properties. Besides, the terrain, an example sea floor, and the generated global trajectory are also depicted in the MuJoCo windows.
+      </p>
+    </section>
+
+    
+
+    <section>
+      <h3>citation</h3>
+      <pre><code>@misc{vu2025glocal,
+  title={Glocal Trajectories Generation with Tracking Control for Integrated-Sensors AUVs Distribution},
+  author={Vu, Duc Cuong and Tran, Son and Nguyen, Tung Lam and Hoang, Duc Chinh},
+  year={2025},
+  howpublished={\url{https://github.com/cuong-vd/AUV-ODIN-mujoco}},
+  note={Accessed: 2025-05-16}
+}</code></pre>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Duc Cuong Vu & Team.
+    <br>
+    <a href="mailto:vdcuong2002@gmail.com">Contact</a>
+    <a href="https://github.com/cuong-vd/AUV-ODIN-mujoco" target="_blank">GitHub</a>
+    <a href="#">Top</a>
+  </footer>
+
+</body>
+</html>
