@@ -2,6 +2,7 @@
 /* ===============================
    🌗 Light/Dark Mode Variables
 =================================*/
+
 :root {
   /* --bg-color: #f2f8f3; */
   --bg-color: #ffffff;
@@ -34,13 +35,15 @@ body.dark-mode {
 =================================*/
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /* font-family: "Courier New", Courier; */
+  /* font-family:message-box; */
+  /* font-family: 'Merriweather', 'Georgia', 'Times New Roman', Times, serif; */
   font-size: 16px;
   line-height: 1.7;
   background: var(--bg-color);
   color: var(--text-color);
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
-  /* padding: 10px 10px; */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -131,9 +134,46 @@ i { color: var(--text-color); }
   text-decoration: underline;
 }
 
+
+
+
 /* ===============================
    📄 Lists & Blocks
 =================================*/
+.news-box {
+  height: 150px;
+  /* border: 1px solid #ddd; */
+  /* border-radius: 8px; */
+  /* padding: 1rem; */
+  overflow-y: auto;
+  /* background-color: #fefefe; */
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.05); */
+}
+
+.news-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.news-item {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.news-date {
+  color: var(--text-color);
+  min-width: 150px;
+  /* text-align: right; */
+}
+
+.news-text {
+  color: var(--text-color);
+  flex: 2;
+}
+
 ul {
   padding-left: 25px;
   margin-top: 8px;
