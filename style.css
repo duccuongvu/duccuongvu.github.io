@@ -2,8 +2,10 @@
 /* ===============================
    🌗 Light/Dark Mode Variables
 =================================*/
+
 :root {
-  --bg-color: #f2f8f3;
+  /* --bg-color: #f2f8f3; */
+  --bg-color: #ffffff;
   --text-color: #2c2c2c;
   --header-bg: #ffffff;
   --section-bg: #ffffff;
@@ -33,13 +35,15 @@ body.dark-mode {
 =================================*/
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  /* font-family: "Courier New", Courier; */
+  /* font-family:message-box; */
+  /* font-family: 'Merriweather', 'Georgia', 'Times New Roman', Times, serif; */
+  font-size: 16px;
   line-height: 1.7;
   background: var(--bg-color);
   color: var(--text-color);
   max-width: 1200px;
   margin: auto;
-  /* padding: 10px 10px; */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -66,26 +70,26 @@ body.dark-mode .bg-overlay {
 /* ===============================
    📦 Containers & Sections
 =================================*/
-header, section {
-  background: var(--section-bg);
-  padding: 25px 30px;
-  margin-bottom: 30px;
-  border-radius: 0px;
-  box-shadow: 0 4px 10px var(--box-shadow-color);
-}
+/* header, section { */
+  /* background: var(--section-bg); */
+  /* padding: 25px 30px; */
+  /* margin-bottom: 30px; */
+  /* border-radius: 0px; */
+  /* box-shadow: 0 4px 10px var(--box-shadow-color); */
+/* } */
 
 /* ===============================
    📝 Typography
 =================================*/
 h1 {
-  font-size: 42px;
-  font-weight: 700;
+  font-size: 35px;
+  font-weight: 540;
   margin-bottom: 10px;
 }
 
 h2.section-title {
-  font-size: 28px;
-  font-weight: 600;
+  font-size: 25px;
+  font-weight: 540;
   margin-bottom: 25px;
   padding-bottom: 8px;
   border-bottom: 2px solid var(--border-color);
@@ -104,8 +108,19 @@ a:hover {
 
 
 strong { color: var(--text-color); }
+b {
+  font-weight: 550;
+  color: var(--text-color);
+}
 em { color: #999; }
+i { color: var(--text-color); }
 
+
+.pub-info p {
+  margin: 5px 0;
+  font-size: 1em;
+  line-height: 1.5;
+}
 /* ===============================
    🔗 Links
 =================================*/
@@ -119,9 +134,46 @@ em { color: #999; }
   text-decoration: underline;
 }
 
+
+
+
 /* ===============================
    📄 Lists & Blocks
 =================================*/
+.news-box {
+  height: 150px;
+  /* border: 1px solid #ddd; */
+  /* border-radius: 8px; */
+  /* padding: 1rem; */
+  overflow-y: auto;
+  /* background-color: #fefefe; */
+  /* box-shadow: 0 2px 8px rgba(0,0,0,0.05); */
+}
+
+.news-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.news-item {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.news-date {
+  color: var(--text-color);
+  min-width: 150px;
+  /* text-align: right; */
+}
+
+.news-text {
+  color: var(--text-color);
+  flex: 2;
+}
+
 ul {
   padding-left: 25px;
   margin-top: 8px;
@@ -135,6 +187,7 @@ ul li {
 .pub-item,
 .conf-item,
 .award-item,
+.skill-item,
 .edu-item {
   margin-bottom: 10px;
   padding-bottom: 10px;
@@ -145,6 +198,7 @@ ul li {
 .pub-item:last-child,
 .conf-item:last-child,
 .award-item:last-child,
+.skill-item:last-child,
 .edu-item:last-child {
   border-bottom: none;
 }
@@ -153,7 +207,7 @@ ul li {
    🎓 Education
 =================================*/
 .edu-degree {
-  font-weight: bold;
+  font-weight: 540;
   font-size: 1.0em;
 }
 .edu-school { color: #777; margin-top: 2px; }
@@ -180,7 +234,7 @@ ul li {
 /* ===============================
    🚀 Projects
 =================================*/
-.project-role { font-weight: bold; }
+.project-role { font-weight: 540; }
 .project-date { font-style: italic; color: #777; }
 .project-details { margin-top: 10px; padding-left: 20px; }
 .project-details li { margin-bottom: 5px; }
@@ -224,15 +278,14 @@ ul li {
 /* ===============================
    📍 Conferences & Awards
 =================================*/
-.conf-name, .award-title {
-  font-weight: bold;
+.skill, .award-title {
+  font-weight: 540;
 }
-.conf-location, .award-org {
+.skill-detail, .award-org {
   font-style: italic;
-  color: #666;
+  color: var (--text-color);
   margin-top: 3px;
 }
-
 /* ===============================
    📱 Responsive
 =================================*/
@@ -275,7 +328,7 @@ header img {
 footer {
   text-align: center;
   padding: 20px 10px;
-  background-color: var(--footer-bg);
+  /* background-color: var(--footer-bg); */
   color: var(--footer-text-color);
   font-size: 14px;
   margin-top: 40px;
