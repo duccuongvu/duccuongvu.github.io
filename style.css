@@ -38,11 +38,11 @@ body {
   /* font-family: "Courier New", Courier; */
   /* font-family:message-box; */
   /* font-family: 'Merriweather', 'Georgia', 'Times New Roman', Times, serif; */
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.7;
   background: var(--bg-color);
   color: var(--text-color);
-  max-width: 1200px;
+  max-width: 1000px;
   margin: auto;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -67,20 +67,12 @@ body.dark-mode .bg-overlay {
   min-height: 100vh;
 }
 
-/* ===============================
-   📦 Containers & Sections
-=================================*/
-/* header, section { */
-  /* background: var(--section-bg); */
-  /* padding: 25px 30px; */
-  /* margin-bottom: 30px; */
-  /* border-radius: 0px; */
-  /* box-shadow: 0 4px 10px var(--box-shadow-color); */
-/* } */
 
 /* ===============================
    📝 Typography
 =================================*/
+
+
 h1 {
   font-size: 35px;
   font-weight: 540;
@@ -135,8 +127,6 @@ i { color: var(--text-color); }
 }
 
 
-
-
 /* ===============================
    📄 Lists & Blocks
 =================================*/
@@ -154,12 +144,13 @@ i { color: var(--text-color); }
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+  font-size: 0.9em;
 }
 
 .news-item {
   display: flex;
   gap: 1rem;
-  font-size: 0.95rem;
+  font-size: 1em;
   line-height: 1.4;
 }
 
@@ -167,11 +158,13 @@ i { color: var(--text-color); }
   color: var(--text-color);
   min-width: 150px;
   /* text-align: right; */
+  font-size: 1em;
 }
 
 .news-text {
   color: var(--text-color);
   flex: 2;
+  font-size: 1em;
 }
 
 ul {
@@ -247,13 +240,30 @@ ul li {
   align-items: flex-start;
 }
 .project-img img {
-  width: 450px;
+  width: 400px;
   max-width: 100%;
   border-radius: 0px;
 }
 .project-info {
   flex: 1;
   min-width: 250px;
+}
+
+/* ===============================
+   📱 Responsive
+=================================*/
+@media (max-width: 768px) {
+  .project-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .project-info { text-align: left; }
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 /* ===============================
@@ -313,14 +323,35 @@ header {
   align-items: flex-start;
   gap: 20px;
 }
+
 header > div {
   flex: 1 1 300px;
 }
+
 header img {
   max-width: 100%;
   height: auto;
   border-radius: 0px;
 }
+
+/* Responsive cho màn nhỏ */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;       /* xếp dọc */
+    align-items: center;          /* căn giữa */
+    text-align: center;
+  }
+  header > div {
+    flex: unset;                  /* bỏ flex grow/shrink để không kéo giãn */
+  }
+  header img {
+    margin: 10px auto;            /* đảm bảo hình nằm giữa */
+  }
+  header p{
+    text-align: left
+  };
+}
+
 
 /* ===============================
    🦶 Footer
