@@ -30,6 +30,53 @@ body.dark-mode {
   --box-shadow-color: rgba(0, 0, 0, 0.8);
 }
 
+/* ===== navigation ===== */
+/* Navigation bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* căn giữa */
+  background: var(--bg-color);;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+  z-index: 1000;
+  max-width: 1000px;  /* Giống body */
+  width: 100%;        /* Để nó mở rộng trong max-width */
+  box-sizing: border-box;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+.navbar a:hover {
+  color: var(--link-color);
+}
+
+@media (max-width: 768px) {
+  .navbar a:not(.navbar-logo) { 
+    display: none; /* Ẩn các link, chỉ còn logo */
+  }
+  #darkModeToggle {
+    margin-left: auto;
+  }
+  .navbar {
+    padding: 8px 12px;
+  }
+}
+
+
+
+.content {
+  padding-top: 20px;
+  padding: 20px;
+}
+
 /* ===============================
    🧱 Base Layout
 =================================*/
@@ -45,6 +92,7 @@ body {
   max-width: 1000px;
   margin: auto;
   transition: background-color 0.3s ease, color 0.3s ease;
+  scroll-behavior: smooth;
 }
 
 .bg-overlay {
@@ -63,7 +111,7 @@ body.dark-mode .bg-overlay {
 
 .content {
   position: relative;
-  padding: 20px;
+  padding-top: 60px;
   min-height: 100vh;
 }
 
@@ -373,10 +421,11 @@ footer .contact-icons {
   vertical-align: middle;
 }
 
+
 /* ===============================
    🌙 Dark Mode Toggle
 =================================*/
-#darkModeToggle {
+/* #darkModeToggle {
   position: fixed;
   top: 20px;
   right: 20px;
@@ -394,18 +443,33 @@ footer .contact-icons {
   justify-content: center;
   user-select: none;
   transition: background-color 0.3s ease, transform 0.2s ease;
+} */
+
+#darkModeToggle {
+  margin-left: auto;  
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--text-color);
 }
+
 #darkModeToggle:hover {
-  background: var(--link-hover-color);
+  /* background: var(--link-hover-color); */
   transform: scale(1.1);
 }
 #darkModeToggle:active {
   transform: scale(0.95);
 }
-body.dark-mode #darkModeToggle {
-  background: #444;
-  color: #f0e68c;
-}
-body.dark-mode #darkModeToggle:hover {
-  background: #666;
-}
+
+/* body.dark-mode #darkModeToggle { */
+  /* background: #444; */
+  /* color: #f0e68c; */
+/* } */
+/* body.dark-mode #darkModeToggle:hover { */
+  /* background: #666; */
+/* } */
+/* 
+#darkModeToggle:hover {
+  color: var(--link-color);
+} */

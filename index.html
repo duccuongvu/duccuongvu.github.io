@@ -7,19 +7,36 @@
   <link rel="icon" href="images/logo.svg" type="image/png">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-  <!-- Stylesheet -->
-  <!-- <link rel="stylesheet" href="style.css">  -->
   <link id="main-style" rel="stylesheet" href="style.css">
   <!-- Theme Toggle Script -->
   <script src="theme-toggle.js" defer></script>
   <script src="cv-toggle.js" defer></script>
-  <button id="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-    <span class="toggle-icon">🌙</span>
-  </button>
+  
 
 </head>
 
 <body>
+  
+  <div class="navbar">
+    <a href="https://dc-vu.github.io" class="navbar-logo" style="display: flex; align-items: center; text-decoration: none;">
+      <img src="images/logo.svg" alt="Logo" style="height: 20px; margin-right: 8px;">
+      <span>
+        Duc-Cuong VU Homepage
+      </span>
+    </a>
+    <span style="flex: 1 1 auto;"></span>
+    <a href="#intro">about</a> 
+    <a href="#news">news</a> 
+    <a href="#edu">education</a> 
+    <a href="#projects">projects</a> 
+    <a href="#pubs">publications</a> 
+    <a href="#skills">skills</a> 
+    <a href="#awards">awards</a>
+    <button id="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <span class="toggle-icon">🌙</span>
+    </button>
+  </div>
+
   <div class="content">
     <!-- ===== Header ===== -->
     <header>
@@ -35,14 +52,17 @@
           <a href="cv/dcvu-cv.pdf" target="_blank">CV</a> 
         </p>
 
-        <h2 style="font-weight: normal; text-align: left;">✍️ about me</h2>
+         <section id="intro">
+          <h2 class="section-title">✍️ about me</h2>
+          <p>
+            I am currently pursuing a Master of Science in Automation and Control at the <a href="https://hust.edu.vn/en/" target="_blank">Hanoi University of Science and Technology (HUST)</a>, Vietnam, under the supervision of <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en" target="_blank">Assoc.Prof.Dr. Tung Lam Nguyen</a>. My research thesis focuses on the application of Stewart platforms in marine environments, funded by the <a href="https://vinif.org/en/">Vingroup Innovation Foundation (VINIF)</a>. Previously, I earned my Bachelor of Science in Automation and Control at HUST, where I received the <i>Best Thesis Defense Award</i> for my thesis on <i>balancing, motion planning, and tracking control for ballbot systems</i>.
+          </p>  
+          <p >
+            My research interests span control theory, optimization in control, robotics, and experimental systems. Currently, I am focusing on bridging the gap between simulation and real-world applications. This approach enhances the comprehensiveness of my thesis by integrating both theoretical analysis and practical implementation.
+          </p>
+            
+        </section>
 
-        <p>
-          I am currently pursuing a Master of Science in Automation and Control at the <a href="https://hust.edu.vn/en/" target="_blank">Hanoi University of Science and Technology (HUST)</a>, Vietnam, under the supervision of <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en" target="_blank">Assoc.Prof.Dr. Tung Lam Nguyen</a>. My research thesis focuses on the application of Stewart platforms in marine environments, funded by the <a href="https://vinif.org/en/">Vingroup Innovation Foundation (VINIF)</a>. Previously, I earned my Bachelor of Science in Automation and Control at HUST, where I received the <i>Best Thesis Defense Award</i> for my thesis on <i>Balancing, motion planning, and tracking control for ballbot systems</i>.
-        </p>  
-        <p >
-          My research interests span control theory, optimization in control, robotics, and experimental systems. Currently, I am focusing on bridging the gap between simulation and real-world applications. This approach enhances the comprehensiveness of my thesis by integrating both theoretical analysis and practical implementation.
-        </p>
       </div>
 
       <div style="max-width: 300px">
@@ -50,18 +70,6 @@
       </div>
     </header>
 
-
-    <!-- ===== Introduction ===== -->
-    <!-- <section id="intro">
-      <h2 class="section-title">✍️ about me</h2>
-      <p>
-        I am currently pursuing a Master of Science in Automation and Control at the <a href="https://hust.edu.vn/en/" target="_blank">Hanoi University of Science and Technology (HUST)</a>, Vietnam, under the supervision of <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en" target="_blank">Assoc.Prof.Dr. Tung Lam Nguyen</a>. My research thesis focuses on the application of Stewart platforms in marine environments, funded by the <a href="https://vinif.org/en/">Vingroup Innovation Foundation (VINIF)</a>. Previously, I earned my Bachelor of Science in Automation and Control at HUST, where I received the <i>Best Thesis Defense Award</i> for my thesis on <i>balancing, motion planning, and tracking control for ballbot systems</i>.
-      </p>  
-      <p >
-        My research interests span control theory, optimization in control, robotics, and experimental systems. Currently, I am focusing on bridging the gap between simulation and real-world applications. This approach enhances the comprehensiveness of my thesis by integrating both theoretical analysis and practical implementation.
-      </p>
-        
-    </section> -->
 
 
     <section id="news">
