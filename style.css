@@ -382,18 +382,18 @@ header img {
   border-radius: 0px;
 }
 
-/* Responsive cho màn nhỏ */
+
 @media (max-width: 768px) {
   header {
-    flex-direction: column;       /* xếp dọc */
-    align-items: center;          /* căn giữa */
+    flex-direction: column;
+    align-items: center;   
     text-align: center;
   }
   header > div {
-    flex: unset;                  /* bỏ flex grow/shrink để không kéo giãn */
+    flex: unset;                
   }
   header img {
-    margin: 10px auto;            /* đảm bảo hình nằm giữa */
+    margin: 10px auto;
   }
   header p{
     text-align: left
