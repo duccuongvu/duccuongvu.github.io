@@ -406,20 +406,11 @@ header img {
 =================================*/
 footer {
   text-align: center;
-  padding: 20px 10px;
-  /* background-color: var(--footer-bg); */
   color: var(--footer-text-color);
-  font-size: 14px;
-  margin-top: 40px;
+  font-size: 12px;
   border-top: 1px solid var(--border-color);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 footer p { margin: 5px 0; }
-footer .contact-icons {
-  font-size: 16px;
-  margin-right: 6px;
-  vertical-align: middle;
-}
 
 
 /* ===============================
