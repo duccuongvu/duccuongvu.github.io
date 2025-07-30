@@ -229,6 +229,7 @@ ul li {
 .conf-item,
 .award-item,
 .skill-item,
+.activity-item,
 .edu-item {
   margin-bottom: 10px;
   padding-bottom: 10px;
@@ -240,6 +241,7 @@ ul li {
 .conf-item:last-child,
 .award-item:last-child,
 .skill-item:last-child,
+.activity-item:last-child,
 .edu-item:last-child {
   border-bottom: none;
 }
@@ -334,16 +336,18 @@ ul li {
 }
 
 /* ===============================
-   📍 Conferences & Awards
+   📍 Conferences 
 =================================*/
-.skill, .award-title {
+.skill, .award-title, .activity-title {
   font-weight: 540;
 }
-.skill-detail, .award-org {
+.skill-detail, .award-org, .activity-detail {
   font-style: italic;
   color: var (--text-color);
   margin-top: 3px;
 }
+
+
 /* ===============================
    📱 Responsive
 =================================*/
