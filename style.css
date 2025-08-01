@@ -400,8 +400,12 @@ header img {
     margin: 10px auto;
   }
   header p{
-    text-align: left
-  };
+    text-align: left;
+  }
+  header h2 {
+    text-align: left;
+    width: 100%;
+  }
 }
 
 
