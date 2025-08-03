@@ -8,10 +8,8 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
   <link id="main-style" rel="stylesheet" href="style.css">
-  <!-- Theme Toggle Script -->
-  <script src="theme-toggle.js" defer></script>
-  <script src="cv-toggle.js" defer></script>
-  
+  <script src="scripts/theme-toggle.js" defer></script>
+  <script src="scripts/date-calculator.js" defer></script>
 
 </head>
 
@@ -70,7 +68,7 @@
 
       <figure style="max-width: 300px; text-align: center;">
         <img src="images/avatar.jpg" alt="Duc-Cuong Vu image" style="width: 100%;">
-        <figcaption style="font-size: 12px; text-align: left;"><em>📷 My photo with the 6-dof parallel robot, Stewart platform, at Motion Control and Applied Robotics laboratory (MoCAR), C7-building, Hanoi University of Science and Technology (HUST).</em></figcaption>
+        <figcaption style="font-size: 12px; text-align: left;">📷 <em>My photo with the 6-dof parallel robot, Stewart platform, at Motion Control and Applied Robotics laboratory (MoCAR), C7-building, Hanoi University of Science and Technology (HUST).</em></figcaption>
       </figure>
     </header>
 
@@ -197,8 +195,6 @@
         </div>
       </div>
     
-
-      
       <div class="pub-item">
         <div class="pub-img">
           <img src="images/ATC2.png" alt="ATC 2024">
@@ -266,7 +262,7 @@
         
         <div class="project-info">
           <div class="project-role">🛠️ Member/Researcher/Labor</div>
-          <div class="project-date">Mar 2025 - Dec 2025</div>
+            <div class="project-date" data-start="2025-03-01" data-end="2025-12-31">Mar 2025 - Dec 2025</div>
           <ul class="project-details">
             <li>Title: Advanced Control of a Ship-Mounted Stewart Platform for Marine Applications</li>
             <li>Field: Marine Robotics and Control Systems</li>
@@ -291,7 +287,7 @@
       <div class="project-item">
         <div class="project-info">
           <div class="project-role">🛠️ Member/Researcher/Labor</div>
-          <div class="project-date">Jan 2025 - Dec 2027</div>
+            <div class="project-date" data-start="2025-01-01" data-end="2026-12-31">Jan 2025 - Dec 2026</div>
           <ul class="project-details">
             <li>Title: Robot navigation system integrating sensor network and wireless communication</li>
             <li>Field: Communications, Optimization, Robotics, and Control Systems</li>
@@ -324,35 +320,38 @@
       <div class="edu-item">
         <div class="edu-info">
           <div class="edu-degree">⭐⭐ Master of Science in Automation and Control</div>
-          <div class="edu-school"><a href="https://seee.hust.edu.vn/en/"  target="_blank">School of Electrical-Electronics Engineering</a>,<br> <a href="https://hust.edu.vn/en/">Hanoi University of Science and Technology (HUST)</a></div>
-          <div class="edu-date">Jul 2024 – Present</div>
+          <div class="edu-school">
+            <a href="https://seee.hust.edu.vn/en/" target="_blank">School of Electrical-Electronics Engineering</a>,<br>
+            <a href="https://hust.edu.vn/en/">Hanoi University of Science and Technology (HUST)</a>
+          </div>
+          <!-- Dùng data-start và data-end -->
+          <div class="edu-date" data-start="2024-07-01" data-end="present">Jul 2024 – Present</div>
           <ul class="edu-details">
             <li>Research topic: Design control structures for Parallel Platforms in Maritime applications</li>
             <li>Funded by: Master, PhD Scholarship Programme of Vingroup Innovation Foundation (VINIF)</li>
           </ul>
-        </div>
-    
-        <div class="edu-img">
-          <img src="images/hust-logo.webp" alt="HUST">
         </div>
       </div>
 
       <div class="edu-item">
         <div class="edu-info">
           <div class="edu-degree">⭐ Bachelor of Science in Automation and Control</div>
-            <div class="edu-school"><a href="https://seee.hust.edu.vn/en/"  target="_blank">School of Electrical-Electronics Engineering</a>,<br> <a href="https://hust.edu.vn/en/"  target="_blank">Hanoi University of Science and Technology (HUST)</a></div>
-            <div class="edu-date">Oct 10, 2020 – Apr 04,  2024 (3 years 5 months 25 days)</div>
-            <ul class="edu-details">
-              <li>CPA: 3.71/4.0 (Excellent degree)</li>
-              <li>Rank: 22/499 (Graduated in 3.5 years)</li>
-              <li>Thesis: <i>Balancing, motion planning and tracking control for ballbot systems</i>  (The best thesis defense) [<a href="https://drive.google.com/file/d/14nDBzQam5qdcvj9y6AuS6N0fQ292AwWj/view?usp=sharing"  target="_blank">pdf</a>]</li>
-            </ul>
+          <div class="edu-school">
+            <a href="https://seee.hust.edu.vn/en/" target="_blank">School of Electrical-Electronics Engineering</a>,<br>
+            <a href="https://hust.edu.vn/en/" target="_blank">Hanoi University of Science and Technology (HUST)</a>
+          </div>
+          <div class="edu-date" data-start="2020-10-10" data-end="2024-04-04">Oct 10, 2020 – Apr 04, 2024</div>
+          <ul class="edu-details">
+            <li>CPA: 3.71/4.0 (Excellent degree)</li>
+            <li>Rank: 22/499 (Graduated in 3.5 years)</li>
+            <li>Thesis: <i>Balancing, motion planning and tracking control for ballbot systems</i> (The best thesis defense) [<a href="https://drive.google.com/file/d/14nDBzQam5qdcvj9y6AuS6N0fQ292AwWj/view?usp=sharing" target="_blank">pdf</a>]</li>
+          </ul>
         </div>
         <div class="edu-img">
           <img src="images/hust-logo.webp" alt="HUST">
         </div>
-
       </div>
+
     </section>
 
 
@@ -362,7 +361,7 @@
         <div class="work-info">
           <div class="work-role">Research Assistant</div>
           <div class="work-institute">Mechatronics Engineering Group (MEG), Motion Control and Applied Robotics laboratory (MoCAR), HUST</div>
-          <div class="work-date">Oct 2021 – Present</div>
+            <div class="work-date" data-start="2021-10-01" data-end="present">Oct 2021 – Present</div>
           <ul class="work-details">
             <li>Worked on research topics including automation, control design, robotics, multi-agent systems, modeling and simulation, and experimental systems.</li>
             <li>Supervised by Assoc.Prof.PhD. Tung Lam Nguyen (lam.nguyentung [at] hust.edu.com).</li>
