@@ -230,6 +230,7 @@ ul li {
 .award-item,
 .skill-item,
 .activity-item,
+.work-item,
 .edu-item {
   margin-bottom: 10px;
   padding-bottom: 10px;
@@ -242,6 +243,7 @@ ul li {
 .award-item:last-child,
 .skill-item:last-child,
 .activity-item:last-child,
+.work-item:last-child,
 .edu-item:last-child {
   border-bottom: none;
 }
@@ -270,6 +272,35 @@ ul li {
   border-radius: 0px;
 }
 .edu-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+
+/* ===============================
+   Work Experience
+=================================*/
+.work-role {
+  font-weight: 540;
+  font-size: 1.0em;
+}
+.work-institute { color: #777; margin-top: 2px; }
+.work-date { font-style: italic; color: #777; margin-top: 5px; }
+.work-details { margin-top: 10px; padding-left: 20px; }
+.work-details li { margin-bottom: 5px; }
+
+.work-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+.work-img img {
+  width: 50px;
+  max-width: 100%;
+  border-radius: 0px;
+}
+.work-info {
   flex: 1;
   min-width: 250px;
 }
