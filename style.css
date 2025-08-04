@@ -82,9 +82,6 @@ body.dark-mode {
 =================================*/
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  /* font-family: "Courier New", Courier; */
-  /* font-family:message-box; */
-  /* font-family: 'Merriweather', 'Georgia', 'Times New Roman', Times, serif; */
   font-size: 14px;
   line-height: 1.7;
   background: var(--bg-color);
@@ -114,6 +111,8 @@ body.dark-mode .bg-overlay {
   padding-top: 60px;
   min-height: 100vh;
 }
+
+
 
 
 /* ===============================
@@ -503,3 +502,11 @@ footer p { margin: 5px 0; }
 #darkModeToggle:hover {
   color: var(--link-color);
 } */
+
+
+:target::before {
+  content: "";
+  display: block;
+  height: 40px;
+  margin-top: -40px;
+}
