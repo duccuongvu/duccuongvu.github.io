@@ -153,10 +153,10 @@
       <h3>resources</h3>
       <ul>
         <li>
-          <a href="https://www.sciencedirect.com/science/article/pii/S002980182400XXX" target="_blank">[paper] Glocal trajectory generation and tracking control for Autonomous Underwater Vehicles in sensor-augmented environments [submited to Ocean Engineering] </a>
+          <a href="" target="_blank">[paper] Glocal trajectory generation and tracking control for Autonomous Underwater Vehicles in sensor-augmented environments [submited to Ocean Engineering] </a>
         </li>
         <li>
-          <a href="https://github.com/cuong-vd/AUV-ODIN-mujoco" target="_blank" style="display: inline-flex; align-items: center;">
+          <a href="https://github.com/dc-vu/AUV-ODIN-mujoco" target="_blank" style="display: inline-flex; align-items: center;">
             <svg height="18" width="18" viewBox="0 0 16 16" fill="currentColor" style="margin-right: 6px; vertical-align: middle;">
               <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
               0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
@@ -174,6 +174,21 @@
 
     <section id="results">
       <h3>video illustations</h3>
+      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+        <div style="display: flex; flex-direction: column; align-items: center; max-width: 30%;">
+          <img src="case1.gif" alt="Video 1" style="width: 100%; height: auto; border: 1px solid #ccc;">
+          <div style="font-size: 13px; color: #555; margin-top: 6px; text-align: center;">A seafloor terrain,</div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; max-width: 30%;">
+          <img src="case2.gif" alt="Video 2" style="width: 100%; height: auto; border: 1px solid #ccc;">
+          <div style="font-size: 13px; color: #555; margin-top: 6px; text-align: center;">A riverbed terrain</div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; max-width: 30%;">
+          <img src="case3.gif" alt="Video 3" style="width: 100%; height: auto; border: 1px solid #ccc;">
+          <div style="font-size: 13px; color: #555; margin-top: 6px; text-align: center;">An underwater tunnel terrain</div>
+        </div>
+      </div>
+
       <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
         <div style="display: flex; flex-direction: column; align-items: center; max-width: 30%;">
           <img src="2d.gif" alt="Video 1" style="width: 100%; height: auto; border: 1px solid #ccc;">
@@ -197,16 +212,12 @@
       <p style="text-align: justify;">
         This paper presents a comprehensive framework for glocal trajectory generation with real-time tracking control for a group of Autonomous Underwater Vehicles (AUVs) equipped with distributed sensors. A two-stage approach is proposed to maximize the underwater area coverage of sensor systems while ensuring network connectivity between AUVs and free collision with terrains and floating obstacles. At the global level, a heuristic algorithm named Global Trajectory to Maximize Coverage (GT-MC) is introduced, which generate trajectory to optimize the final AUVs distribution. After that, the trajectory is further optimized to produce the final set of waypoints for the AUVs group. At the local level, a safety-critical trajectory generation method is developed by using a Model Predictive Control (MPC) scheme for a virtual AUV system with Control Barrier Functions (CBF) as constraints for floating obstacle avoidance. The generated trajectories are tracked by the actual AUVs using a classical Sliding Mode Controller (SMC) combined with a thruster force allocation optimizer for the robustness. The complete framework is validated via simulation studies using an open-source advanced physics tool called MuJoCo. The suggested methodology can facilitate the autonomy, scalability, and safety of sensor-AUVs distribution missions, making it a promising tool for intelligent marine sensing and monitoring.
       </p>
-      <img src="intro.png" alt="ODIN MuJoCo Simulation" style="max-width:600px; width:100%; height:auto; display:block; margin: 20px auto;">
-      <p style="text-align: justify; font-style: italic;">
-        [Description] Study’s main results illustration. First of all, by using the input terrain, a robot-sensor distributed map as well as the trajectories of the robot-sensor nodes are generated. The robots are controlled to track the above-generated trajectories in order to go to the desired positions. If obstacles that hinder the AUV are found, a local path is generated for obstacle avoidance.
-      </p>
     </section>
 
     <section id="path">
       <h3>global path generation algorithm</h3>
       <img src="global.gif" alt="global">
-      <p style="text-align: justify;">Sensors distribution and correspond trajectories in three study cases. All three scenarios reaches up to over 80 percentage of coverage ratio. In study case 1, AUV team travels total 836 m in over 250 time steps, which is 500 m shorter than the unoptimized path and 300 m longer than the sum of straight-line distances. Furthurmore, in the second case, the total travel distance of the group is 300 m just 150 m longer than the sum of straight paths. Finally, AUV team covers the tunnel in nearly 300 time steps, moving a total distance of 300m, which reduces by over 600 m compared to the case without trajectory optimization.</p>
+      <p style="text-align: justify;">Motivated by limitation of global trajectory methods that mentioned in Table1,an iterative approach called Global Trajectory - Maximize Coverage (GT-MC) is introduced to find a trajectory that meets the final coverage optimized distribution. The suggested trajectory is a list of waypoints that satisfy constraints of connectivity, maximum velocity and safety distance between AUVs themselves as well as between AUVs and terrain obstacles. Then, as the obtained trajectory only satisfies the target and constraints of final coverage optimization, it is further refined using a re-optimizing scheme. The sub-optimal trajectory will go through a Sequential Distance-based Merging phase (SDM) to delete unnecessary waypoints and then Tail Redundancy Trimming phase (TRT) to cut off the repeated waypoints. In consequence, the trajectory meets the global trajectory optimizing goal and constraints, resulting in the final optimal set of waypoints.</p>
     </section>
 
     <section id="control">
@@ -224,7 +235,7 @@
       
     </section>
 
-    <section id="results">
+    <!-- <section id="results">
       <h3>advanced simulation results</h3>
       <img src="2d.png" alt="2D Tracking"  style="max-width:1000px; width:100%; height:auto; display:block; margin: 20px auto;">
       <p style="text-align: justify; font-style: italic;">
@@ -245,7 +256,7 @@
       <p style="text-align: justify; font-style: italic;">
         [Description] In this simulation case, a trajectory from the generated trajectory of Section 3 is selected for individual AUV tracking. It shows the simulation setup and the simulation results. First, the simulation setup subfigures illustrate the initial position of the AUV, which is selected randomly, and the goal position, which depends on the terrain and integrated sensor properties. Besides, the terrain, an example sea floor, and the generated global trajectory are also depicted in the MuJoCo windows.
       </p>
-    </section>
+    </section> -->
 
     
 
@@ -255,7 +266,7 @@
   title={Glocal Trajectories Generation with Tracking Control for Integrated-Sensors AUVs Distribution},
   author={Vu, Duc Cuong and Tran, Son and Nguyen, Tung Lam and Hoang, Duc Chinh},
   year={2025},
-  howpublished={\url{https://github.com/cuong-vd/AUV-ODIN-mujoco}},
+  howpublished={\url{https://github.com/dc-vu/AUV-ODIN-mujoco}},
   note={Accessed: 2025-05-16}
 }</code></pre>
     </section>
