@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Glocal Trajectories for AUVs</title>
   <link rel="icon" type="image/png" href="figure_ODIN_mujoco-removebg-preview.png" sizes="128x128"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
@@ -22,12 +23,12 @@
     }
 
     header h1 {
-      font-size: 22px;
+      font-size: 30px;
       margin: 0 0 10px;
       font-weight: 600;
       text-align: center;
       margin: 0 auto;
-      max-width: 1000px;
+      max-width: 1200px;
     }
 
     header h2 {
@@ -44,7 +45,7 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
       padding: 30px 20px;
     }
@@ -128,6 +129,40 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    .button-container {
+      display: flex;
+      /* flex-direction: row;     */
+      justify-content: center; 
+      /* align-items: center;       */
+      gap: 16px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.3s;
+      min-width: 150px;
+      justify-content: center;
+    }
+
+    .btn:hover {
+      background-color: #444;
+    }
+
+    .btn i {
+      font-size: 16px;
+    }
+
+
   </style>
 </head>
 <body>
@@ -149,61 +184,16 @@
 
 
   <div class="container">
-    <section id="resource">
-      <h3>resources</h3>
-      <ul>
-        <li>
-          <a href="" target="_blank">[paper] Glocal trajectory generation and tracking control for Autonomous Underwater Vehicles in sensor-augmented environments [submited to Ocean Engineering] </a>
-        </li>
-        <li>
-          <a href="https://github.com/dc-vu/AUV-ODIN-mujoco" target="_blank" style="display: inline-flex; align-items: center;">
-            <svg height="18" width="18" viewBox="0 0 16 16" fill="currentColor" style="margin-right: 6px; vertical-align: middle;">
-              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-              0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
-              -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2
-              -3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64
-              -.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08
-              2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01
-              1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-            </svg>
-            [GitHub] AUV-ODIN-mujoco: Code and Resources [Open access upon Accepted paper]
-          </a>
-        </li>
-      </ul>
-    </section>
+    <div class="button-container">
+    <a class="btn" href="" target="_blank">
+      <i class="fa-regular fa-file-lines"></i> Paper
+    </a>
+    <a class="btn" href="https://github.com/dc-vu/AUV-ODIN-mujoco" target="_blank">
+      <i class="fa-brands fa-github"></i> Code
+    </a>
+  </div>
 
-    <section id="results">
-      <h3>video illustations</h3>
-      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-        <div style="display: flex; flex-direction: column; align-items: center; max-width: 30%;">
-          <img src="case1.gif" alt="Video 1" style="width: 100%; height: auto; border: 1px solid #ccc;">
-          <div style="font-size: 13px; color: #555; margin-top: 6px; text-align: center;">A seafloor terrain,</div>
-        </div>
-        <div style="display: flex; flex-direction: column; align-items: center; max-width: 30%;">
-          <img src="case2.gif" alt="Video 2" style="width: 100%; height: auto; border: 1px solid #ccc;">
-          <div style="font-size: 13px; color: #555; margin-top: 6px; text-align: center;">A riverbed terrain</div>
-        </div>
-        <div style="display: flex; flex-direction: column; align-items: center; max-width: 30%;">
-          <img src="case3.gif" alt="Video 3" style="width: 100%; height: auto; border: 1px solid #ccc;">
-          <div style="font-size: 13px; color: #555; margin-top: 6px; text-align: center;">An underwater tunnel terrain</div>
-        </div>
-      </div>
 
-      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-        <div style="display: flex; flex-direction: column; align-items: center; max-width: 30%;">
-          <img src="2d.gif" alt="Video 1" style="width: 100%; height: auto; border: 1px solid #ccc;">
-          <div style="font-size: 13px; color: #555; margin-top: 6px; text-align: center;">2D Trajectory Tracking</div>
-        </div>
-        <div style="display: flex; flex-direction: column; align-items: center; max-width: 30%;">
-          <img src="3d.gif" alt="Video 2" style="width: 100%; height: auto; border: 1px solid #ccc;">
-          <div style="font-size: 13px; color: #555; margin-top: 6px; text-align: center;">3D Trajectory Tracking</div>
-        </div>
-        <div style="display: flex; flex-direction: column; align-items: center; max-width: 30%;">
-          <img src="attack.gif" alt="Video 3" style="width: 100%; height: auto; border: 1px solid #ccc;">
-          <div style="font-size: 13px; color: #555; margin-top: 6px; text-align: center;">Obstacle attack stable AUV</div>
-        </div>
-      </div>
-    </section>
     
     
 
@@ -216,8 +206,22 @@
 
     <section id="path">
       <h3>global path generation algorithm</h3>
+      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+        <div style="display: flex; flex-direction: column; align-items: center; max-width: 30%;">
+          <img src="case1.gif" alt="Video 1" style="width: 100%; height: auto; border: 1px solid #ccc;">
+          <div style="font-size: 13px; color: #555; margin-top: 6px; text-align: center;">A seafloor terrain</div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; max-width: 30%;">
+          <img src="case2.gif" alt="Video 2" style="width: 100%; height: auto; border: 1px solid #ccc;">
+          <div style="font-size: 13px; color: #555; margin-top: 6px; text-align: center;">A riverbed terrain</div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; max-width: 30%;">
+          <img src="case3.gif" alt="Video 3" style="width: 100%; height: auto; border: 1px solid #ccc;">
+          <div style="font-size: 13px; color: #555; margin-top: 6px; text-align: center;">An underwater tunnel terrain</div>
+        </div>
+      </div>
       <img src="global.gif" alt="global">
-      <p style="text-align: justify;">Motivated by limitation of global trajectory methods that mentioned in Table1,an iterative approach called Global Trajectory - Maximize Coverage (GT-MC) is introduced to find a trajectory that meets the final coverage optimized distribution. The suggested trajectory is a list of waypoints that satisfy constraints of connectivity, maximum velocity and safety distance between AUVs themselves as well as between AUVs and terrain obstacles. Then, as the obtained trajectory only satisfies the target and constraints of final coverage optimization, it is further refined using a re-optimizing scheme. The sub-optimal trajectory will go through a Sequential Distance-based Merging phase (SDM) to delete unnecessary waypoints and then Tail Redundancy Trimming phase (TRT) to cut off the repeated waypoints. In consequence, the trajectory meets the global trajectory optimizing goal and constraints, resulting in the final optimal set of waypoints.</p>
+      <p style="text-align: justify;">Motivated by limitation of global trajectory methods that mentioned in Table 1,an iterative approach called Global Trajectory - Maximize Coverage (GT-MC) is introduced to find a trajectory that meets the final coverage optimized distribution. The suggested trajectory is a list of waypoints that satisfy constraints of connectivity, maximum velocity and safety distance between AUVs themselves as well as between AUVs and terrain obstacles. Then, as the obtained trajectory only satisfies the target and constraints of final coverage optimization, it is further refined using a re-optimizing scheme. The sub-optimal trajectory will go through a Sequential Distance-based Merging phase (SDM) to delete unnecessary waypoints and then Tail Redundancy Trimming phase (TRT) to cut off the repeated waypoints. In consequence, the trajectory meets the global trajectory optimizing goal and constraints, resulting in the final optimal set of waypoints.</p>
     </section>
 
     <section id="control">
@@ -232,6 +236,21 @@
       <h3>simulation setup</h3>
       <img src="ControlArchitecture.png" alt="Simulation setup">
       <p style="text-align: justify;">Overview of the hierarchical control architecture for AUV navigation. The global path is generated offline and provided as a reference to the MPC solver for local path planning, which operates in the outer loop. A virtual model is used to predict a new reference trajectory. Then, it is passed to a Sliding Mode Controller (SMC) and a force allocation block running in the inner control loop. The control signal is applied to the MuJoCo-based AUV model, which includes hydrodynamic effects.</p>
+      <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+        <div style="display: flex; flex-direction: column; align-items: center; max-width: 30%;">
+          <img src="2d.gif" alt="Video 1" style="width: 100%; height: auto; border: 1px solid #ccc;">
+          <div style="font-size: 13px; color: #555; margin-top: 6px; text-align: center;">2D Trajectory Tracking</div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; max-width: 30%;">
+          <img src="3d.gif" alt="Video 2" style="width: 100%; height: auto; border: 1px solid #ccc;">
+          <div style="font-size: 13px; color: #555; margin-top: 6px; text-align: center;">3D Trajectory Tracking</div>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: center; max-width: 30%;">
+          <img src="attack.gif" alt="Video 3" style="width: 100%; height: auto; border: 1px solid #ccc;">
+          <div style="font-size: 13px; color: #555; margin-top: 6px; text-align: center;">Obstacle attack stable AUV</div>
+        </div>
+      </div>
+
       
     </section>
 
