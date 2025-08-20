@@ -73,6 +73,9 @@
 	pdfborder={0 0 0}
 }
 \usepackage{soul}
+\definecolor{softyellow}{RGB}{255, 255, 180} % very light yellow
+\sethlcolor{softyellow}
+
 \usepackage{tikz}
 
 % Underlined hyperlinks
@@ -211,7 +214,7 @@
 	{
 		\begin{soloitemize}
 			\item \textbf{Research project:} \textit{Design control structures for Parallel Platforms in Maritime applications}
-			\item \textbf{Funded by:} \textit{Master, PhD Scholarship Programme of Vingroup Innovation Foundation (VINIF)} 
+			\item \textbf{Funded by:} \textit{Master, PhD Scholarship Programme of Vingroup Innovation Foundation (\href{https://vinif.org/en/}{VinIF})} 
 		\end{soloitemize}
 	}
 	
@@ -254,17 +257,19 @@
 		{Advanced Control of a Ship-Mounted Stewart Platform for Marine Applications}
 		{\begin{soloitemize}
 				\item Field: Marine Robotics and Control Systems.
-				\item International Collaboration of Korea Institute of Science and Technology and Institute for Control Engineering and Automation (\href{https://hust.edu.vn/en/}{HUST}).
-				\item Supervisors: \href{https://scholar.google.com/citations?user=qyExc4QAAAAJ&hl=en}{\textit{PhD. Minh Nhat Vu}} and \href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{\textit{Assoc.Prof.PhD. Tung Lam Nguyen}}
+				\item International Collaboration of Korea Institute of Science and Technology and Institute (\href{https://www.kist.re.kr/eng/index.do}{KIST}) for Control Engineering and Automation (\href{https://hust.edu.vn/en/}{HUST}) via the \textit{KIST School Partnership Project}.
+				\item Responsible for designing the Stewart platform control system and validating it through experiments.
+				\item Supervisors: \href{https://scholar.google.com/citations?user=qyExc4QAAAAJ&hl=en}{\textit{PhD. Minh Nhat Vu}} (PI) and \href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{\textit{Assoc.Prof.PhD. Tung Lam Nguyen}}
 			\end{soloitemize}
 		}
 		\sepspace
 		
 		\project{Member/Researcher}{Jan 2025 - Dec 2027}{Robot navigation system integrating sensor network and wireless communication}
 		{\begin{soloitemize}
-				\item Field: Robotics and Control systems.
-				\item Funded by Hanoi University of Science and Technology.
-				\item Supervisors: \href{https://scholar.google.com/citations?user=mI561CkAAAAJ&hl=en}{\textit{PhD. Chinh Hoang Duc}} 
+				\item Field: Communications, Optimization, Robotics, and Control Systems.
+				\item Funded by Hanoi University of Science and Technology (\href{https://hust.edu.vn/en/}{HUST}).
+				\item Responsible for developing the AUV simulation in MuJoCo and validating control algorithms through quasi-physics-based tests.
+				\item Supervisors: \href{https://scholar.google.com/citations?user=mI561CkAAAAJ&hl=en}{\textit{PhD. Chinh Hoang Duc}} (PI)
 				and 
 				\href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{\textit{Assoc.Prof.PhD. Tung Lam Nguyen}}.
 		\end{soloitemize}
@@ -301,6 +306,7 @@
 	
 	
 	\section*{Selected publications}
+	
 	\publication{Journal}
 	{Ocean Engineering (SCIE Q1) (2025)}
 	{Lagrangian-based modeling and safety-critical controls for Stewart platforms under marine operations}
