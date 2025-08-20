@@ -110,18 +110,17 @@
 % Skill entry
 
 
-% Định nghĩa chiều rộng của phần nhãn (cột trái)
 \newlength{\skilllabelwidth}
 \settowidth{\skilllabelwidth}{\textbf{12345678912345123441}}
 
-% Định nghĩa lệnh hiển thị kỹ năng
 \newcommand{\skill}[2]{%
 	\noindent
 	\parbox[t]{\skilllabelwidth}{\raggedright\textbf{#1}}%
-	\hspace{0.5em}%
-	\parbox[t]{\dimexpr\linewidth-\skilllabelwidth-0.5em\relax}{%
-		\hangindent=0pt\hangafter=0 #2%
-	}\par\vspace{0.15cm}
+	\hspace{0.75em}% wider gap between label and text
+	\parbox[t]{\dimexpr\linewidth-\skilllabelwidth-0.75em\relax}{%
+		\setlength{\baselineskip}{1.35\baselineskip}% line spacing inside detail
+		#2%
+	}\par\vspace{0.7em} % space between skill entries
 }
 
 % Language level
@@ -134,7 +133,7 @@
 \newcommand{\education}[4]{%
 	\noindent \textbf{#1} (\textit{#2})\par
 	\vspace{0.5em}
-	\noindent \textit{#3}\par
+	\noindent \textit{\vspace{0.15cm}#3}\par
 	\vspace{0.5em}
 	\noindent\hangindent=2em\hangafter=0 #4 \par\normalsize
 }
@@ -143,7 +142,7 @@
 \newcommand{\work}[4]{%
 	\noindent \textbf{#1} (\textit{#2})\par
 	\vspace{0.5em}
-	\noindent \textit{#3}\par
+	\noindent \textit{\vspace{0.15cm}#3}\par
 	\vspace{0.5em}
 	\noindent\hangindent=2em\hangafter=0 #4 \par\normalsize
 }
@@ -152,7 +151,7 @@
 \newcommand{\project}[4]{%
 	\noindent \textbf{#1} (\textit{#2})\par
 	\vspace{0.5em}
-	\noindent \textit{#3}\par
+	\noindent \textit{\vspace{0.15cm}#3}\par
 	\vspace{0.5em}
 	\noindent\hangindent=2em\hangafter=0 #4 \par\normalsize
 }
@@ -175,6 +174,13 @@
 	\vspace{0.5em}
 	\noindent #2 \par
 }
+
+%\newcommand{\skill}[2]{%
+%	\noindent \textbf{#1} \par
+%	\vspace{0.3em}
+%	\noindent\hangindent=2em\hangafter=0 #2 \par
+%	\vspace{0.8em}
+%}
 
 
 \graphicspath{{../images/}}
@@ -201,7 +207,7 @@
 	
 	\section*{Education}
 	
-	\education{Master of Science in Automation and Control}{Jul 2024 - present}{School of Electrical - Electronics Engineering, \\Hanoi University of Science and Technology (HUST), Hanoi, Vietnam}
+	\education{Master of Science in Automation and Control}{Jul 2024 - present}{School of Electrical - Electronics Engineering, Hanoi University of Science and Technology (\href{https://hust.edu.vn/en/}{HUST}),\\ Hanoi, Vietnam}
 	{
 		\begin{soloitemize}
 			\item \textbf{Research project:} \textit{Design control structures for Parallel Platforms in Maritime applications}
@@ -212,7 +218,7 @@
 	\sepspace
 	
 	\education{Bachelor of Science in Automation and Control}
-	{Oct 2020 - Mar 2024}{School of Electrical - Electronics Engineering, \\Hanoi University of Science and Technology (HUST), Hanoi, Vietnam}
+	{Oct 2020 - Mar 2024}{School of Electrical - Electronics Engineering, Hanoi University of Science and Technology (\href{https://hust.edu.vn/en/}{HUST}), \\Hanoi, Vietnam}
 	{\begin{soloitemize}
 			\item \textbf{Excellent degree}, GPA: 3.71/4. Finished the 4-year BSc program in \textbf{just 3.5 years}.
 			\item \textbf{Ranking:} 22/499 in the same cohort.
@@ -229,14 +235,13 @@
 	
 	\work{Research Assistant}
 	{Oct 2021 - present}
-	{The Mechatronics Engineering Group, \\School of Electrical - Electronic Engineering,\\Hanoi University of Science and Technology (HUST), Hanoi, Vietnam}
+	{The Mechatronics Engineering Group, Hanoi University of Science and Technology (\href{https://hust.edu.vn/en/}{HUST}),\\ Hanoi, Vietnam}
 	{ \begin{soloitemize}
 			\item \textbf{Research topics:} Automation, Control Design, Robotics, Multi-agent Systems, Modeling and Simulation, Experiment systems.
 			\item \textbf{Supervisor:} \href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{\textit{Assoc.Prof.PhD. Tung Lam Nguyen}}
 			% , PhD. Danh Huy Nguyen , PhD. Thi Van Anh Nguyen  
-			({\href{mailto:lam.nguyentung@hust.edu.vn}{\texttt{lam.nguyentung}}}
-			% , {\href{mailto:huy.nguyendanh@hust.edu.vn}{\texttt{huy.nguyendanh}}}, {\href{mailto:anh.nguyenthivan1@hust.edu.vn}{\texttt{anh.nguyenthivan1}}} 
-			\texttt{[at] hust.edu.com}).
+			({\href{mailto:lam.nguyentung@hust.edu.vn}{\texttt{lam.nguyentung[at] hust.edu.com}}})
+			% , {\href{mailto:huy.nguyendanh@hust.edu.vn}{\texttt{huy.nguyendanh}}}, {\href{mailto:anh.nguyenthivan1@hust.edu.vn}{\texttt{anh.nguyenthivan1}}} ).
 			\item \textbf{Skills acquired:}  hardware design, numerical simulation and modeling, analysis, and interpretation of results, study conception, and design, draft manuscript preparation, ...
 		\end{soloitemize}
 	}
@@ -249,7 +254,7 @@
 		{Advanced Control of a Ship-Mounted Stewart Platform for Marine Applications}
 		{\begin{soloitemize}
 				\item Field: Marine Robotics and Control Systems.
-				\item International Collaboration of Korea Institute of Science and Technology and Institute for Control Engineering and Automation (HUST).
+				\item International Collaboration of Korea Institute of Science and Technology and Institute for Control Engineering and Automation (\href{https://hust.edu.vn/en/}{HUST}).
 				\item Supervisors: \href{https://scholar.google.com/citations?user=qyExc4QAAAAJ&hl=en}{\textit{PhD. Minh Nhat Vu}} and \href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{\textit{Assoc.Prof.PhD. Tung Lam Nguyen}}
 			\end{soloitemize}
 		}
@@ -335,7 +340,6 @@
 	\conference{Seminars and Talks}{\textit{2025: Talk "MuJoCo for Advanced Physics Simulation: From manipulators to autonomous vehicles" for "Motion Control" master course at HUST and MoCAR seminar}}
 	
 	
-	
 	\section*{Conferences}
 	\conference{IEEE 12th International Conference on Control, Automation and Information Sciences (IEEE ICCAIS 2023)}{\textit{Hanoi, Vietnam}}
 	
@@ -355,5 +359,24 @@
 	\sepspace
 	
 	\conference{Best Thesis Defense Award}{Hanoi University of Science and Technology}
+	
+	
+	% ================= Skills Section =================
+	\section*{Skills}
+	
+	\skill{Programming}{Proficient in Python, C/C++, and MATLAB for algorithm development, numerical computation, and embedded system applications.}
+	
+	\skill{Simulation}{Experienced with Simulink, Simscape, and MuJoCo for multi-domain physical modeling, robot dynamics simulation, and virtual prototyping.}
+	
+	\skill{Control \& Math}{Solid foundation in rigid body dynamics, control theories, motion control, optimization, and Guidance–Navigation–Control (GNC) systems.}
+	
+	\skill{Engineering}{Hands-on experience with version control (Git), PCB design and debugging, 3D CAD modeling using SolidWorks, and designing experimental platforms for validation.}
+	
+	\skill{Systems}{Familiar with EtherCAT-based Linux kernel development, real-time control architectures, and embedded systems programming for robotics and automation.}
+	
+	\skill{Research}{Capable of conducting scientific research, writing academic publications, and presenting technical findings at international conferences. Experienced in literature review, hypothesis formulation, and experimental validation.}
+	
+	
+
 	
 \end{document}
