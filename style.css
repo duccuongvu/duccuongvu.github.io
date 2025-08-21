@@ -10,6 +10,7 @@
   --header-bg: #ffffff;
   --section-bg: #ffffff;
   --link-color: #007acc;
+  --link-color: #007acc;
   --link-hover-color: #005c99;
   --border-color: #ccc;
   --footer-bg: #f8f9fa;
@@ -135,13 +136,13 @@ h2.section-title {
 }
 
 a {
-  color: #016bb1; 
+  color: var(--link-color); 
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #339eff;
+  color: var(--link-hover-color);
   text-decoration: underline;
 }
 
@@ -437,6 +438,36 @@ header img {
     width: 100%;
   }
 }
+
+
+/* ===============================
+   📝 Abstract Toggle
+=================================*/
+.abstract-content {
+  display: none; /* hidden by default */
+  margin-top: 10px;
+  /* padding: 10px; */
+  /* background: #f8f8f8; */
+  /* border-left: 3px solid #0077cc; */
+  /* border-radius: 6px; */
+  text-align: left;  /* align text with p text */
+}
+.abstract-toggle {
+  background: none;      /* remove gray background */
+  border: none;          /* remove border */
+  padding: 0;            /* remove extra padding */
+  margin: 0;             /* align with text */
+  font: inherit;         /* inherit font from <p> */
+  color: var(--link-color);        /* match your link color */
+  cursor: pointer;
+  text-align: left;      /* align text flush left */
+}
+
+.abstract-toggle:hover {
+  text-decoration: underline;
+  color: var(--link-hover-color);
+}
+
 
 
 /* ===============================
