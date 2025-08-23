@@ -101,7 +101,7 @@
 
 % Length for alignment boxes
 \newlength{\spacebox}
-\settowidth{\spacebox}{123456789}
+\settowidth{\spacebox}{123456}
 
 %% MACROS %%
 
@@ -115,8 +115,8 @@
 
 % Personal info entries
 \newcommand{\info}[2]{%
-	\noindent\hangindent=2em\hangafter=0
-	\parbox{\spacebox}{\textsl{#1}} #2 \vspace{0.2em}\par
+	\noindent\hangindent=1em\hangafter=0
+	\parbox{\spacebox}{\textsl{#1}} #2 
 }
 
 % Skill entry
@@ -216,11 +216,9 @@
 	
 	\name{Duc-Cuong VU, BSc.}
 	\sepspace
-	\info{Email}{\href{mailto:vdcuong2002@gmail.com}{\texttt{vdcuong2002 [at] gmail.com}}}
-	%\info{Phone}{+84 865 280 802}
-%	\info{Address}{Giao Thuy, Nam Dinh, Vietnam}
+	\info{Email}{\href{mailto:vdcuong2002@gmail.com}{\texttt{vdcuong2002 [at] gmail.com}}} \hspace{2cm}
 	\info{Sites}{\href{https://dc-vu.github.io}{https://dc-vu.github.io}}
-	
+	\vspace{0.2em}\par
 	
 	
 	\section*{Education}
