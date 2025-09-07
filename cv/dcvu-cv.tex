@@ -143,7 +143,7 @@
 
 % Education entry
 \newcommand{\education}[4]{%
-	\noindent \textbf{#1} (\textit{#2})\par
+	\noindent \textbf{#1} \hfill \textit{#2}\par
 	\vspace{0.5em}
 	\noindent \textit{\vspace{0.15cm}#3}\par
 	\vspace{0.5em}
@@ -152,7 +152,7 @@
 
 % Work experience entry
 \newcommand{\work}[4]{%
-	\noindent \textbf{#1} (\textit{#2})\par
+	\noindent \textbf{#1} \hfill \textit{#2}\par
 	\vspace{0.5em}
 	\noindent \textit{\vspace{0.15cm}#3}\par
 	\vspace{0.5em}
@@ -161,7 +161,7 @@
 
 % Project entry
 \newcommand{\project}[4]{%
-	\noindent \textbf{#1} (\textit{#2})\par
+	\noindent \textbf{#1} \hfill \textit{#2}\par
 	\vspace{0.5em}
 	\noindent \textit{\vspace{0.15cm}#3}\par
 	\vspace{0.5em}
@@ -172,11 +172,9 @@
 \newcommand{\publication}[5]{%
 	\noindent \textbf{#1} \hspace{0.1cm} #2 \par
 	\vspace{0.5em}
-	\noindent #3 \par
+	\noindent #3 [\href{https://doi.org/#5}{pdf}] \par
 	\vspace{0.5em}
-	\noindent \textit{#4} \par
-	\vspace{0.5em}
-	\noindent DOI: \href{https://doi.org/#5}{#5} \par
+	\noindent \textit{#4}
 }
 
 
@@ -223,7 +221,7 @@
 	
 	\section*{Education}
 	
-	\education{Master of Science in Automation and Control}{Jul 2024 - present}{School of Electrical - Electronics Engineering, Hanoi University of Science and Technology (\href{https://hust.edu.vn/en/}{HUST}),\\ Hanoi, Vietnam}
+	\education{Master of Science in Automation and Control}{Jul 2024 - present}{School of Electrical - Electronics Engineering, Hanoi University of Science and Technology (\href{https://hust.edu.vn/en/}{HUST}),\hfill Hanoi, Vietnam}
 	{
 		\begin{soloitemize}
 			\item \textbf{Research project:} \textit{Design control structures for Parallel Platforms in Maritime applications}
@@ -234,32 +232,15 @@
 	\sepspace
 	
 	\education{Bachelor of Science in Automation and Control}
-	{Oct 2020 - Mar 2024}{School of Electrical - Electronics Engineering, Hanoi University of Science and Technology (\href{https://hust.edu.vn/en/}{HUST}), \\Hanoi, Vietnam}
+	{Oct 2020 - Mar 2024}{School of Electrical - Electronics Engineering, Hanoi University of Science and Technology (\href{https://hust.edu.vn/en/}{HUST}), \hfill Hanoi, Vietnam}
 	{\begin{soloitemize}
-			\item \textbf{Excellent degree}, GPA: 3.71/4. Finished the 4-year BSc program in \textbf{just 3.5 years}.
-			\item \textbf{Ranking:} 22/499 in the same cohort.
-			\item \textbf{Bachelor Thesis:} \textit{Balancing, motion planning, and tracking control for ballbot systems} [\href{https://drive.google.com/file/d/14nDBzQam5qdcvj9y6AuS6N0fQ292AwWj/view?usp=sharing}{pdf}]
-			. \\
-			\textbf{Thesis score:} 9.9/10 - The best thesis defense
+			\item \textbf{Excellent degree}, GPA: 3.71/4 (Rank: 22/499). Finished the 4-year BSc program in \textbf{just 3.5 years}.
+			\item \textbf{Thesis:} \textit{Balancing, motion planning, and tracking control for ballbot systems} [\href{https://drive.google.com/file/d/14nDBzQam5qdcvj9y6AuS6N0fQ292AwWj/view?usp=sharing}{pdf}] (The best thesis defense)
 		\end{soloitemize}
 	}
 	
 	
-	
-	% work experience
-	\section*{Work experience}
-	
-	\work{Research Assistant}
-	{Oct 2021 - present}
-	{The Mechatronics Engineering Group, Hanoi University of Science and Technology (\href{https://hust.edu.vn/en/}{HUST}),\\ Hanoi, Vietnam}
-	{ \begin{soloitemize}
-			\item Conducted research on advanced control strategies, robotics, motion control, and multi-agent systems, focusing on both theoretical development and practical implementation for automation and marine robotics.
-			\item Developed and validated high-fidelity simulation models using tools such as Simscape and MuJoCo, bridging the gap between simulation and real-world experiments.
-			\item Integrated hardware and software components for real-time control, and contributed to experimental setup, data acquisition, and system troubleshooting.
-			\item \textbf{Supervisor:} \href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{\textit{Assoc.Prof.PhD. Tung Lam Nguyen}} ({\href{mailto:lam.nguyentung@hust.edu.vn}{\texttt{lam.nguyentung[at] hust.edu.vn}}})
-		\end{soloitemize}
-	}
-	
+
 	
 	\section*{Selected publications}
 	
@@ -294,58 +275,53 @@
 	{10.1002/rnc.7358}
 	
 	
-	\section*{Academic activities}
-	\activities{Invited review for}{\textit{Nonlinear Dynamics (this is my first time as a reviewer)}}
+		% work experience
+	\section*{Work experience}
 	
-	\sepspace
+%	\work{VinRobotics}
+%	{Sep 2025 - present}
+%	{Robotics Engineer \hfill Hanoi, Vietnam}
+%	{\begin{soloitemize}
+%			\item Responsible for State Estimation, Model Predictive Control (MPC), and Whole Body Control (WBC) for VinRobotics Humanoids robot.
+%	\end{soloitemize}}
+%	
+%	\sepspace
 	
-	\activities{Seminars and Talks}
-	{
-		\textit{2025: Talk "MuJoCo for Advanced Physics Simulation: From manipulators to autonomous vehicles" for "Motion Control" master course at HUST and MoCAR seminar} [\href{https://drive.google.com/file/d/10EOLlFqleqqPBXlAqDkhnFmAycjfnl9E/view?usp=drive_link}{pdf}] \\
-		
-		\noindent\textit{2025: Seminar "Underwater Vehicles" for modeling training of Autonomous Underwarter Vehicle at MEG-MoCAR} [\href{https://drive.google.com/file/d/13BD5C82OyaQ9N83s5FF_MnSdGozZ3Q1_/view?usp=drive_link}{pdf}]
-		
-		
+	\work{Mechatronics Engineering Group at HUST}
+	{Oct 2021 - present}
+	{Research Assistant supervised by \href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{\textit{Assoc.Prof.PhD. Tung Lam Nguyen}},\hfill Hanoi, Vietnam}
+	{ \begin{soloitemize}
+			\item Conducted research on advanced control strategies, robotics, motion control, and multi-agent systems, focusing on both theoretical development and practical implementation.
+		\end{soloitemize}
 	}
 	
-	
-	\section*{Conferences}
-	\conference{IEEE 12th International Conference on Control, Automation and Information Sciences (IEEE ICCAIS 2023)}{\textit{Hanoi, Vietnam}}
-	
-	\sepspace
-	
-	\conference{2024 International Conference on Advanced Technologies for Communications (IEEE ATC2024)}{\textit{Ho Chi Minh City, Vietnam}}
-	
-	\sepspace
-	
-	\conference{International Conference on Intelligent Systems and Networks (Springer ICISN 2023)}{\textit{Hanoi, Vietnam}}
+		
+
 	
 
 
-	\section*{Projects}
-		\project{Member/Researcher}
+	\section*{Academic projects}
+		\project{Advanced Control of a Ship-Mounted Stewart Platform for Marine Applications}
 		{Mar 2025 - Dec 2025}
-		{Advanced Control of a Ship-Mounted Stewart Platform for Marine Applications}
+		{Research assistant supervised by \href{https://scholar.google.com/citations?user=qyExc4QAAAAJ&hl=en}{\textit{PhD. Minh Nhat Vu}} (PI) and \href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{\textit{Assoc.Prof.PhD. Tung Lam Nguyen}}}
 		{\begin{soloitemize}
 				\item Field: Marine Robotics and Control Systems.
 				\item International Collaboration of Korea Institute of Science and Technology and Institute (\href{https://www.kist.re.kr/eng/index.do}{KIST}) for Control Engineering and Automation (\href{https://hust.edu.vn/en/}{HUST}) via the \textit{KIST School Partnership Project}.
-				\item Supervisors: \href{https://scholar.google.com/citations?user=qyExc4QAAAAJ&hl=en}{\textit{PhD. Minh Nhat Vu}} (PI) and \href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{\textit{Assoc.Prof.PhD. Tung Lam Nguyen}}
 				\item Designing and implementing advanced control algorithms for the Stewart platform, including safety-critical and robust control strategies tailored for marine environments.
 				\item Developing high-fidelity simulation (Simscape, MuJoCo) that capture marine environmental disturbances (such as waves, currents, and ship motion) and accurately represent the platform's kinematics and dynamics.
 				\item Building the experimental setup, including mechanical assembly, hardware integration, Linux-based real-time kernel configuration, and EtherCAT communication for precise control and data acquisition.
 				\item Collaborating with cross-institutional teams to refine system requirements, troubleshoot technical challenges, and ensure seamless integration of hardware and software components.
 				\item Preparing detailed technical documentation, authoring scientific publications, including Ocean Engineering (OE) and Results in Engineering, and presenting project outcomes to both academic and industrial collaborators.
 			\end{soloitemize}
-		}f
+		}
 	
 		\sepspace
 		
-		\project{Member/Researcher}{Jan 2025 - Dec 2027}{Robot navigation system integrating sensor network and wireless communication}
+		\project{Robot navigation system integrating sensor network and wireless communication}{Jan 2025 - Dec 2027}{Research assistant supervised by \href{https://scholar.google.com/citations?user=mI561CkAAAAJ&hl=en}{\textit{PhD. Chinh Hoang Duc}} (PI)
+			and \href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{\textit{Assoc.Prof.PhD. Tung Lam Nguyen}}.}
 		{\begin{soloitemize}
 				\item Field: Communications, Optimization, Robotics, and Control Systems.
 				\item Funded by Hanoi University of Science and Technology (\href{https://hust.edu.vn/en/}{HUST}).
-				\item Supervisors: Supervisors: \href{https://scholar.google.com/citations?user=mI561CkAAAAJ&hl=en}{\textit{PhD. Chinh Hoang Duc}} (PI)
-				and \href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{\textit{Assoc.Prof.PhD. Tung Lam Nguyen}}.
 				\item Designing and developing a comprehensive simulation environment for Autonomous Underwater Vehicles (AUVs) using the MuJoCo physics engine, enabling accurate modeling of underwater dynamics, sensor feedback, and environmental disturbances.
 				\item Implementing and validating advanced control algorithms for robust navigation, obstacle avoidance, and trajectory tracking in challenging underwater scenarios.
 				\item Integrating sensor network data and wireless communication protocols into the simulation framework to evaluate system performance under realistic communication constraints.
@@ -356,11 +332,9 @@
 	
 		\sepspace
 		
-		\project{Bachelor graduated project}{Jul 2023 - Jul 2024}{Balancing, motion planning, and tracking control for ballbot systems}
+		\project{Balancing, motion planning, and tracking control for ballbot systems}{Jul 2023 - Jul 2024}{Bachelor graduated project supervised by \href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{\textit{Assoc.Prof.PhD. Tung Lam Nguyen}}}
 		{\begin{soloitemize}
 				\item Field: Optimization, Robotics, and Control Systems.
-				\item Supervisors:
-				\href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{\textit{Assoc.Prof.PhD. Tung Lam Nguyen}}.
 				\item Developed mathematical models and simulation environments for 3D ballbot systems, focusing on nonlinear dynamics, trajectory generation, and safety constraints.
 				\item Designed and implemented advanced control algorithms, including observer-based hierarchical sliding mode control and nonlinear model predictive control (NMPC) with control barrier functions (CBFs) for obstacle avoidance and tilt angle limitation.
 				\item Formulated and solved time-optimal trajectory planning problems using flatness theory and optimization techniques, enabling smooth and efficient motion planning for ballbot navigation.
@@ -369,33 +343,29 @@
 		}
 
 	
-%	\section*{Skills}
-%	
-%	\skill{Programming}{
-%		Proficient in Python, C/C++, and MATLAB for algorithm development, numerical computation, and embedded system applications.
-%	}
-%	
-%	\skill{Simulation}{
-%		Experienced with Simulink, Simscape, and MuJoCo for multi-domain physical modeling, robot dynamics simulation, and virtual prototyping.
-%	}
-%	
-%	\skill{Control \& Math}{
-%		Solid foundation in rigid body dynamics, control theories, motion control, optimization, and Guidance–Navigation–Control (GNC) systems.
-%	}
-%	
-%	\skill{Engineering}{
-%		Hands-on experience with version control (Git), PCB design and debugging, 3D CAD modeling using SolidWorks, and designing experimental platforms for validation.
-%	}
-%	
-%	\skill{Systems}{
-%		Familiar with Linux kernel development, real-time control architectures, and embedded systems programming for robotics and automation.
-%	}
-%	
-%	\skill{Research}{
-%		Capable of conducting scientific research, writing academic publications, and presenting technical findings at international conferences. Experienced in literature review, hypothesis formulation, and experimental validation.
-%	}
+	\section*{Academic activities}
+	\activities{Invited review for}{\textit{Nonlinear Dynamics (this is my first time as a reviewer)}}
 	
+	\sepspace
 	
+	\activities{Seminars and Talks}
+	{
+		\textit{2025: Talk "MuJoCo for Advanced Physics Simulation: From manipulators to autonomous vehicles" for "Motion Control" master course at HUST and MoCAR seminar} [\href{https://drive.google.com/file/d/10EOLlFqleqqPBXlAqDkhnFmAycjfnl9E/view?usp=drive_link}{pdf}] \\
+		
+		\noindent\textit{2025: Seminar "Underwater Vehicles" for modeling training of Autonomous Underwarter Vehicle at MEG-MoCAR} [\href{https://drive.google.com/file/d/13BD5C82OyaQ9N83s5FF_MnSdGozZ3Q1_/view?usp=drive_link}{pdf}]
+	}
+
+
+	\section*{Conferences}
+	\conference{IEEE 12th International Conference on Control, Automation and Information Sciences (IEEE ICCAIS 2023)}{\textit{Hanoi, Vietnam}}
+	
+	\sepspace
+	
+	\conference{2024 International Conference on Advanced Technologies for Communications (IEEE ATC2024)}{\textit{Ho Chi Minh City, Vietnam}}
+	
+	\sepspace
+	
+	\conference{International Conference on Intelligent Systems and Networks (Springer ICISN 2023)}{\textit{Hanoi, Vietnam}}
 	
 	
 	
