@@ -41,7 +41,7 @@
 % Áp dụng định dạng tương tự cho \section* (không đánh số)
 \titleformat{name=\section,numberless}
 [block]
-{\normalfont\Large\bfseries\fontfamily{qag}\selectfont}
+{\normalfont\large\bfseries\fontfamily{qag}\selectfont}
 {}  % không có số
 {0em}
 {}
@@ -93,10 +93,10 @@
 
 % Separator line command
 \newcommand{\sepspace}{%
-	\par\vspace{0.5em}
+	\par\vspace{0.0em}
 	\noindent
 	\tikz{\draw[gray, dashed, line width=0.5pt] (0,0) -- (\linewidth,0);}
-	\par\vspace{0.5em}
+	\par\vspace{0.0em}
 }
 
 % Length for alignment boxes
@@ -107,7 +107,7 @@
 
 % Name
 \newcommand{\name}[1]{%
-	\Huge
+	\huge
 	\fontfamily{phv}\selectfont
 	\textbf{#1}%
 	\par\normalsize\normalfont
@@ -144,36 +144,36 @@
 % Education entry
 \newcommand{\education}[4]{%
 	\noindent \textbf{#1}, \textit{#3} \hfill \textit{#2}\par
-	%\vspace{0.5em}
+	%\vspace{0.3em}
 	%\noindent \textit{\vspace{0.15cm}#3}\par
-	\vspace{0.5em}
+	\vspace{0.3em}
 	\noindent\hangindent=2em\hangafter=0 #4 \par\normalsize
 }
 
 % Work experience entry
 \newcommand{\work}[4]{%
 	\noindent \textbf{#1} \hfill \textit{#2}\par
-	\vspace{0.5em}
+	\vspace{0.3em}
 	\noindent \textit{\vspace{0.15cm}#3}\par
-	\vspace{0.5em}
+	\vspace{0.3em}
 	\noindent\hangindent=2em\hangafter=0 #4 \par\normalsize
 }
 
 % Project entry
 \newcommand{\project}[4]{%
 	\noindent \textbf{#1} \hfill \textit{#2}\par
-	\vspace{0.5em}
+	\vspace{0.3em}
 	\noindent \textit{\vspace{0.15cm}#3}\par
-	\vspace{0.5em}
+	\vspace{0.3em}
 	\noindent\hangindent=2em\hangafter=0 #4 \par\normalsize
 }
 
 % Publication entry
 \newcommand{\publication}[5]{%
-	\noindent \textbf{#1} \hspace{0.1cm} #2 \par
-	\vspace{0.5em}
+	\noindent \textbf{#1} \hspace{0.1cm} \textit{#2} \par
+	\vspace{0.3em}
 	\noindent #3 [\href{https://doi.org/#5}{pdf}] \par
-	\vspace{0.5em}
+	\vspace{0.3em}
 	\noindent \textit{#4}
 }
 
@@ -181,7 +181,7 @@
 % Conference entry
 \newcommand{\conference}[2]{%
 	\noindent \textbf{#1} \par
-	\vspace{0.5em}
+	\vspace{0.3em}
 	\noindent \textit{#2} \par
 }
 
@@ -192,7 +192,7 @@
 
 \newcommand{\activities}[2]{%
 	\noindent \textbf{#1} \par
-	\vspace{0.5em}
+	\vspace{0.3em}
 	\noindent #2 \par
 }
 
@@ -208,10 +208,9 @@
 
 
 \begin{document}
-	
 	\begin{textblock*}{5cm}(15.5cm,0.8cm) 
 		\centering
-		\begin{tcolorbox}[colframe=black, colback=white, sharp corners]
+		\begin{tcolorbox}[colframe=white, colback=white, sharp corners]
 			\fontfamily{phv}\selectfont \centering\footnotesize \textit{Last update: Aug 2025} \normalsize\normalfont
 		\end{tcolorbox}
 	\end{textblock*}
@@ -246,7 +245,7 @@
 		%\hfill Hanoi, Vietnam
 	}
 	{\begin{soloitemize}
-			\item \textbf{Excellent degree}, GPA: 3.71/4 (Rank: 22/499). Finished the 4-year BSc program in \textbf{just 3.5 years}.
+			\item \textbf{Excellent degree}, GPA: 3.71/4 (Rank: 22/499, top 5\%). Finished the 4-year BSc program in \textbf{just 3.5 years}.
 			\item \textbf{Thesis:} \textit{Balancing, motion planning, and tracking control for ballbot systems} [\href{https://drive.google.com/file/d/14nDBzQam5qdcvj9y6AuS6N0fQ292AwWj/view?usp=sharing}{pdf}] (The best thesis defense)
 		\end{soloitemize}
 	}
@@ -280,7 +279,6 @@
 	
 	\sepspace
 	
-	
 	\publication{Journal}
 	{Results in Engineering (ESCI Q1) (2025)}
 	{A novel approach of Consensus-based Finite-time Distributed Sliding Mode Control for Stewart platform manipulators motion tracking}
@@ -302,7 +300,8 @@
 	{Sep 2025 - present}
 	{Full-time \hfill Hanoi, Vietnam}
 	{\begin{soloitemize}
-			\item Responsible for System Identification, State Estimation, Model Predictive Control (MPC), and Whole Body Control (WBC) for VinRobotics Humanoids robot.
+			\item Conduct pipeline for robot model standardization, kinematics calibration, system identification, and advanced control algorithm for humanoid robot.
+			\item Also responsible for State Estimation, Model Predictive Control (MPC), and Whole Body Control (WBC) for VinRobotics Humanoids robot.
 	\end{soloitemize}}
 %	
 	\sepspace
@@ -415,7 +414,7 @@
 	
 	\sepspace
 	
-	\activities{Seminars and Talks}
+	\activities{Teaching, Seminars and Talks}
 	{
 		\textit{2025: Talk "MuJoCo for Advanced Physics Simulation: From manipulators to autonomous vehicles" for "Motion Control" master course at HUST and MoCAR seminar} [\href{https://drive.google.com/file/d/10EOLlFqleqqPBXlAqDkhnFmAycjfnl9E/view?usp=drive_link}{pdf}] \\
 		
