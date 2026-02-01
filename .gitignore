@@ -3,3 +3,6 @@ cv/dcvu-cv.aux
 cv/dcvu-cv.out
 cv/dcvu-cv.log
 cv/dcvu-cv.synctex.gz
+cv/dcvu-cv.fls
+cv/dcvu-cv.fdb_latexmk
+.vscode/
