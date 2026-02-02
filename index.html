@@ -23,12 +23,13 @@
   <meta property="twitter:image" content="https://duccuongvu.github.io/images/avatar.jpg">
   
   <link rel="icon" href="images/logo.png" type="image/png">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts: Inter (sans-serif) for body, Montserrat for headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
   <link id="main-style" rel="stylesheet" href="style.css">
   <script src="scripts/theme-toggle.js" defer></script>
   <script src="scripts/date-calculator.js" defer></script>
   <script src="scripts/abstract-toggle.js" defer></script>
+  <script src="scripts/work-expand.js" defer></script>
   <!-- <style>
     body {
       font-family: "Times New Roman";
@@ -91,20 +92,13 @@
         <section id="intro">
           <h2 class="section-title">✍️ about me</h2>
           <p>
-            I am currently pursuing a Master of Science in Automation and Control at the <a href="https://hust.edu.vn/en/" target="_blank">Hanoi University of Science and Technology (HUST)</a>, Vietnam, under the supervision of <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en" target="_blank">Assoc. Prof. Dr. Tung Lam Nguyen</a>. 
-            My research focuses on the application of Stewart platforms in marine environments, funded by the <a href="https://vinif.org/en/" target="_blank">Vingroup Innovation Foundation (VINIF)</a>. I previously earned my Bachelor of Science in Automation and Control at HUST, where I received the <i>Best Thesis Defense Award</i> for my undergraduate thesis on <i>balancing, motion planning, and tracking control for ballbot systems</i>.
+            I am pursuing an M.Sc. in Automation and Control at <a href="https://hust.edu.vn/en/" target="_blank">HUST</a>, supervised by <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en" target="_blank">Assoc. Prof. Dr. Tung Lam Nguyen</a>. My research focuses on Stewart platforms in marine environments, funded by <a href="https://vinif.org/en/" target="_blank">VINIF</a>. I hold a B.Sc. from HUST and received the <i>Best Thesis Defense Award</i> for my work on <i>balancing, motion planning, and tracking control for ballbot systems</i>.
           </p>
-        
           <p>
-            I am also a Robotics Engineer at <a href="https://vinrobotics.net/" target="_blank">VinRobotics</a>, a pioneer in humanoid robotics in Vietnam. My work focuses on developing advanced control algorithms and implementing cutting-edge technologies for humanoid robots. My key responsibilities include model-based control and motion planning for industrial robots.
+            Beside that, I am a Robotics Engineer at <a href="https://vinrobotics.net/" target="_blank">VinRobotics</a>, working on control algorithms and motion planning for humanoids and industrial robots.
           </p>
-        
           <p>
-            My research interests span control theory, optimization in control, robotics, and experimental systems. I am particularly interested in bridging the gap between simulation and real-world implementation, aiming to strengthen the connection between theoretical analysis and practical validation.
-          </p>
-        
-          <p>
-            For more details about my work, visit the <a href="projects/index.html">projects</a> page, or explore my <a href="activities/index.html">academic activities</a>.
+            My interests include control theory, robotics, and bridging simulation with real-world validation. See my <a href="projects/index.html">projects</a> and <a href="activities/index.html">activities</a> for more.
           </p>
         </section>
         
@@ -188,6 +182,7 @@
 
       <div class="pub-item">
         <div class="pub-img">
+          <div class="pub-journal">TMECH/AIM</div>
           <img src="images/HIK.png" alt="HIK-paper">
         </div>
         <div class="pub-info">
@@ -207,6 +202,7 @@
 
       <div class="pub-item">
         <div class="pub-img">
+          <div class="pub-journal">Ocean Eng.</div>
           <img src="images/project-td-com.gif" alt="Ocean Engineering">
         </div>
         <div class="pub-info">
@@ -215,7 +211,7 @@
           <p style="font-style: italic; opacity: 0.7; font-size: 0.9em;">* equal contribution</p>
           <p>Ocean Engineering, 2025 (SCIE, Q1)</p>
           <!-- <p>Accepted manuscript</p> -->
-          <p>[<a href="https://www.sciencedirect.com/science/article/pii/S0029801825025855" target="_blank">paper</a> | <a href="https://drive.google.com/file/d/1GN7qNn0eF9i9D0e4s4YdCC4POIGcKyAi/view?usp=drive_link" target="_blank">pdf</a>]</p>
+          <p>[<a href="https://www.sciencedirect.com/science/article/pii/S0029801825025855" target="_blank">paper</a> | <a href="https://drive.google.com/file/d/1GN7qNn0eF9i9D0e4s4YdCC4POIGcKyAi/view?usp=drive_link" target="_blank">pdf</a> | <a href="https://github.com/duccuongvu/AUV-ODIN-mujoco" target="_blank">code</a>]</p>
           <div class="abstract-content">
             This paper presents a comprehensive framework for glocal trajectory generation with real-time tracking control for a group of Autonomous Underwater Vehicles (AUVs) equipped with distributed sensors. A two-stage approach is proposed to maximize the underwater area coverage of sensor systems while ensuring network connectivity between AUVs and free collision with terrains and floating obstacles. At the global level, a heuristic algorithm named Global Trajectory to Maximize Coverage (GT-MC) is introduced, which generate trajectory to optimize the final AUVs distribution. After that, the trajectory is further optimized to produce the final set of waypoints for the AUVs group. At the local level, a safety-critical trajectory generation method is developed by using a Model Predictive Control (MPC) scheme for a virtual AUV system with Control Barrier Functions (CBF) as constraints for floating obstacle avoidance. Then, the generated trajectories are tracked by the actual AUVs using a base controller, in this case a classical Sliding Mode Controller (SMC) combined with a thruster force allocation optimizer. The complete framework is validated via simulation studies using an open-source advanced physics tool called MuJoCo. The suggested methodology can facilitate the autonomy, scalability, and safety of sensor-AUVs distribution missions, making it a promising tool for intelligent marine sensing and monitoring.
           </div>
@@ -224,6 +220,7 @@
 
       <div class="pub-item">
         <div class="pub-img">
+          <div class="pub-journal">Ocean Eng.</div>
           <img src="images/oe-paper.png" alt="Ocean Engineering">
         </div>
         <div class="pub-info">
@@ -239,6 +236,7 @@
 
       <div class="pub-item">
         <div class="pub-img">
+          <div class="pub-journal">IET Cyber-Syst. Robot.</div>
           <img src="images/2Dballbot.png" alt="IET publication">
         </div>
         <div class="pub-info">
@@ -255,6 +253,7 @@
 
       <div class="pub-item">
         <div class="pub-img">
+          <div class="pub-journal">IEEE Access</div>
           <img src="images/IEEEAccess.gif" alt="IEEE Access">
         </div>
         <div class="pub-info">
@@ -270,6 +269,7 @@
 
       <div class="pub-item">
         <div class="pub-img">
+          <div class="pub-journal">RinE</div>
           <img src="images/rieng-paper.png" alt="Results in Engineering">
         </div>
         <div class="pub-info">
@@ -285,6 +285,7 @@
 
       <div class="pub-item">
         <div class="pub-img">
+          <div class="pub-journal">IJRNC</div>
           <img src="images/RNC.gif" alt="RNC Journal">
         </div>
         <div class="pub-info">
@@ -309,9 +310,12 @@
             <div class="work-role"><strong>Robotics Engineer at VinRobotics, Vingroup</strong></div>
             <div class="work-institute">Full-time (On-site) | Hanoi, Vietnam</div>
             <div class="work-date" data-start="2025-09" data-end="present">Sep 2025 – Present</div>
-            <ul class="work-details">
-              <li>Responsible for model-based control and motion planning for industrial robots.</li>
-            </ul>
+            <button type="button" class="work-expand-btn">Show details</button>
+            <div class="work-expandable">
+              <ul class="work-details">
+                <li>Responsible for model-based control and motion planning for industrial robots.</li>
+              </ul>
+            </div>
           </div>
           <div class="work-img">
             <img src="images/VR-logo.svg" alt="VinRobotics Logo" width="50" height="50">
@@ -327,11 +331,14 @@
               Supervised by <a href="https://scholar.google.com/citations?user=mI561CkAAAAJ&hl=en" target="_blank">PhD. Chinh Hoang Duc</a> (PI)
               and <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en" target="_blank">Assoc.Prof.PhD. Tung Lam Nguyen</a>.
             </p>
-            <ul class="work-details">
-              <li>Work under project: Robot navigation system integrating sensor network and wireless communication.</li>
-              <li>Designed and developed a comprehensive MuJoCo-based simulation environment for AUVs, incorporating underwater dynamics, sensor feedback, environmental disturbances, and communication constraints to evaluate system performance.</li>
-              <li>Implemented and validated advanced control algorithms for navigation, obstacle avoidance, and trajectory tracking, while collaborating on integration, troubleshooting, and authoring a peer-reviewed scientific paper.</li>
-            </ul>
+            <p class="work-project">Project: Robot navigation system integrating sensor network and wireless communication.</p>
+            <button type="button" class="work-expand-btn">Show details</button>
+            <div class="work-expandable">
+              <ul class="work-details">
+                <li>Designed and developed a comprehensive MuJoCo-based simulation environment for AUVs, incorporating underwater dynamics, sensor feedback, environmental disturbances, and communication constraints to evaluate system performance.</li>
+                <li>Implemented and validated advanced control algorithms for navigation, obstacle avoidance, and trajectory tracking, while collaborating on integration, troubleshooting, and authoring a peer-reviewed scientific paper.</li>
+              </ul>
+            </div>
           </div>
           <div class="edu-img">
             <img src="images/meg-logo.png" alt="MEG Logo">
@@ -350,13 +357,15 @@
               Supervised by <a href="https://scholar.google.com/citations?user=qyExc4QAAAAJ&hl=en" target="_blank">PhD. Minh Nhat Vu</a> (PI)
               and <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en" target="_blank">Assoc.Prof.PhD. Tung Lam Nguyen</a>.
             </p>
-            <ul class="work-details">
-              <li>Work under project: Advanced Control of a Ship-Mounted Stewart Platform for Marine Applications.</li>
-              <li>Funded by KIST Korea Institute of Science and Technology.</li>
-              <li>Designed and implemented advanced control algorithms for the Stewart platform, including safety-critical and robust control strategies tailored for marine environments.</li>
-              <li>Developed high-fidelity simulation models and conducted comprehensive experimental validation to analyze system performance under marine disturbances.</li>
-              <li>Collaborated with cross-institutional teams on system integration, troubleshooting, and authoring peer-reviewed scientific publications.</li>
-            </ul>
+            <p class="work-project">Project: Advanced Control of a Ship-Mounted Stewart Platform for Marine Applications (KIST).</p>
+            <button type="button" class="work-expand-btn">Show details</button>
+            <div class="work-expandable">
+              <ul class="work-details">
+                <li>Designed and implemented advanced control algorithms for the Stewart platform, including safety-critical and robust control strategies tailored for marine environments.</li>
+                <li>Developed high-fidelity simulation models and conducted comprehensive experimental validation to analyze system performance under marine disturbances.</li>
+                <li>Collaborated with cross-institutional teams on system integration, troubleshooting, and authoring peer-reviewed scientific publications.</li>
+              </ul>
+            </div>
           </div>
           <div class="edu-img">
             <img src="images/meg-logo.png" alt="MEG Logo">
@@ -374,12 +383,14 @@
             <p class="work-supervisors">
               Supervised by <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en" target="_blank">Assoc.Prof.PhD. Tung Lam Nguyen</a>.
             </p>
-            <ul class="work-details">
-              <li>Work under master project: Design control structures for Parallel Platforms in Maritime applications.</li>
-              <li>Funded by VinIF.</li>
-              <li>Designed and implemented advanced control algorithms for a Stewart platform in marine environments, supported by high-fidelity simulations (Simscape, MuJoCo) and validated through a full experimental setup (mechanical assembly, hardware integration, Linux real-time kernel, EtherCAT communication).</li>
-              <li>Collaborated with cross-institutional teams on system integration, troubleshooting, and documentation, while authoring peer-reviewed publications and presenting outcomes to academic and industrial partners.</li>
-            </ul>
+            <p class="work-project">Project: Design control structures for Parallel Platforms in Maritime applications (VinIF).</p>
+            <button type="button" class="work-expand-btn">Show details</button>
+            <div class="work-expandable">
+              <ul class="work-details">
+                <li>Designed and implemented advanced control algorithms for a Stewart platform in marine environments, supported by high-fidelity simulations (Simscape, MuJoCo) and validated through a full experimental setup (mechanical assembly, hardware integration, Linux real-time kernel, EtherCAT communication).</li>
+                <li>Collaborated with cross-institutional teams on system integration, troubleshooting, and documentation, while authoring peer-reviewed publications and presenting outcomes to academic and industrial partners.</li>
+              </ul>
+            </div>
           </div>
           <div class="edu-img">
             <img src="images/meg-logo.png" alt="MEG Logo">
@@ -394,16 +405,18 @@
             <div class="work-role"><strong>Student Intern at HUST</strong></div>
             <div class="work-institute">Internship (Hybrid) | Hanoi, Vietnam</div>
             <div class="work-date" data-start="2021-10" data-end="2024-04">Oct 2021 – Apr 2024 (2 yrs 7 mos)</div>
-            <div class="work-location">Hanoi, Vietnam</div>
             <p class="work-supervisors">
               Supervised by <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en" target="_blank">Assoc.Prof.PhD. Tung Lam Nguyen</a>.
             </p>
-            <ul class="work-details">
-              <li>Work under bachelor project: Balancing, motion planning, and tracking control for ballbot systems.</li>
-              <li>Developed mathematical models and simulation environments for 3D ballbot systems, focusing on nonlinear dynamics, trajectory generation, and safety constraints.</li>
-              <li>Conducted research on modeling and simulation, advanced control strategies, and practical implementation for the Ball-Balancing Robot.</li>
-              <li>Authored and co-authored peer-reviewed journal papers based on the project outcomes, including publications in the International Journal of Robust and Nonlinear Control (RNC) and IEEE Access.</li>
-            </ul>
+            <p class="work-project">Project: Balancing, motion planning, and tracking control for ballbot systems.</p>
+            <button type="button" class="work-expand-btn">Show details</button>
+            <div class="work-expandable">
+              <ul class="work-details">
+                <li>Developed mathematical models and simulation environments for 3D ballbot systems, focusing on nonlinear dynamics, trajectory generation, and safety constraints.</li>
+                <li>Conducted research on modeling and simulation, advanced control strategies, and practical implementation for the Ball-Balancing Robot.</li>
+                <li>Authored and co-authored peer-reviewed journal papers based on the project outcomes, including publications in the International Journal of Robust and Nonlinear Control (RNC) and IEEE Access.</li>
+              </ul>
+            </div>
           </div>
           <div class="edu-img">
             <img src="images/meg-logo.png" alt="MEG Logo">
