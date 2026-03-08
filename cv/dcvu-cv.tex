@@ -53,6 +53,21 @@
 {2.5ex plus 1ex minus .2ex}
 
 
+
+% Áp dụng định dạng tương tự cho \section* (không đánh số)
+\titleformat{name=\subsection,numberless}
+[block]
+{\normalfont\large\bfseries\fontfamily{qag}\selectfont}
+{}  % không có số
+{0em}
+{}
+[\titlerule]
+
+%\titlespacing*{\subsection}
+%{-0.5cm}    % ← lùi vào 1cm
+%{2ex plus 1ex minus .2ex}
+%{2.5ex plus 1ex minus .2ex}
+
 \usepackage[shortlabels]{enumitem}
 \newlist{soloitemize}{itemize}{1}
 \setlist[soloitemize]{
@@ -211,7 +226,7 @@
 	\begin{textblock*}{5cm}(15.5cm,0.8cm) 
 		\centering
 		\begin{tcolorbox}[colframe=white, colback=white, sharp corners]
-			\fontfamily{phv}\selectfont \centering\footnotesize \textit{Last update: Aug 2025} \normalsize\normalfont
+			\fontfamily{phv}\selectfont \centering\footnotesize \textit{Last update: Mar 2026} \normalsize\normalfont
 		\end{tcolorbox}
 	\end{textblock*}
 	
@@ -258,7 +273,7 @@
 	\publication{Journal}
 	{Ocean Engineering (SCIE Q1) (2025)}
 	{Glocal trajectory generation and tracking control for AUVs with optimal coverage sensor networks}
-	{\hl{\textbf{Duc Cuong Vu}}*, Son Tran*, Tung Lam Nguyen, and Duc Chinh Hoang}
+	{\hl{\textbf{Duc Cuong Vu}}$^\dagger$, Son Tran$^\dagger$, Tung Lam Nguyen, and Duc Chinh Hoang \hfill$^\dagger$: equally contribution}
 	{10.1016/j.oceaneng.2025.122902}
 	
 	\sepspace
@@ -295,20 +310,48 @@
 
 	\sepspace
 	\publication{Journal}
-	{International Journal of Robust and Nonlinear Control (SCIE Q1) (2024)}
+	{International Journal of Robust and Nonlinear Control - IJRNC (SCIE Q1) (2024)}
 	{Time-optimal trajectory generation and observer-based hierarchical sliding mode control for ballbots with system constraints}
 	{\hl{\textbf{Duc Cuong Vu}}, Minh Duc Pham, Thi Thuy Hang Nguyen, Thi Van Anh Nguyen, and Tung Lam Nguyen}
 	{10.1002/rnc.7358}
+
+
+	
+	\subsection*{Other manuscripts}
+	
+	\publication{Under-review manuscript}
+	{IEEE Transaction on Mechatronics (TMECH 2026)}
+	{Decentralized Control Strategy with Consistent Joint-to-Actuator Control Law for Parallel Mechanisms on a Humanoid Platform}
+	{Tran Vu Trung, Van Thanh Nguyen, \hl{\textbf{Duc Cuong Vu}}, Duc Hai Nguyen, Manh Cuong Nguyen, and Minh Nhat Vu}
+	{10.1002/rnc.7358}
 	
 	
+	\sepspace
+	
+	\publication{Under-review manuscript}
+	{IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS) 2026}
+	{Adaptive Whole-Body MPC with Optimal Posture Planning for Humanoid Robots under Unknown Payloads}
+	{Manh Cuong Nguyen$^\dagger$, \hl{\textbf{Duc Cuong Vu$^\dagger$}}, Viet Anh Vu, Toan Nguyen, Duc Tuan Pham, Minh Hiep Phung, Anh Vien Ngo, and Minh Nhat Vu \hfill$^\dagger$: equally contribution}
+	{}
+	
+	\sepspace
+	
+	\publication{Under-review manuscript}
+	{2026 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM)}
+	{Conformal-Seeded Hybrid Inverse Kinematics for Offset Redundant Manipulators}
+	{\hl{\textbf{Duc Cuong Vu}}, Van Tung Nguyen, Duc Hai Nguyen, Manh Cuong Nguyen, Tran Vu Trung, Andreas Kugi, and Minh Nhat Vu}
+	{}
 		% work experience
+		
+	
 	\section*{Experience}
 	
 	\work{Robotics Engineer at VinRobotics}
 	{Sep 2025 - present}
-	{Full-time \hfill Hanoi, Vietnam}
+	{Full-time, supervised by  \href{https://scholar.google.com/citations?user=qyExc4QAAAAJ&hl=en}{\textit{PhD. Minh Nhat Vu}}\hfill Hanoi, Vietnam}
 	{\begin{soloitemize}
 			\item Conduct pipeline for robot model standardization, kinematics calibration, system identification, and advanced control algorithm for industrial robots.
+			\item Design motion planning and motion control for VinRobotics humanoids robot, conduct scientific papers which are submitted to IROS2026 and IEEE Transaction on Mechatronics.
 	\end{soloitemize}}
 %	
 	\sepspace
@@ -417,7 +460,7 @@
 
 	
 	\section*{Academic activities}
-	\activities{Invited review for}{\textit{Nonlinear Dynamics, IEEE Access}}
+	\activities{Invited review for}{\textit{Nonlinear Dynamics}}
 	
 	\sepspace
 	
@@ -455,11 +498,8 @@
 	
 	% ================= Skills Section =================
 	\section*{Skills}
-		\skill{Programming} {Python, C/C++, MATLAB for algorithm development and embedded robotics.}
-		\skill{Modeling \& Simulation} {Simulink, Simscape Multibody, MuJoCo for kinematics, dynamics, and control validation.}
-		\skill{Control \& Optimization} {Rigid-body dynamics, nonlinear control, MPC, estimation/observer design, optimization, ....}
-		\skill{Robotics Systems} {ROS2, EtherCAT, real-time Linux, embedded systems, automation.}
-		\skill{Engineering Tools} {Git, SolidWorks, PCB design, experimental platform development.}
+		\skill{Programming} {Python, C/C++, MATLAB.}
+		\skill{Engineering Tools} {Git, ROS2, IgH EtherCAT, real-time Linux, Acados, CasADI, Pinocchio, MuJoCo, Simulink, Simscape, SolidWorks, Motion Capture system, PCB design, etc.}
 		\skill{Research} {Scientific writing, publications, presentations, literature analysis, experimental validation.}
 %	\section*{Skills}
 %	
