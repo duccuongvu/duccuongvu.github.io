@@ -10,10 +10,10 @@
 
 \geometry{
 	a4paper,
-	left=15mm,
-	right=15mm,
-	top=10mm,
-	bottom=10mm
+	left=10mm,
+	right=10mm,
+	top=20mm,
+	bottom=20mm
 }
 
 %\geometry{
@@ -75,7 +75,7 @@
 	topsep=0pt,
 	itemsep=4pt,
 	left=2pt,
-	label=$\bullet$,
+	label=$\star$,
 }
 
 % For positioning and boxes
@@ -113,6 +113,9 @@
 	\tikz{\draw[gray, dashed, line width=0.5pt] (0,0) -- (\linewidth,0);}
 	\par\vspace{0.0em}
 }
+% \newcommand{\sepspace}{%
+% 	\par \vspace{1em}
+% }
 
 % Length for alignment boxes
 \newlength{\spacebox}
@@ -121,11 +124,11 @@
 %% MACROS %%
 
 % Name
-\newcommand{\name}[1]{%
+\newcommand{\name}[3]{%
 	\huge
 	\fontfamily{phv}\selectfont
 	\textbf{#1}%
-	\par\normalsize\normalfont
+	\normalsize\normalfont \hfill #2 \quad #3
 }
 
 % Personal info entries
@@ -184,14 +187,21 @@
 }
 
 % Publication entry
-\newcommand{\publication}[5]{%
-	\noindent \textbf{#1} \hspace{0.1cm} \textit{#2} \par
-	\vspace{0.3em}
-	\noindent #3 [\href{https://doi.org/#5}{pdf}] \par
-	\vspace{0.3em}
-	\noindent \textit{#4}
-}
+% \newcommand{\publication}[5]{%
+% 	\noindent \textbf{#1} \hspace{0.1cm} \textit{#2} \par
+% 	\vspace{0.3em}
+% 	\noindent #3 [\href{https://doi.org/#5}{pdf}] \par
+% 	\vspace{0.3em}
+% 	\noindent \textit{#4}
+% }
 
+\newcommand{\publication}[5]{%
+	\noindent $\star$ \hspace{0.1em} #3 \par
+	\vspace{0.3em} 
+	\noindent\hspace{2em}\textit{#2} [\href{https://doi.org/#5}{pdf}] \par
+	\vspace{0.3em}
+	\noindent\hspace{2em}\textit{#4}
+}
 
 % Conference entry
 \newcommand{\conference}[2]{%
@@ -223,7 +233,7 @@
 
 
 \begin{document}
-	\begin{textblock*}{5cm}(15.5cm,0.8cm) 
+	\begin{textblock*}{5cm}(15.5cm,0.2cm) 
 		\centering
 		\begin{tcolorbox}[colframe=white, colback=white, sharp corners]
 			\fontfamily{phv}\selectfont \centering\footnotesize \textit{Last update: Mar 2026} \normalsize\normalfont
@@ -231,10 +241,10 @@
 	\end{textblock*}
 	
 	
-	\name{Duc-Cuong VU, BSc.}
+	\name{Duc-Cuong Vu}{\href{mailto:vdcuong2002@gmail.com}{vdcuong2002@gmail.com}}{\href{https://duccuongvu.github.io}{https://duccuongvu.github.io}}
+
 	\sepspace
-	\info{Email}{\href{mailto:vdcuong2002@gmail.com}{\texttt{vdcuong2002 [at] gmail.com}}} \hspace{2cm}
-	\info{Website}{\href{https://duccuongvu.github.io}{https://duccuongvu.github.io}}
+	
 	\vspace{0.2em}\par
 	
 	
@@ -245,10 +255,10 @@
 		%\hfill Hanoi, Vietnam
 	}
 	{
-		\begin{soloitemize}
+		% \begin{soloitemize}
 			%\item \textbf{Research project:} \textit{Design control structures for Parallel Platforms in Maritime applications}
-			\item \textbf{Funded by:} \textit{Master, PhD Scholarship Programme of Vingroup Innovation Foundation (\href{https://vinif.org/en/}{VinIF})} 
-		\end{soloitemize}
+			{Funded by:} \textit{Master, PhD Scholarship Programme of Vingroup Innovation Foundation (\href{https://vinif.org/en/}{VinIF})} 
+		% \end{soloitemize}
 	}
 	
 	\sepspace
@@ -259,10 +269,11 @@
 		Hanoi University of Science and Technology (\href{https://hust.edu.vn/en/}{HUST}), 
 		%\hfill Hanoi, Vietnam
 	}
-	{\begin{soloitemize}
-			\item \textbf{Excellent degree}, GPA: 3.71/4 (Rank: 22/499, top 5\%). Finished the 4-year BSc program in \textbf{just 3.5 years}.
+	{
+	% {\begin{soloitemize}
+			{Excellent degree}, GPA: 3.71/4 (Rank: 22/499, top 5\%). Finished the 4-year BSc program in {just 3.5 years}.
 			%\item \textbf{Thesis:} \textit{Balancing, motion planning, and tracking control for ballbot systems} [\href{https://drive.google.com/file/d/14nDBzQam5qdcvj9y6AuS6N0fQ292AwWj/view?usp=sharing}{pdf}] (The best thesis defense)
-		\end{soloitemize}
+		% \end{soloitemize}
 	}
 	
 	
@@ -296,7 +307,7 @@
 	
 	\publication{Journal}
 	{Results in Engineering (ESCI Q1) (2025)}
-	{A novel approach of Consensus-based Finite-time Distributed Sliding Mode Control for Stewart platform manipulators motion tracking}
+	{A novel approach of Consensus-based Finite-time DSMC for Stewart platform manipulators motion tracking}
 	{\hl{\textbf{D.C. Vu}}, D.H. Nguyen, and T.L. Nguyen}
 	{10.1016/j.rineng.2024.103872}
 	
@@ -304,9 +315,9 @@
 	
 	 \publication{Journal}
 	 {IET Cyber-Systems and Robotics (SCIE Q3) (2025)}
-	 {Unifying Hierarchical Sliding Mode Control and Control Barrier Function for Tilt Angle Constraint of a Ball-Balancing Robot [accpeted for publication]}
+	 {Unifying Hierarchical Sliding Mode Control and Control Barrier Function for Tilt Angle Constraint of a Ball-Balancing Robot}
 	 {T.T.H. Nguyen, \hl{\textbf{D.C. Vu}}, M.D. Pham, T.V.A. Nguyen, and T.L. Nguyen}
-	 {--}
+	 {10.1049/csy2.70045}
 
 	\sepspace
 	\publication{Journal}
@@ -320,7 +331,7 @@
 	\subsection*{Other manuscripts}
 	
 	\publication{Under-review manuscript}
-	{--}
+	{Submitted manuscript}
 	{Decentralized Control Strategy with Consistent Joint-to-Actuator Control Law for Parallel Mechanisms on a Humanoid Platform}
 	{T.V. Trung, V.T. Nguyen, \hl{\textbf{D.C. Vu}}, D.H. Nguyen, M.C. Nguyen, and M.N. Vu}
 	{10.1002/rnc.7358}
@@ -329,7 +340,7 @@
 	\sepspace
 	
 	\publication{Under-review manuscript}
-	{--}
+	{Submitted manuscript}
 	{Adaptive Whole-Body MPC with Optimal Posture Planning for Humanoid Robots under Unknown Payloads}
 	{M.C. Nguyen$^\dagger$, \hl{\textbf{D.C. Vu$^\dagger$}}, V.A. Vu, T. Nguyen, D.T. Pham, M.H. Phung, A.V. Ngo, and M.N. Vu \hfill$^\dagger$: equally contribution}
 	{}
@@ -337,7 +348,7 @@
 	\sepspace
 	
 	\publication{Under-review manuscript}
-	{--}
+	{Submitted manuscript}
 	{Conformal-Seeded Hybrid Inverse Kinematics for Offset Redundant Manipulators}
 	{\hl{\textbf{D.C. Vu}}, V.T. Nguyen, D.H. Nguyen, M.C. Nguyen, T.V. Trung, A. Kugi, and M.N. Vu}
 	{}
@@ -463,9 +474,9 @@
 	\activities{Invited review for}
 		{
 			\begin{soloitemize}
-				\item Nonlinear Dynamics
-				\item International Conference on Intelligent Robots and Systems (IROS, 2026)
-				\item IEEE Robotics and Automation Letters (RA-L)
+				\item \textit{Nonlinear Dynamics}
+				\item \textit{International Conference on Intelligent Robots and Systems (IROS, 2026)}
+				\item \textit{IEEE Robotics and Automation Letters (RA-L)}
 			\end{soloitemize}}
 	
 	\sepspace
