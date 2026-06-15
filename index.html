@@ -62,10 +62,10 @@
     <a href="#news">news</a> 
     <a href="#pubs">publications</a> 
     <a href="#work">works</a>
-    <a href="#edu">education</a> 
-    <a href="projects/index.html">projects</a> 
-    <a href="activities/index.html">activities</a>
-    <a href="awards/index.html">awards</a>
+    <a href="#edu">education</a>
+    <a href="projects/index.html">projects</a>
+    <a href="#activities">activities</a>
+    <a href="#awards">awards</a>
     <button id="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
       <span class="toggle-icon">🌙</span>
     </button>
@@ -80,26 +80,19 @@
         <!-- <p>📬 Email: </p> -->
         <!-- <p>☎️ Phone: +84 865 280 802</p> -->
         <!-- <p>📍 Hometown: <a href="https://www.google.com/maps/place/B%E1%BA%A1ch+Long,+Giao+Thu%E1%BB%B7,+Nam+%C4%90%E1%BB%8Bnh,+Vi%E1%BB%87t+Nam/@20.2156776,106.3976524,14z/data=!3m1!4b1!4m6!3m5!1s0x313606a1c2e7def5:0x193f394d98ad6ead!8m2!3d20.2191505!4d106.4111425!16s%2Fg%2F1td5tmpf?entry=ttu&g_ep=EgoyMDI1MDUxMy4xIKXMDSoASAFQAw%3D%3D" target="_blank">Giao Thuy, Nam Dinh, Vietnam</a></p> -->
-        <p>
-            <a href="mailto:vdcuong2002@gmail.com">E-mail</a> / 
-            <a href="https://orcid.org/0009-0002-3190-1875" target="_blank">ORCID</a>   /  
-            <a href="https://www.linkedin.com/in/duccuongvu/" target="_blank">LinkedIn</a>   /  
-          <a href="https://scholar.google.com/citations?user=N35X_pEAAAAJ&hl=en" target="_blank">Google Scholar</a> /  
-          <a href="https://github.com/duccuongvu" target="_blank">GitHub</a>   /  
-          <a href="cv/dcvu-cv.pdf" target="_blank">CV</a> 
+        <p class="contact-links">
+          <a href="mailto:vdcuong2002@gmail.com"><code>[email]</code></a>
+          <a href="https://orcid.org/0009-0002-3190-1875" target="_blank"><code>[orcid]</code></a>
+          <a href="https://www.linkedin.com/in/duccuongvu/" target="_blank"><code>[linkedin]</code></a>
+          <a href="https://scholar.google.com/citations?user=N35X_pEAAAAJ&hl=en" target="_blank"><code>[google scholar]</code></a>
+          <a href="https://github.com/duccuongvu" target="_blank"><code>[github]</code></a>
+          <a href="cv/dcvu-cv.pdf" target="_blank"><code>[cv]</code></a>
         </p>
 
         <section id="intro">
           <h2 class="section-title">✍️ about me</h2>
-          <p>
-            I am pursuing an M.Sc. in Automation and Control at <a href="https://hust.edu.vn/en/" target="_blank">HUST</a>, supervised by <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en" target="_blank">Assoc. Prof. Dr. Tung Lam Nguyen</a>. My research focuses on Stewart platforms in marine environments, funded by <a href="https://vinif.org/en/" target="_blank">VINIF</a>. I hold a B.Sc. from HUST and received the <i>Best Thesis Defense Award</i> for my work on <i>balancing, motion planning, and tracking control for ballbot systems</i>.
-          </p>
-          <p>
-            Beside that, I am a Robotics Engineer at <a href="https://vinrobotics.net/" target="_blank">VinRobotics</a>, working on control algorithms and motion planning for humanoids and industrial robots.
-          </p>
-          <p>
-            My interests include control theory, robotics, and bridging simulation with real-world validation. See my <a href="projects/index.html">projects</a> and <a href="activities/index.html">activities</a> for more.
-          </p>
+          <p>Bachelor and Master of Science in Automation and Control @ <a href="https://hust.edu.vn/en/" target="_blank">HUST</a>.</p>
+          <p>Robotics Engineer @ <a href="https://vinrobotics.net/" target="_blank">VinRobotics</a>.</p>
         </section>
         
 
@@ -212,10 +205,7 @@
           <p style="font-style: italic; opacity: 0.7; font-size: 0.9em;">* equal contribution</p>
           <p>Ocean Engineering, 2025 (SCIE, Q1)</p>
           <!-- <p>Accepted manuscript</p> -->
-          <p>[<a href="https://www.sciencedirect.com/science/article/pii/S0029801825025855" target="_blank">paper</a> | <a href="https://drive.google.com/file/d/1GN7qNn0eF9i9D0e4s4YdCC4POIGcKyAi/view?usp=drive_link" target="_blank">pdf</a> | <a href="https://github.com/duccuongvu/AUV-ODIN-mujoco" target="_blank">code</a>]</p>
-          <div class="abstract-content">
-            This paper presents a comprehensive framework for glocal trajectory generation with real-time tracking control for a group of Autonomous Underwater Vehicles (AUVs) equipped with distributed sensors. A two-stage approach is proposed to maximize the underwater area coverage of sensor systems while ensuring network connectivity between AUVs and free collision with terrains and floating obstacles. At the global level, a heuristic algorithm named Global Trajectory to Maximize Coverage (GT-MC) is introduced, which generate trajectory to optimize the final AUVs distribution. After that, the trajectory is further optimized to produce the final set of waypoints for the AUVs group. At the local level, a safety-critical trajectory generation method is developed by using a Model Predictive Control (MPC) scheme for a virtual AUV system with Control Barrier Functions (CBF) as constraints for floating obstacle avoidance. Then, the generated trajectories are tracked by the actual AUVs using a base controller, in this case a classical Sliding Mode Controller (SMC) combined with a thruster force allocation optimizer. The complete framework is validated via simulation studies using an open-source advanced physics tool called MuJoCo. The suggested methodology can facilitate the autonomy, scalability, and safety of sensor-AUVs distribution missions, making it a promising tool for intelligent marine sensing and monitoring.
-          </div>
+          <p class="pub-links"><a href="https://www.sciencedirect.com/science/article/pii/S0029801825025855" target="_blank"><code>[paper]</code></a><a href="https://drive.google.com/file/d/1GN7qNn0eF9i9D0e4s4YdCC4POIGcKyAi/view?usp=drive_link" target="_blank"><code>[pdf]</code></a><a href="https://github.com/duccuongvu/AUV-ODIN-mujoco" target="_blank"><code>[code]</code></a></p>
         </div>
       </div>
 
@@ -228,10 +218,7 @@
           <p>📝 Lagrangian-based modeling and safety-critical controls for Stewart platforms under marine operations</p>
           <p><em><b>Duc Cuong Vu</b>, Danh Huy Nguyen, Minh Nhat Vu, and Tung Lam Nguyen</em></p>
           <p>Ocean Engineering, 2025 (SCIE, Q1)</p>
-          <p>[<a href="https://www.sciencedirect.com/science/article/pii/S0029801825018268" target="_blank">paper</a> | <a href="https://drive.google.com/file/d/1j4Le1ceRAjrDXLOKi8MW3s1x3ZWVnzEc/view?usp=drive_link" target="_blank">pdf</a>]</p>
-          <div class="abstract-content">
-            The operation of waves, winds, and ocean currents that affect ships or marine vehicles poses a number of challenges for systems that require balance. To address this issue, this study introduces a 6-degree-of-freedom parallel robot Stewart platform erected on the ship deck to isolate vibrations. First, Lagrangian-based modeling is applied to the ship-mounted Stewart platform. Unlike previous systems that are based on Kane’s method or Newtonian mechanics, the Lagrangian-based approach does not require a large number of tedious mathematical transformations; instead, it can be generated by a computer. Because of the complexity of the simulation model, the control design model is simplified from the original. Following that, the Control Lyapunov Function (CLF) is employed to achieve zero convergence and the stabilization of the state errors. To ensure operational safety, the Quadratic Program (QP) problem takes into account the Control Barrier Function (CBF) and Exponential Control Barrier Function (ECBF) constraints. The controllers are equipped with High-Gain Disturbance Observation (DOB). Finally, the Lagrangian-based model is validated by comparison with the MATLAB Simscape Multibody platform. In addition, the performance of the proposed control strategies is analyzed.
-          </div>
+          <p class="pub-links"><a href="https://www.sciencedirect.com/science/article/pii/S0029801825018268" target="_blank"><code>[paper]</code></a><a href="https://drive.google.com/file/d/1j4Le1ceRAjrDXLOKi8MW3s1x3ZWVnzEc/view?usp=drive_link" target="_blank"><code>[pdf]</code></a></p>
         </div>
       </div>
 
@@ -245,10 +232,7 @@
           <p><em>Thi Thuy Hang Nguyen, <b>Duc Cuong Vu</b>, Minh Duc Pham, Tung Lam Nguyen, and Thi-Van-Anh Nguyen</em></p>
           <p>IET Cyber-Systems and Robotics, 2025 (SCIE, Q3)</p>
           <!-- <p>Accepted manuscript</p> -->
-          <p>[Accepted manuscript]</p>
-          <div class="abstract-content">
-            This paper presents a novel control methodology that combines control barrier functions (CBFs) and hierarchical sliding mode control (HSMC) for the ball-balancing robot. The motivation arises from the need to achieve stable balancing and position tracking while guaranteeing physical safety under tilt angle constraints. The proposed approach aims to achieve stable balancing and position tracking, and ensure compliance with safety constraints defined as an invariant set. To ensure the satisfaction of these safety constraints,  CBFs  are employed. Based on the construction of a suitable CBF, a non-empty set of control signals satisfying the CBF-dependent inequality is given. The integration of CBFs and HSMC is facilitated through quadratic programming (QP), enabling the unification of stability objectives and safety constraints. The applied nominal control law is HSMC, an effective solution for the underactuated system. The safety constraint is considered to guarantee that the tilt angle of the body never exceeds a predetermined value. Simulation results demonstrate that the proposed controller maintains the deviation angle within safe bounds while achieving robust tracking performance. These findings confirm the potential of combining HSMC with CBFs to ensure both performance and safety, paving the way for future experimental validation on physical platforms.
-          </div>
+          <p class="pub-links"><code>[accepted manuscript]</code></p>
         </div>
       </div>
 
@@ -261,10 +245,7 @@
           <p>📝 CBFs-based Model Predictive Control for Obstacle Avoidance with Tilt Angle Limitation for Ball-Balancing Robots</p>
           <p><em>Minh Duc Pham, <b>Duc Cuong Vu</b>, Thi Thuy Hang Nguyen, Thi Van Anh Nguyen, Minh Nhat Vu, and Tung Lam Nguyen</em></p>
           <p> IEEE Access, 2025 (SCIE, Q2)</p>
-          <p>[<a href="https://ieeexplore.ieee.org/abstract/document/10988790/" target="_blank">paper</a> | <a href="https://drive.google.com/file/d/1pmVraFZr0_TKOEBgPxYvASX9Bd9Q4gtW/view?usp=drive_link" target="_blank">pdf</a>]</p>
-          <div class="abstract-content">
-            This study investigates an automatic navigation method for one type of underactuated system, ball-balancing robot (ballbot), in complex environments with both dynamic obstacles and complex-shaped obstacles. To ensure safe operations, which means that ballbot has to avoid obstacles and maintain tilt angles in a desired range, Nonlinear Model Predictive Control (NMPC) is formulated to predict the position and behavior of the ballbot, followed by the optimization problem assisted by Control Barrier Function (CBF) constraints to drive the ballbot in the safe trajectory. Instead of directly implementing tilt angle limitations on the main NMPC, another Quadratic Programming Optimizer based on CBF is designed outside the main controller to reduce the constraint complexity of optimization. An elliptic-bounded generation method is used to simplify the object boundary, especially concave obstacles definition in NMPC constraints, while Extended State Observer is used for observing, compensating the uncertainty terms, and estimating the velocities of the ballbot. In general, by combining this CBF-based NMPC and Quadratic Programming, this research addresses simultaneously high-quality observer, tracking control, balancing control, complex motion planning and safe-angle constraints for the 3D-ballbot system. The effectiveness of our proposed method is determined by simulations in complicated tracking scenarios with static, dynamic and complex-shaped objects.
-          </div>
+          <p class="pub-links"><a href="https://ieeexplore.ieee.org/abstract/document/10988790/" target="_blank"><code>[paper]</code></a><a href="https://drive.google.com/file/d/1pmVraFZr0_TKOEBgPxYvASX9Bd9Q4gtW/view?usp=drive_link" target="_blank"><code>[pdf]</code></a></p>
         </div>
       </div>
 
@@ -277,10 +258,7 @@
           <p>📝 A novel approach of Consensus-based Finite-time Distributed Sliding Mode Control for Stewart platform manipulators motion tracking</p>
           <p><em><b>Duc Cuong Vu,</b> Danh Huy Nguyen, and Tung Lam Nguyen</em></p>
           <p>Results in Engineering, 2025 (ESCI, Q1)</p>
-          <p>[<a href="https://doi.org/10.1016/j.rineng.2024.103872" target="_blank">paper</a> | <a href="https://drive.google.com/file/d/18KpTObaeMACcZNy26OZon25hHLPXHA4p/view?usp=drive_link" target="_blank">pdf</a>]</p>
-          <div class="abstract-content">
-            The Gough-Stewart Platform, often referred to simply as the Stewart Platform, is a parallel mechanical system with six degrees of freedom, which is widely employed in simulation and precise applications. This study gives a thorough Lagrangian-based model of the Stewart Platform, emphasizing its dynamic behavior and control mechanisms. A novel distributed control technique based on Finite-time Distributed Sliding Mode Control (DSMC) is presented to establish second-order consensus in a multi-agent framework in which each leg of the platform is viewed as an autonomous agent. The control approach ensures accurate monitoring of reference trajectories. Simulations are used to validate the efficacy of the proposed control scheme by comparing it to typical decentralized PD control methods. The results simulated based on the Quasi-Physical Model show that consensus-based control outperforms the counterpart control approaches in terms of accuracy and stability.
-          </div>
+          <p class="pub-links"><a href="https://doi.org/10.1016/j.rineng.2024.103872" target="_blank"><code>[paper]</code></a><a href="https://drive.google.com/file/d/18KpTObaeMACcZNy26OZon25hHLPXHA4p/view?usp=drive_link" target="_blank"><code>[pdf]</code></a></p>
         </div>
       </div>
 
@@ -293,10 +271,7 @@
           <p>📝 Time-optimal trajectory generation and observer-based hierarchical sliding mode control for ballbots with system constraints</p>
           <p><em><b>Duc Cuong Vu</b>, Minh Duc Pham, Thi Thuy Hang Nguyen, Thi Van Anh Nguyen, and Tung Lam Nguyen</em></p>
           <p>International Journal of Robust and Nonlinear Control, 2024 (SCIE, Q1)</p>
-          <p>[<a href="https://onlinelibrary.wiley.com/doi/10.1002/rnc.7358" target="_blank">paper</a> | <a href="https://drive.google.com/file/d/18HqWPhsNbvWf8t5ZYXYBOsqK-H8hTmdf/view?usp=drive_link" target="_blank">pdf</a>]</p>
-          <div class="abstract-content">
-            This paper introduces a comprehensive motion planning–tracking–safety constraint scheme for a 3D ballbot system. A nonlinear control for the 3D ballbot system is designed based on three separate planes by utilizing extended state observer (ESO) to estimate coupling mechanisms. Three virtual control signals are generated from these distinct planes and can be used for formulating actual control signals. To overcome the complexity of nonlinear motion equations, flatness theory is used to construct the time-optimal trajectory through an optimization problem, facilitating smooth movement of the ballbot, and obstacle avoidance based on RRT* waypoints. Furthermore, our work manipulates the hierarchical sliding mode controller (HSMC) as the nominal controller to ensure that the ballbot tracks to the optimal trajectory, unifying with the exponential control barrier function (ECBF) to address safety constraints in the body's deflection angle. Through extensive simulations and comparative analysis, the system demonstrates its effectiveness and safe operation in various working conditions.
-          </div>
+          <p class="pub-links"><a href="https://onlinelibrary.wiley.com/doi/10.1002/rnc.7358" target="_blank"><code>[paper]</code></a><a href="https://drive.google.com/file/d/18HqWPhsNbvWf8t5ZYXYBOsqK-H8hTmdf/view?usp=drive_link" target="_blank"><code>[pdf]</code></a></p>
         </div>
       </div>
       </section>
@@ -309,14 +284,7 @@
         <div class="work-item">
           <div class="work-info">
             <div class="work-role"><strong>Robotics Engineer at VinRobotics, Vingroup</strong></div>
-            <div class="work-institute">Full-time (On-site) | Hanoi, Vietnam</div>
-            <div class="work-date" data-start="2025-09" data-end="present">Sep 2025 – Present</div>
-            <button type="button" class="work-expand-btn">Show details</button>
-            <div class="work-expandable">
-              <ul class="work-details">
-                <li>Responsible for model-based control and motion planning for industrial robots.</li>
-              </ul>
-            </div>
+            <div class="work-institute">Full-time (On-site) | Hanoi, Vietnam | Sep 2025 – Present</div>
           </div>
           <div class="work-img">
             <img src="images/VR-logo.svg" alt="VinRobotics Logo" width="50" height="50">
@@ -326,62 +294,7 @@
         <div class="work-item">
           <div class="work-info">
             <div class="work-role"><strong>Research & Internship at HUST</strong></div>
-            <div class="work-institute">Contract / Part-time / Internship (Hybrid) | Hanoi, Vietnam</div>
-            <div class="work-date" data-start="2021-10" data-end="present">Oct 2021 – Present</div>
-            <button type="button" class="work-expand-btn">Show details</button>
-            <div class="work-expandable">
-              <div class="work-subrole">
-                <div class="work-subrole-title">Research Project Assistant · Jan 2025 – Present</div>
-                <p class="work-supervisors">
-                  Supervised by <a href="https://scholar.google.com/citations?user=mI561CkAAAAJ&hl=en" target="_blank">PhD. Chinh Hoang Duc</a> (PI)
-                  and <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en" target="_blank">Assoc.Prof.PhD. Tung Lam Nguyen</a>.
-                </p>
-                <p class="work-project">Project: Robot navigation system integrating sensor network and wireless communication.</p>
-                <ul class="work-details">
-                  <li>Designed and developed a comprehensive MuJoCo-based simulation environment for AUVs, incorporating underwater dynamics, sensor feedback, environmental disturbances, and communication constraints to evaluate system performance.</li>
-                  <li>Implemented and validated advanced control algorithms for navigation, obstacle avoidance, and trajectory tracking, while collaborating on integration, troubleshooting, and authoring a peer-reviewed scientific paper.</li>
-                </ul>
-              </div>
-
-              <div class="work-subrole">
-                <div class="work-subrole-title">Research Project Assistant · Jan 2025 – Oct 2025</div>
-                <p class="work-supervisors">
-                  Supervised by <a href="https://scholar.google.com/citations?user=qyExc4QAAAAJ&hl=en" target="_blank">PhD. Minh Nhat Vu</a> (PI)
-                  and <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en" target="_blank">Assoc.Prof.PhD. Tung Lam Nguyen</a>.
-                </p>
-                <p class="work-project">Project: Advanced Control of a Ship-Mounted Stewart Platform for Marine Applications (KIST).</p>
-                <ul class="work-details">
-                  <li>Designed and implemented advanced control algorithms for the Stewart platform, including safety-critical and robust control strategies tailored for marine environments.</li>
-                  <li>Developed high-fidelity simulation models and conducted comprehensive experimental validation to analyze system performance under marine disturbances.</li>
-                  <li>Collaborated with cross-institutional teams on system integration, troubleshooting, and authoring peer-reviewed scientific publications.</li>
-                </ul>
-              </div>
-
-              <div class="work-subrole">
-                <div class="work-subrole-title">Graduate Student Research · May 2024 – Present</div>
-                <p class="work-supervisors">
-                  Supervised by <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en" target="_blank">Assoc.Prof.PhD. Tung Lam Nguyen</a>.
-                </p>
-                <p class="work-project">Project: Design control structures for Parallel Platforms in Maritime applications (VinIF).</p>
-                <ul class="work-details">
-                  <li>Designed and implemented advanced control algorithms for a Stewart platform in marine environments, supported by high-fidelity simulations (Simscape, MuJoCo) and validated through a full experimental setup (mechanical assembly, hardware integration, Linux real-time kernel, EtherCAT communication).</li>
-                  <li>Collaborated with cross-institutional teams on system integration, troubleshooting, and documentation, while authoring peer-reviewed publications and presenting outcomes to academic and industrial partners.</li>
-                </ul>
-              </div>
-
-              <div class="work-subrole">
-                <div class="work-subrole-title">Student Intern · Oct 2021 – Apr 2024</div>
-                <p class="work-supervisors">
-                  Supervised by <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en" target="_blank">Assoc.Prof.PhD. Tung Lam Nguyen</a>.
-                </p>
-                <p class="work-project">Project: Balancing, motion planning, and tracking control for ballbot systems.</p>
-                <ul class="work-details">
-                  <li>Developed mathematical models and simulation environments for 3D ballbot systems, focusing on nonlinear dynamics, trajectory generation, and safety constraints.</li>
-                  <li>Conducted research on modeling and simulation, advanced control strategies, and practical implementation for the Ball-Balancing Robot.</li>
-                  <li>Authored and co-authored peer-reviewed journal papers based on the project outcomes, including publications in the International Journal of Robust and Nonlinear Control (RNC) and IEEE Access.</li>
-                </ul>
-              </div>
-            </div>
+            <div class="work-institute">Contract / Part-time / Internship (Hybrid) | Hanoi, Vietnam | Oct 2021 – Present</div>
           </div>
           <div class="edu-img">
             <img src="images/meg-logo.png" alt="MEG Logo">
@@ -392,11 +305,6 @@
         </div>
       </section>
 
-
-
-      </div>
-    </section>
-
     <!-- ===== Education ===== -->
     <section id="edu">
       <h2 class="section-title">🎓 educations</h2>
@@ -404,16 +312,7 @@
       <div class="edu-item">
         <div class="edu-info">
           <div class="edu-degree">⭐⭐ Master of Science in Automation and Control</div>
-          <div class="edu-school">
-            <a href="https://seee.hust.edu.vn/en/" target="_blank">School of Electrical-Electronics Engineering</a>,
-            <a href="https://hust.edu.vn/en/">Hanoi University of Science and Technology (HUST)</a>
-          </div>
-          <!-- Dùng data-start và data-end -->
-          <div class="edu-date" data-start="2024-07-01" data-end="present">Jul 2024 – Present</div>
-          <ul class="edu-details">
-            <li>Research topic: Design control structures for Parallel Platforms in Maritime applications [<a href="https://github.com/duccuongvu/master-thesis/blob/master/master-thesis.pdf" target="_blank">pdf</a>]</li>
-            <li>Funded by: Master, PhD Scholarship Programme of <a href="https://vinif.org/en/" target="_blank">Vingroup Innovation Foundation (VINIF)</a>.</li>
-          </ul>
+          <div class="edu-school">SEEE, <a href="https://hust.edu.vn/en/" target="_blank">Hanoi University of Science and Technology</a> | Jul 2024 – Present</div>
         </div>
         <div class="edu-img">
           <img src="images/hust-logo.webp" alt="HUST">
@@ -423,15 +322,7 @@
       <div class="edu-item">
         <div class="edu-info">
           <div class="edu-degree">⭐ Bachelor of Science in Automation and Control</div>
-          <div class="edu-school">
-            <a href="https://seee.hust.edu.vn/en/" target="_blank">School of Electrical-Electronics Engineering</a>,
-            <a href="https://hust.edu.vn/en/" target="_blank">Hanoi University of Science and Technology (HUST)</a>
-          </div>
-          <div class="edu-date" data-start="2020-10-10" data-end="2024-04-04">Oct 10, 2020 – Apr 04, 2024</div>
-          <ul class="edu-details">
-            <li>CPA: 3.71/4.0 (Excellent degree). Rank: 22/499</li>
-            <li>Thesis: <i>Balancing, motion planning and tracking control for ballbot systems</i> (The best thesis defense) [<a href="https://drive.google.com/file/d/14nDBzQam5qdcvj9y6AuS6N0fQ292AwWj/view?usp=sharing" target="_blank">pdf</a>]</li>
-          </ul>
+          <div class="edu-school">SEEE, <a href="https://hust.edu.vn/en/" target="_blank">Hanoi University of Science and Technology</a> | Oct 2020 – Apr 2024</div>
         </div>
         <div class="edu-img">
           <img src="images/hust-logo.webp" alt="HUST">
@@ -440,6 +331,41 @@
 
     </section>
 
+
+    <!-- ===== Activities ===== -->
+    <section id="activities">
+      <h2 class="section-title">👣 academic activities</h2>
+      <div class="activity-item">
+        <div class="activity-title">Invited Reviewer</div>
+        <div class="activity-detail">
+          <ul>
+            <li><a href="https://link.springer.com/journal/11071" target="_blank">Nonlinear Dynamics</a></li>
+            <li>IEEE/RSJ IROS 2026</li>
+            <li>IEEE Robotics and Automation Letters (RA-L)</li>
+            <li>IEEE RO-MAN 2026</li>
+          </ul>
+        </div>
+      </div>
+      <div class="activity-item">
+        <div class="activity-title">Seminars and Talks</div>
+        <div class="activity-detail">
+          <ul>
+            <li>2025: "MuJoCo for Advanced Physics Simulation" — Motion Control master course at HUST &amp; MoCAR seminar [<a href="https://drive.google.com/file/d/10EOLlFqleqqPBXlAqDkhnFmAycjfnl9E/view?usp=drive_link" target="_blank">slide</a>]</li>
+            <li>2025: "Underwater Vehicles" — AUV modeling training at MEG-MoCAR [<a href="https://drive.google.com/file/d/13BD5C82OyaQ9N83s5FF_MnSdGozZ3Q1_/view?usp=drive_link" target="_blank">slide</a>]</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Awards ===== -->
+    <section id="awards">
+      <h2 class="section-title">🏆 honors & awards</h2>
+      <ul>
+        <li>NTU Research Scholarship — PhD in EEE, <a href="https://www.ntu.edu.sg/" target="_blank">Nanyang Technological University (NTU), Singapore</a></li>
+        <li>Master, PhD Scholarship Programme — <a href="https://vinif.org/en/" target="_blank">Vingroup Innovation Foundation (VINIF)</a></li>
+        <li>Best Thesis Defense Award — <a href="https://hust.edu.vn/en/" target="_blank">Hanoi University of Science and Technology</a></li>
+      </ul>
+    </section>
 
     <footer>
       <p>&copy; 2026 Duc-Cuong VU. All rights reserved.</p>

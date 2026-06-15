@@ -277,6 +277,53 @@ i { color: var(--text-color); }
 /* ===============================
    🔗 Links
 =================================*/
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 4px 0 0;
+}
+
+.pub-links a {
+  text-decoration: none;
+}
+
+.pub-links a code,
+.pub-links code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.88em;
+  color: var(--link-color);
+  transition: color 0.2s ease;
+}
+
+.pub-links a:hover code {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.contact-links a {
+  text-decoration: none;
+}
+
+.contact-links a code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.88em;
+  color: var(--link-color);
+  transition: color 0.2s ease;
+}
+
+.contact-links a:hover code {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
 .contact a, footer a {
   color: var(--link-color);
   text-decoration: none;
@@ -416,7 +463,6 @@ ul li {
 .work-img img {
   width: 50px;
   max-width: 100%;
-  border-radius: 4px;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
@@ -532,7 +578,6 @@ ul li {
 .project-img img {
   width: 400px;
   max-width: 100%;
-  border-radius: 4px;
   box-shadow: 0 2px 8px var(--box-shadow-color);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -575,13 +620,11 @@ ul li {
   background: var(--pub-journal-bg);
   color: var(--text-color);
   border: 1px solid var(--pub-journal-border);
-  border-radius: 4px 4px 0 0;
   letter-spacing: 0.02em;
 }
 .pub-img img {
   width: 100%;
   max-width: 100%;
-  border-radius: 0 0 4px 4px;
   box-shadow: 0 2px 8px var(--box-shadow-color);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: block;
@@ -624,7 +667,7 @@ header {
   gap: 20px;
   position: relative;
   z-index: 1;
-  padding-top: 72px;
+  padding-top: 8px;
   margin-bottom: 24px;
 }
 
@@ -635,7 +678,6 @@ header > div {
 header img {
   max-width: 100%;
   height: auto;
-  border-radius: 4px;
   box-shadow: 0 2px 8px var(--box-shadow-color);
 }
 
