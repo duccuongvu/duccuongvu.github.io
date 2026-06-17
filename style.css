@@ -274,6 +274,10 @@ i { color: var(--text-color); }
   font-size: 1em;
   line-height: 1.5;
 }
+
+.pub-info p em {
+  font-size: 0.88em;
+}
 /* ===============================
    🔗 Links
 =================================*/
