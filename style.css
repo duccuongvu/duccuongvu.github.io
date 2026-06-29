@@ -303,12 +303,12 @@ h2.section-title {
 ================================= */
 .work-item {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding-bottom: 20px;
+  flex-direction: column;
+  gap: 0;
+  padding: 10px 12px 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid var(--border);
+  border-radius: 6px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -319,11 +319,52 @@ h2.section-title {
   box-shadow: 0 4px 16px var(--shadow);
 }
 
+.work-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
 .work-info { flex: 1; }
 
 .work-role { font-weight: 600; font-size: 14px; }
 .work-institute { font-size: 13px; color: var(--muted); margin-top: 3px; }
 .work-date { font-size: 12px; color: var(--muted); margin-top: 2px; font-style: italic; }
+
+.work-expand-btn {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--accent);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.work-expandable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.work-item.expanded .work-expandable {
+  max-height: 600px;
+}
+
+.work-expandable ul {
+  margin: 10px 0 0 0;
+  padding-left: 18px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.work-expandable ul li { margin-bottom: 4px; }
 
 .work-img {
   display: flex;
@@ -342,15 +383,101 @@ h2.section-title {
 .work-img img:hover { transform: scale(1.05); }
 
 /* ===============================
+   Projects
+================================= */
+.project-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 10px 12px 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+  border-radius: 6px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.project-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px var(--shadow);
+}
+
+.project-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.project-info { flex: 1; }
+
+.project-role { font-weight: 600; font-size: 14px; }
+.project-title { font-size: 13px; margin-top: 3px; }
+.project-meta { font-size: 12px; color: var(--muted); margin-top: 2px; font-style: italic; }
+
+.project-expand-btn {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--accent);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.project-expandable {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.project-item.expanded .project-expandable {
+  max-height: 800px;
+}
+
+.project-expandable ul {
+  margin: 10px 0 0 0;
+  padding-left: 18px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.project-expandable ul li { margin-bottom: 4px; }
+
+.project-img {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.project-img img {
+  width: 180px;
+  max-width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.project-img img:hover { transform: scale(1.03); }
+
+/* ===============================
    Publications
 ================================= */
 .pub-item {
   display: flex;
   gap: 20px;
   align-items: flex-start;
-  padding-bottom: 24px;
+  padding: 10px 12px 24px;
   margin-bottom: 24px;
   border-bottom: 1px solid var(--border);
+  border-radius: 6px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -418,7 +545,8 @@ h2.section-title {
   display: flex;
   gap: 20px;
   align-items: flex-start;
-  padding-bottom: 20px;
+  padding: 10px 12px 20px;
+  border-radius: 6px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".work-item").forEach(item => {
-    const expandable = item.querySelector(".work-expandable");
-    const btn = item.querySelector(".work-expand-btn");
+  document.querySelectorAll(".work-item, .project-item").forEach(item => {
+    const expandable = item.querySelector(".work-expandable, .project-expandable");
+    const btn = item.querySelector(".work-expand-btn, .project-expand-btn");
     if (!expandable || !btn) return;
 
     btn.addEventListener("click", () => {
