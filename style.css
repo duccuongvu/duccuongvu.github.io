@@ -188,6 +188,15 @@ ul li { margin-bottom: 6px; }
 .email-badge.hust   { background: #C0392B; }
 .email-badge.vin    { background: #1565C0; }
 
+.email-logo {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  object-fit: contain;
+  background: #fff;
+}
+
 .email-addr {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
