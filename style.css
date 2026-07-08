@@ -621,6 +621,8 @@ h2.section-title {
 
 .edu-img img:hover { transform: scale(1.05); }
 
+.edu-img img.edu-img-wide { width: 130px; }
+
 /* ===============================
    Activities
 ================================= */
