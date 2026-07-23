@@ -34,7 +34,7 @@
   <!-- ── Left sidebar ── -->
   <aside class="sidebar">
     <div class="sidebar-avatar">
-      <img src="images/avatar.jpeg" alt="Duc-Cuong VU">
+      <img src="images/avatar-anime.png" alt="Duc-Cuong VU">
     </div>
 
     <div class="sidebar-identity">
@@ -52,14 +52,6 @@
         <a href="mailto:duccuong001@e.ntu.edu.sg" class="email-row">
           <img class="email-logo" src="images/ntu-logo.png" alt="NTU">
           <span class="email-addr">duccuong001@e.ntu.edu.sg</span>
-        </a>
-        <a href="mailto:cuong.vd241117m@hust.edu.vn" class="email-row">
-          <img class="email-logo" src="images/hust-logo.webp" alt="HUST">
-          <span class="email-addr">cuong.vd241117m@hust.edu.vn</span>
-        </a>
-        <a href="mailto:v.cuongvd5@vinrobotics.net" class="email-row">
-          <img class="email-logo" src="images/VR-logo.svg" alt="VinRobotics">
-          <span class="email-addr">v.cuongvd5@vinrobotics.net</span>
         </a>
       </div>
     </div>
@@ -96,7 +88,6 @@
         <a href="#edu">Education</a>
         <a href="#awards">Awards</a>
         <a href="#activities">Activities</a>
-        <a href="#projects">Projects</a>
       </nav>
     </div>
 
@@ -113,8 +104,9 @@
 
     <section id="about">
       <h2 class="section-title">About</h2>
-      <p>I am a Project Researcher at Hanoi University of Science and Technology (HUST) and an R&D Robotics Engineer at VinRobotics, Vingroup. My work focuses on robotics, automation, and control systems, spanning both academic research and industrial development.</p>
-      <p style="margin-top: 12px;">I am pursuing an M.Sc. degree in Automation and Control Engineering at HUST, where I also earned my B.Sc. degree in 2024. I will be joining Nanyang Technological University (NTU), Singapore as a PhD student with the NTU Research Scholarship.</p>
+      <p>First year PhD student at Nanyang Technological University (NTU), Singapore.</p>
+
+      <p>Previous, I was a Project Researcher at Hanoi University of Science and Technology (HUST) and an R&D Robotics Engineer at VinRobotics, Vingroup.</p>
     </section>
 
     <section id="news">
@@ -140,6 +132,24 @@
 
     <section id="edu">
       <h2 class="section-title">Education</h2>
+      <div class="edu-item">
+        <div class="edu-info">
+          <div class="edu-degree">Nanyang Technological University</div>
+          <div class="edu-school">School of Electrical and Electronic Engineering · Singapore</div>
+          <div class="edu-tree">
+            <div class="edu-tree-item">
+              <span class="tree-branch">└─</span>
+              <div class="tree-content">
+                <div class="tree-degree">Ph.D. in Electrical and Electronic Engineering</div>
+                <div class="tree-date">Aug 2026 – Present</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="edu-img">
+          <img class="edu-img-wide" src="images/NTU_Logo.png" alt="NTU">
+        </div>
+      </div>
       <div class="edu-item">
         <div class="edu-info">
           <div class="edu-degree">Hanoi University of Science and Technology</div>
@@ -266,14 +276,59 @@
           </div>
         </div>
         <div class="work-expandable">
-          <ul>
-            <li>Led dynamic parameter identification for robotic manipulators, including system identification, kinematic calibration, and friction modeling.</li>
-            <li>Developed model-based control strategies for dual-arm humanoid robots: Computed Torque Control, friction/gravity compensation, and singular perturbation-based methods.</li>
-            <li>Designed a real-time inverse kinematics solver achieving 100% success rate with execution time below 40 μs.</li>
-            <li>Implemented MPC-based motion planning for dual-arm coordination using receding horizon optimization with Acados and CasADi (C++/Python/MATLAB).</li>
-            <li>Designed and validated control algorithms for parallel mechanisms integrated into humanoid robot ankle and pelvis subsystems.</li>
-            <li>Co-authored research papers on robotic manipulation and humanoid systems, currently under review at IEEE Transactions on Mechatronics and IROS 2026.</li>
-          </ul>
+          <div class="work-expandable-inner">
+          <div class="work-subproject">
+            <div class="work-subproject-title">Manipulation control and motion planning</div>
+            <button class="subproject-expand-btn">Show details</button>
+            <div class="subproject-expandable">
+              <div class="subproject-expandable-inner">
+              <ul>
+                <li>Led dynamic parameter identification for robotic manipulators: system identification, kinematic calibration, and friction modeling.</li>
+                <li>Designed a real-time inverse kinematics solver achieving 100% success rate with execution time below 40 μs.</li>
+                <div class="work-media">
+                  <img src="images/hik.png" alt="inverse kinematics">
+                </div>
+                <li>Developed model-based control for dual-arm humanoid robots: Fuzzy-based Adaptive Control for Compliant Controller, Computed Torque Control, gravity/friction compensation, and singular perturbation-based methods.</li>
+                <div class="work-media">
+                  <img src="images/fuzzy-arm.png" alt="fuzzy arm control">
+                  <img src="images/fuzzy-demo.png" alt="fuzzy arm demo">
+                </div>
+                <li>Implemented MPC-based motion planning for dual-arm coordination using receding horizon optimization with Acados and CasADi (C++/Python/MATLAB).</li>
+                <div class="work-media">
+                  <img src="images/castor-demo.png" alt="castor demo">
+                  <img src="images/castor-demo-2.png" alt="castor demo">
+                </div>
+                <li>Time-optimal motion planning and trajectory generation design for robot system.</li>
+                <div class="work-media">
+                  <img src="images/citopp.png" alt="citopp demo">
+                  <img src="images/citopp-demo.png" alt="citopp demo">
+                </div>
+                <li>Rubik's cube planning for single-arm manipulation.</li>
+                <div class="work-media">
+                  <img src="images/rubik-cube-planning.png" alt="rubik cube planning">
+                  <img src="images/gripper_with_cube.gif" alt="gripper with cube">
+                </div>
+              </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="work-subproject">
+            <div class="work-subproject-title">Humanoids control and motion planning</div>
+            <button class="subproject-expand-btn">Show details</button>
+            <div class="subproject-expandable">
+              <div class="subproject-expandable-inner">
+                <div class="work-media">
+                <img src="images/humanoid-motion.png" alt="humanoid motion">
+                <img src="images/humanoid-sitdown.png" alt="humanoid sitdown">
+              </div>
+              <ul>
+                <li>Designed motion planning for humanoid standup and sitdown motions, using for lifting objects.</li>
+              </ul>
+              </div>
+            </div>
+          </div>
+          </div>
         </div>
       </div>
 
@@ -282,7 +337,7 @@
           <div class="work-info">
             <div class="work-role">Project Researcher</div>
             <div class="work-institute">Motion Control &amp; Applied Robotics Lab (MoCAR), HUST · Hanoi, Vietnam</div>
-            <div class="work-date">Oct 2021 – Present · Part-time</div>
+            <div class="work-date">Oct 2021 – Jul 2026 · Part-time</div>
             <button class="work-expand-btn">Show details</button>
           </div>
           <div class="work-img">
@@ -291,134 +346,71 @@
           </div>
         </div>
         <div class="work-expandable">
-          <ul>
-            <li>Designed safety-critical Lagrangian-based controllers for ship-mounted Stewart platforms under marine disturbances, in collaboration with KIST (Korea).</li>
-            <li>Developed trajectory generation and tracking control for AUVs with optimal coverage sensor networks (MuJoCo simulation, published in Ocean Engineering).</li>
-            <li>Designed observer-based hierarchical sliding mode control and CBF-based MPC for ballbot systems; led formation control for multi-robot teams.</li>
-            <li>Contributed to 10+ publications across IJRNC, IEEE Access, Ocean Engineering, and Results in Engineering.</li>
-          </ul>
-        </div>
-      </div>
+          <div class="work-expandable-inner">
 
-    </section>
+          <div class="work-subproject">
+            <div class="work-subproject-title">Advanced Control of a Ship-Mounted Stewart Platform for Marine Applications</div>
+            <div class="work-subproject-meta">Mar 2025 – Dec 2025 · Marine Robotics &amp; Control Systems · Member/Researcher, MoCAR Lab × KIST · Supervisors: <a href="https://scholar.google.com/citations?user=qyExc4QAAAAJ&hl=en" target="_blank">Ph.D. Minh Nhat Vu</a>, <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en" target="_blank">Assoc.Prof. Tung Lam Nguyen</a></div>
+            <button class="subproject-expand-btn">Show details</button>
+            <div class="subproject-expandable">
+              <div class="subproject-expandable-inner">
+              <div class="work-media">
+                <img src="images/ball-bouncing.gif" alt="ball bouncing">
+                <img src="images/project-kist.png" alt="KIST project">
+              </div>
+              <ul>
+                <li>Led the initial phase by developing and testing motion control algorithms for trajectory tracking, stabilization, and disturbance rejection.</li>
+                <li>Implemented a ball-bouncing experiment on the Stewart platform to validate real-time dynamic motion control.</li>
+                <li>Designed safety-critical and robust control strategies tailored for marine environments, published in Ocean Engineering (2025).</li>
+                <li>Developed high-fidelity simulation models capturing marine disturbances (waves, currents, ship motion) using full Lagrangian kinematics and dynamics.</li>
+                <li>Built the full experimental setup: mechanical assembly, Linux real-time kernel configuration, and EtherCAT communication.</li>
+              </ul>
+              </div>
+            </div>
+          </div>
 
-    <section id="projects">
-      <h2 class="section-title">Projects</h2>
+          <div class="work-subproject">
+            <div class="work-subproject-title">Robot Navigation System Integrating Sensor Network and Wireless Communication</div>
+            <div class="work-subproject-meta">Jan 2025 – Dec 2026 · AUV, Optimization &amp; Control · Funded by HUST · Supervisors: <a href="https://scholar.google.com/citations?user=mI561CkAAAAJ&hl=en" target="_blank">Ph.D. Chinh Hoang Duc</a>, <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en" target="_blank">Assoc.Prof. Tung Lam Nguyen</a></div>
+            <button class="subproject-expand-btn">Show details</button>
+            <div class="subproject-expandable">
+              <div class="subproject-expandable-inner">
+              <div class="work-media">
+                <img src="images/attack.gif" alt="AUV">
+                <img src="images/project-td-com.gif" alt="trajectory">
+              </div>
+              <ul>
+                <li>Designed a comprehensive MuJoCo simulation environment for AUVs, modeling underwater dynamics, sensor feedback, and environmental disturbances.</li>
+                <li>Developed trajectory generation and control for AUVs with optimal coverage sensor networks; published in Ocean Engineering (2025).</li>
+                <li>Implemented and validated advanced control for robust navigation, obstacle avoidance, and trajectory tracking in challenging underwater scenarios.</li>
+                <li>Integrated sensor network data and wireless communication protocols to evaluate system performance under realistic constraints.</li>
+              </ul>
+              </div>
+            </div>
+          </div>
 
-      <div class="project-item">
-        <div class="project-main">
-          <div class="project-info">
-            <div class="project-role">R&amp;D Engineer · VinRobotics, Vingroup</div>
-            <div class="project-title">Manipulation &amp; Humanoid Robot Development</div>
-            <div class="project-meta">Sep 2025 – Present · Industrial Robotics · Supervisor: <a href="https://scholar.google.com/citations?user=qyExc4QAAAAJ&hl=en" target="_blank">Ph.D. Minh Nhat Vu</a></div>
-            <button class="project-expand-btn">Show details</button>
+          <div class="work-subproject">
+            <div class="work-subproject-title">Balancing, Motion Planning, and Tracking Control for Ballbot Systems</div>
+            <div class="work-subproject-meta">Jul 2023 – Jul 2024 · Optimization, Robotics &amp; Control · Bachelor Thesis · Supervisor: <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en" target="_blank">Assoc.Prof. Tung Lam Nguyen</a></div>
+            <button class="subproject-expand-btn">Show details</button>
+            <div class="subproject-expandable">
+              <div class="subproject-expandable-inner">
+              <div class="work-media">
+                <img src="images/IEEEAccess.gif" alt="IEEE Access">
+                <img src="images/RNC.gif" alt="RNC">
+              </div>
+              <ul>
+                <li>Developed mathematical models and simulation environments for 3D ballbot systems: nonlinear dynamics, trajectory generation, and safety constraints.</li>
+                <li>Designed observer-based hierarchical sliding mode control and NMPC with CBFs for obstacle avoidance and tilt angle limitation.</li>
+                <li>Formulated and solved time-optimal trajectory planning problems using flatness theory and optimization techniques.</li>
+                <li>Integrated extended state observers (ESO) to estimate system uncertainties and coupling effects.</li>
+                <li>Published in IJRNC (2024) and IEEE Access (2025); received Best Thesis Defense Award at HUST.</li>
+              </ul>
+              </div>
+            </div>
           </div>
-          <div class="project-img">
-            <img src="images/cs-hik.gif" alt="humanoid control">
-            <img src="images/humanoid vin.gif" alt="humanoid">
-          </div>
-        </div>
-        <div class="project-expandable">
-          <ul>
-            <li>Led dynamic parameter identification for robotic manipulators: system identification, kinematic calibration, and friction modeling.</li>
-            <li>Developed model-based control for dual-arm humanoid robots: Computed Torque Control, gravity/friction compensation, and singular perturbation-based methods.</li>
-            <li>Designed a real-time inverse kinematics solver achieving 100% success rate with execution time below 40 μs.</li>
-            <li>Implemented MPC-based motion planning for dual-arm coordination using receding horizon optimization with Acados and CasADi (C++/Python/MATLAB).</li>
-            <li>Designed and validated control of parallel mechanisms integrated into humanoid robot ankle and pelvis subsystems.</li>
-            <li>Co-authored research papers under review at IEEE Transactions on Mechatronics and IROS 2026. Video demos: <a href="https://www.acin.tuwien.ac.at/en/6df2/" target="_blank">[1]</a> <a href="https://www.acin.tuwien.ac.at/en/ef94/" target="_blank">[2]</a></li>
-          </ul>
-        </div>
-      </div>
 
-      <div class="project-item">
-        <div class="project-main">
-          <div class="project-info">
-            <div class="project-role">Member/Researcher · MoCAR Lab, HUST × KIST</div>
-            <div class="project-title">Advanced Control of a Ship-Mounted Stewart Platform for Marine Applications</div>
-            <div class="project-meta">Mar 2025 – Dec 2025 · Marine Robotics &amp; Control Systems · Supervisors: <a href="https://scholar.google.com/citations?user=qyExc4QAAAAJ&hl=en" target="_blank">Ph.D. Minh Nhat Vu</a>, <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en" target="_blank">Assoc.Prof. Tung Lam Nguyen</a></div>
-            <button class="project-expand-btn">Show details</button>
           </div>
-          <div class="project-img">
-            <img src="images/ball-bouncing.gif" alt="ball bouncing">
-            <img src="images/project-kist.png" alt="KIST project">
-          </div>
-        </div>
-        <div class="project-expandable">
-          <ul>
-            <li>Led the initial phase by developing and testing motion control algorithms for trajectory tracking, stabilization, and disturbance rejection.</li>
-            <li>Implemented a ball-bouncing experiment on the Stewart platform to validate real-time dynamic motion control.</li>
-            <li>Designed safety-critical and robust control strategies tailored for marine environments, published in Ocean Engineering (2025).</li>
-            <li>Developed high-fidelity simulation models capturing marine disturbances (waves, currents, ship motion) using full Lagrangian kinematics and dynamics.</li>
-            <li>Built the full experimental setup: mechanical assembly, Linux real-time kernel configuration, and EtherCAT communication.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="project-item">
-        <div class="project-main">
-          <div class="project-info">
-            <div class="project-role">Member/Researcher · MoCAR Lab, HUST</div>
-            <div class="project-title">Robot Navigation System Integrating Sensor Network and Wireless Communication</div>
-            <div class="project-meta">Jan 2025 – Dec 2026 · AUV, Optimization &amp; Control · Funded by HUST · Supervisors: <a href="https://scholar.google.com/citations?user=mI561CkAAAAJ&hl=en" target="_blank">Ph.D. Chinh Hoang Duc</a>, <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en" target="_blank">Assoc.Prof. Tung Lam Nguyen</a></div>
-            <button class="project-expand-btn">Show details</button>
-          </div>
-          <div class="project-img">
-            <img src="images/attack.gif" alt="AUV">
-            <img src="images/project-td-com.gif" alt="trajectory">
-          </div>
-        </div>
-        <div class="project-expandable">
-          <ul>
-            <li>Designed a comprehensive MuJoCo simulation environment for AUVs, modeling underwater dynamics, sensor feedback, and environmental disturbances.</li>
-            <li>Developed trajectory generation and control for AUVs with optimal coverage sensor networks; published in Ocean Engineering (2025).</li>
-            <li>Implemented and validated advanced control for robust navigation, obstacle avoidance, and trajectory tracking in challenging underwater scenarios.</li>
-            <li>Integrated sensor network data and wireless communication protocols to evaluate system performance under realistic constraints.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="project-item">
-        <div class="project-main">
-          <div class="project-info">
-            <div class="project-role">Bachelor Thesis · MoCAR Lab, HUST</div>
-            <div class="project-title">Balancing, Motion Planning, and Tracking Control for Ballbot Systems</div>
-            <div class="project-meta">Jul 2023 – Jul 2024 · Optimization, Robotics &amp; Control · Supervisor: <a href="https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en" target="_blank">Assoc.Prof. Tung Lam Nguyen</a></div>
-            <button class="project-expand-btn">Show details</button>
-          </div>
-          <div class="project-img">
-            <img src="images/IEEEAccess.gif" alt="IEEE Access">
-            <img src="images/RNC.gif" alt="RNC">
-          </div>
-        </div>
-        <div class="project-expandable">
-          <ul>
-            <li>Developed mathematical models and simulation environments for 3D ballbot systems: nonlinear dynamics, trajectory generation, and safety constraints.</li>
-            <li>Designed observer-based hierarchical sliding mode control and NMPC with CBFs for obstacle avoidance and tilt angle limitation.</li>
-            <li>Formulated and solved time-optimal trajectory planning problems using flatness theory and optimization techniques.</li>
-            <li>Integrated extended state observers (ESO) to estimate system uncertainties and coupling effects.</li>
-            <li>Published in IJRNC (2024) and IEEE Access (2025); received Best Thesis Defense Award at HUST.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="project-item">
-        <div class="project-main">
-          <div class="project-info">
-            <div class="project-role">Personal Project</div>
-            <div class="project-title">Inverted Pendulum — Real-Time Embedded Control</div>
-            <div class="project-meta">Oct 3–7, 2024 · Embedded &amp; Control Systems</div>
-            <button class="project-expand-btn">Show details</button>
-          </div>
-          <div class="project-img">
-            <img src="images/ip1.gif" alt="inverted pendulum">
-          </div>
-        </div>
-        <div class="project-expandable">
-          <ul>
-            <li>Independently built a complete inverted pendulum system end-to-end in 5 days: control design and hardware configuration.</li>
-            <li>Used NI MyRIO and LabVIEW with analog circuitry for real-time industrial servo actuation.</li>
-            <li>Designed and tuned a PID controller for stable upright balancing with a LabVIEW GUI for live monitoring.</li>
-          </ul>
         </div>
       </div>
 
