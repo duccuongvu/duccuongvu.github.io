@@ -28,18 +28,35 @@
   <script src="scripts/scroll-reveal.js" defer></script>
   <script src="scripts/visitor-map.js" defer></script>
   <script src="scripts/work-expand.js" defer></script>
+  <script src="scripts/sidebar-toggle.js" defer></script>
 </head>
 <body>
 
-  <!-- ── Left sidebar ── -->
-  <aside class="sidebar">
-    <div class="sidebar-avatar">
+  <!-- ── Mobile top bar ── -->
+  <div class="mobile-topbar">
+    <div class="mobile-topbar-identity">
       <img src="images/avatar-anime.png" alt="Duc-Cuong VU">
+      <div>
+        <div class="mobile-topbar-name">Duc-Cuong VU</div>
+        <div class="mobile-topbar-role">Robotics Engineer &amp; Control Researcher</div>
+      </div>
     </div>
+    <button id="sidebarToggle" class="sidebar-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="sidebar">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 
-    <div class="sidebar-identity">
-      <div class="sidebar-name">Duc-Cuong VU</div>
-      <div class="sidebar-role">Robotics Engineer &amp; Control Researcher</div>
+  <!-- ── Left sidebar ── -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-avatar">
+        <img src="images/avatar-anime.png" alt="Duc-Cuong VU">
+      </div>
+
+      <div class="sidebar-identity">
+        <div class="sidebar-name">Duc-Cuong VU</div>
+        <div class="sidebar-role">Robotics Engineer &amp; Control Researcher</div>
+      </div>
     </div>
 
     <div class="sidebar-block">
@@ -133,46 +150,49 @@
     <section id="edu">
       <h2 class="section-title">Education</h2>
       <div class="edu-item">
-        <div class="edu-info">
-          <div class="edu-degree">Nanyang Technological University</div>
-          <div class="edu-school">School of Electrical and Electronic Engineering · Singapore</div>
-          <div class="edu-tree">
-            <div class="edu-tree-item">
-              <span class="tree-branch">└─</span>
-              <div class="tree-content">
-                <div class="tree-degree">Ph.D. in Electrical and Electronic Engineering</div>
-                <div class="tree-date">Aug 2026 – Present</div>
-              </div>
-            </div>
+        <div class="edu-main">
+          <div class="edu-img">
+            <img src="images/ntu-logo.png" alt="NTU">
+          </div>
+          <div class="edu-info">
+            <div class="edu-degree">Nanyang Technological University</div>
+            <div class="edu-school">School of Electrical and Electronic Engineering · Singapore</div>
           </div>
         </div>
-        <div class="edu-img">
-          <img class="edu-img-wide" src="images/NTU_Logo.png" alt="NTU">
+        <div class="edu-tree">
+          <div class="edu-tree-item">
+            <div class="tree-content">
+              <div class="tree-degree">Ph.D. in Electrical and Electronic Engineering</div>
+              <div class="tree-date">Aug 2026 – Present</div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="edu-item">
-        <div class="edu-info">
-          <div class="edu-degree">Hanoi University of Science and Technology</div>
-          <div class="edu-school">School of Electrical and Electronic Engineering · Hanoi, Vietnam</div>
-          <div class="edu-tree">
-            <div class="edu-tree-item">
-              <span class="tree-branch">├─</span>
-              <div class="tree-content">
-                <div class="tree-degree">Master of Science in Automation and Control</div>
-                <div class="tree-date">Jul 2024 – Jul 2026</div>
-              </div>
-            </div>
-            <div class="edu-tree-item">
-              <span class="tree-branch">└─</span>
-              <div class="tree-content">
-                <div class="tree-degree">Bachelor of Science in Automation and Control</div>
-                <div class="tree-date">Oct 2020 – Apr 2024</div>
-              </div>
-            </div>
+        <div class="edu-main">
+          <div class="edu-img">
+            <img src="images/hust-logo.webp" alt="HUST">
+          </div>
+          <div class="edu-info">
+            <div class="edu-degree">Hanoi University of Science and Technology</div>
+            <div class="edu-school">School of Electrical and Electronic Engineering · Hanoi, Vietnam</div>
           </div>
         </div>
-        <div class="edu-img">
-          <img src="images/hust-logo.webp" alt="HUST">
+        <div class="edu-tree">
+          <div class="edu-tree-item">
+            <div class="tree-content">
+              <div class="tree-degree">Master of Science in Automation and Control</div>
+              <div class="tree-date">Jul 2024 – Jul 2026</div>
+            </div>
+            <div class="tree-thesis">Thesis: Design control structures for parallel platforms in maritime applications</div>
+          </div>
+          <div class="edu-tree-item">
+            <div class="tree-content">
+              <div class="tree-degree">Bachelor of Science in Automation and Control</div>
+              <div class="tree-date">Oct 2020 – Apr 2024</div>
+            </div>
+            <div class="tree-thesis">Thesis: Balancing, Motion Planning, and Tracking Control for Ballbot Systems</div>
+          </div>
         </div>
       </div>
     </section>
@@ -186,11 +206,15 @@
           <img src="images/project-td-com.gif" alt="Ocean Engineering">
         </div>
         <div class="pub-info">
-          <p>Glocal trajectory generation and tracking control for AUVs with optimal coverage sensor networks</p>
-          <p><em><b>Duc Cuong Vu</b>*, Son Tran*, Tung Lam Nguyen, and Duc Chinh Hoang</em></p>
-          <p style="font-style: italic; opacity: 0.6; font-size: 0.88em;">* equal contribution</p>
-          <p>Ocean Engineering, 2025</p>
-          <p class="pub-links"><a href="https://www.sciencedirect.com/science/article/pii/S0029801825025855" target="_blank"><code>[paper]</code></a><a href="https://drive.google.com/file/d/1GN7qNn0eF9i9D0e4s4YdCC4POIGcKyAi/view?usp=drive_link" target="_blank"><code>[pdf]</code></a><a href="https://github.com/duccuongvu/AUV-ODIN-mujoco" target="_blank"><code>[code]</code></a></p>
+          <p class="pub-title">Glocal trajectory generation and tracking control for AUVs with optimal coverage sensor networks</p>
+          <p class="pub-authors"><b>Duc Cuong Vu</b>*, Son Tran*, Tung Lam Nguyen, and Duc Chinh Hoang</p>
+          <p class="pub-note">* equal contribution</p>
+          <p class="pub-venue">Ocean Engineering, 2025</p>
+          <p class="pub-links">
+            <a href="https://www.sciencedirect.com/science/article/pii/S0029801825025855" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>paper</a>
+            <a href="https://drive.google.com/file/d/1GN7qNn0eF9i9D0e4s4YdCC4POIGcKyAi/view?usp=drive_link" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>pdf</a>
+            <a href="https://github.com/duccuongvu/AUV-ODIN-mujoco" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>code</a>
+          </p>
         </div>
       </div>
 
@@ -200,10 +224,13 @@
           <img src="images/oe-paper.png" alt="Ocean Engineering">
         </div>
         <div class="pub-info">
-          <p>Lagrangian-based modeling and safety-critical controls for Stewart platforms under marine operations</p>
-          <p><em><b>Duc Cuong Vu</b>, Danh Huy Nguyen, Minh Nhat Vu, and Tung Lam Nguyen</em></p>
-          <p>Ocean Engineering, 2025</p>
-          <p class="pub-links"><a href="https://www.sciencedirect.com/science/article/pii/S0029801825018268" target="_blank"><code>[paper]</code></a><a href="https://drive.google.com/file/d/1j4Le1ceRAjrDXLOKi8MW3s1x3ZWVnzEc/view?usp=drive_link" target="_blank"><code>[pdf]</code></a></p>
+          <p class="pub-title">Lagrangian-based modeling and safety-critical controls for Stewart platforms under marine operations</p>
+          <p class="pub-authors"><b>Duc Cuong Vu</b>, Danh Huy Nguyen, Minh Nhat Vu, and Tung Lam Nguyen</p>
+          <p class="pub-venue">Ocean Engineering, 2025</p>
+          <p class="pub-links">
+            <a href="https://www.sciencedirect.com/science/article/pii/S0029801825018268" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>paper</a>
+            <a href="https://drive.google.com/file/d/1j4Le1ceRAjrDXLOKi8MW3s1x3ZWVnzEc/view?usp=drive_link" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>pdf</a>
+          </p>
         </div>
       </div>
 
@@ -213,10 +240,12 @@
           <img src="images/2Dballbot.png" alt="IET publication">
         </div>
         <div class="pub-info">
-          <p>Unifying Hierarchical Sliding Mode Control and Control Barrier Function for Tilt Angle Constraint of a Ball-Balancing Robot</p>
-          <p><em>Thi Thuy Hang Nguyen, <b>Duc Cuong Vu</b>, Minh Duc Pham, Tung Lam Nguyen, and Thi-Van-Anh Nguyen</em></p>
-          <p>IET Cyber-Systems and Robotics, 2025</p>
-          <p class="pub-links"><code>[accepted manuscript]</code></p>
+          <p class="pub-title">Unifying Hierarchical Sliding Mode Control and Control Barrier Function for Tilt Angle Constraint of a Ball-Balancing Robot</p>
+          <p class="pub-authors">Thi Thuy Hang Nguyen, <b>Duc Cuong Vu</b>, Minh Duc Pham, Tung Lam Nguyen, and Thi-Van-Anh Nguyen</p>
+          <p class="pub-venue">IET Cyber-Systems and Robotics, 2025</p>
+          <p class="pub-links">
+            <a href="https://doi.org/10.1049/csy2.70045" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>paper</a>
+          </p>
         </div>
       </div>
 
@@ -226,10 +255,13 @@
           <img src="images/IEEEAccess.gif" alt="IEEE Access">
         </div>
         <div class="pub-info">
-          <p>CBFs-based Model Predictive Control for Obstacle Avoidance with Tilt Angle Limitation for Ball-Balancing Robots</p>
-          <p><em>Minh Duc Pham, <b>Duc Cuong Vu</b>, Thi Thuy Hang Nguyen, Thi Van Anh Nguyen, Minh Nhat Vu, and Tung Lam Nguyen</em></p>
-          <p>IEEE Access, 2025</p>
-          <p class="pub-links"><a href="https://ieeexplore.ieee.org/abstract/document/10988790/" target="_blank"><code>[paper]</code></a><a href="https://drive.google.com/file/d/1pmVraFZr0_TKOEBgPxYvASX9Bd9Q4gtW/view?usp=drive_link" target="_blank"><code>[pdf]</code></a></p>
+          <p class="pub-title">CBFs-based Model Predictive Control for Obstacle Avoidance with Tilt Angle Limitation for Ball-Balancing Robots</p>
+          <p class="pub-authors">Minh Duc Pham, <b>Duc Cuong Vu</b>, Thi Thuy Hang Nguyen, Thi Van Anh Nguyen, Minh Nhat Vu, and Tung Lam Nguyen</p>
+          <p class="pub-venue">IEEE Access, 2025</p>
+          <p class="pub-links">
+            <a href="https://ieeexplore.ieee.org/abstract/document/10988790/" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>paper</a>
+            <a href="https://drive.google.com/file/d/1pmVraFZr0_TKOEBgPxYvASX9Bd9Q4gtW/view?usp=drive_link" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>pdf</a>
+          </p>
         </div>
       </div>
 
@@ -239,10 +271,13 @@
           <img src="images/rieng-paper.png" alt="Results in Engineering">
         </div>
         <div class="pub-info">
-          <p>A novel approach of Consensus-based Finite-time Distributed Sliding Mode Control for Stewart platform manipulators motion tracking</p>
-          <p><em><b>Duc Cuong Vu,</b> Danh Huy Nguyen, and Tung Lam Nguyen</em></p>
-          <p>Results in Engineering, 2025</p>
-          <p class="pub-links"><a href="https://doi.org/10.1016/j.rineng.2024.103872" target="_blank"><code>[paper]</code></a><a href="https://drive.google.com/file/d/18KpTObaeMACcZNy26OZon25hHLPXHA4p/view?usp=drive_link" target="_blank"><code>[pdf]</code></a></p>
+          <p class="pub-title">A novel approach of Consensus-based Finite-time Distributed Sliding Mode Control for Stewart platform manipulators motion tracking</p>
+          <p class="pub-authors"><b>Duc Cuong Vu,</b> Danh Huy Nguyen, and Tung Lam Nguyen</p>
+          <p class="pub-venue">Results in Engineering, 2025</p>
+          <p class="pub-links">
+            <a href="https://doi.org/10.1016/j.rineng.2024.103872" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>paper</a>
+            <a href="https://drive.google.com/file/d/18KpTObaeMACcZNy26OZon25hHLPXHA4p/view?usp=drive_link" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>pdf</a>
+          </p>
         </div>
       </div>
 
@@ -252,10 +287,13 @@
           <img src="images/RNC.gif" alt="RNC Journal">
         </div>
         <div class="pub-info">
-          <p>Time-optimal trajectory generation and observer-based hierarchical sliding mode control for ballbots with system constraints</p>
-          <p><em><b>Duc Cuong Vu</b>, Minh Duc Pham, Thi Thuy Hang Nguyen, Thi Van Anh Nguyen, and Tung Lam Nguyen</em></p>
-          <p>International Journal of Robust and Nonlinear Control, 2024</p>
-          <p class="pub-links"><a href="https://onlinelibrary.wiley.com/doi/10.1002/rnc.7358" target="_blank"><code>[paper]</code></a><a href="https://drive.google.com/file/d/18HqWPhsNbvWf8t5ZYXYBOsqK-H8hTmdf/view?usp=drive_link" target="_blank"><code>[pdf]</code></a></p>
+          <p class="pub-title">Time-optimal trajectory generation and observer-based hierarchical sliding mode control for ballbots with system constraints</p>
+          <p class="pub-authors"><b>Duc Cuong Vu</b>, Minh Duc Pham, Thi Thuy Hang Nguyen, Thi Van Anh Nguyen, and Tung Lam Nguyen</p>
+          <p class="pub-venue">International Journal of Robust and Nonlinear Control, 2024</p>
+          <p class="pub-links">
+            <a href="https://onlinelibrary.wiley.com/doi/10.1002/rnc.7358" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>paper</a>
+            <a href="https://drive.google.com/file/d/18HqWPhsNbvWf8t5ZYXYBOsqK-H8hTmdf/view?usp=drive_link" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>pdf</a>
+          </p>
         </div>
       </div>
     </section>
@@ -268,11 +306,13 @@
           <div class="work-info">
             <div class="work-role">R&amp;D Robotics Engineer</div>
             <div class="work-institute">VinRobotics, Vingroup · Hanoi, Vietnam</div>
-            <div class="work-date">Sep 2025 – Present · Full-time</div>
+            <div class="work-date">Sep 2025 – Jul 2026 · Full-time</div>
             <button class="work-expand-btn">Show details</button>
           </div>
           <div class="work-img">
-            <img src="images/VR-logo.svg" alt="VinRobotics">
+            <div class="work-logo">
+              <img src="images/VR-logo.svg" alt="VinRobotics">
+            </div>
           </div>
         </div>
         <div class="work-expandable">
@@ -341,8 +381,12 @@
             <button class="work-expand-btn">Show details</button>
           </div>
           <div class="work-img">
-            <img src="images/meg-logo.png" alt="MEG Lab">
-            <img src="images/hust-logo.webp" alt="HUST">
+            <div class="work-logo">
+              <img src="images/meg-logo.png" alt="MEG Lab">
+            </div>
+            <div class="work-logo">
+              <img src="images/hust-logo.webp" alt="HUST">
+            </div>
           </div>
         </div>
         <div class="work-expandable">
