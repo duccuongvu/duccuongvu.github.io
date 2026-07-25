@@ -678,6 +678,27 @@ h2.section-title {
 
 .pub-link svg { flex-shrink: 0; }
 
+.pub-show-more-btn {
+  display: block;
+  margin: 4px auto 0;
+  padding: 8px 20px;
+  font-size: 12.5px;
+  font-family: inherit;
+  font-weight: 500;
+  color: var(--link);
+  background: var(--pub-tag-bg);
+  border: 1px solid var(--pub-tag-border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.pub-show-more-btn:hover {
+  color: #fff;
+  background: var(--link);
+  border-color: var(--link);
+}
+
 .pub-link:hover {
   color: #fff;
   background: var(--link);
