@@ -10,9 +10,7 @@
   --link-hover: #1e40af;
   --sidebar-bg: #fafafa;
   --sidebar-w: 300px;
-  --shadow: rgba(0, 0, 0, 0.06);
   --pub-tag-bg: rgba(29, 78, 216, 0.07);
-  --pub-tag-border: rgba(29, 78, 216, 0.18);
 }
 
 body.dark-mode {
@@ -23,9 +21,7 @@ body.dark-mode {
   --link: #60a5fa;
   --link-hover: #93c5fd;
   --sidebar-bg: #161616;
-  --shadow: rgba(0, 0, 0, 0.5);
   --pub-tag-bg: rgba(96, 165, 250, 0.1);
-  --pub-tag-border: rgba(96, 165, 250, 0.25);
 }
 
 /* ===============================
@@ -43,13 +39,11 @@ body {
   color: var(--text);
   display: flex;
   min-height: 100vh;
-  transition: background 0.3s, color 0.3s;
 }
 
 a {
   color: var(--link);
   text-decoration: none;
-  transition: color 0.2s;
 }
 a:hover { color: var(--link-hover); text-decoration: underline; }
 
@@ -75,7 +69,6 @@ ul li { margin-bottom: 6px; }
   display: flex;
   flex-direction: column;
   gap: 28px;
-  transition: background 0.3s, border-color 0.3s;
 }
 
 .sidebar-header {
@@ -86,7 +79,6 @@ ul li { margin-bottom: 6px; }
 
 .sidebar-avatar {
   width: 100%;
-  border-radius: 8px;
   overflow: hidden;
   border: 1px solid var(--border);
   flex-shrink: 0;
@@ -132,7 +124,6 @@ ul li { margin-bottom: 6px; }
   font-size: 12px;
   color: var(--link);
   text-decoration: none;
-  transition: color 0.2s;
 }
 
 .sidebar-links a:hover { color: var(--link-hover); text-decoration: underline; }
@@ -150,8 +141,6 @@ ul li { margin-bottom: 6px; }
   padding: 5px 10px;
   border-left: 2px solid transparent;
   margin-left: -10px;
-  border-radius: 0 4px 4px 0;
-  transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
 
 .sidebar-nav a:hover {
@@ -180,7 +169,6 @@ ul li { margin-bottom: 6px; }
 .email-badge {
   width: 18px;
   height: 18px;
-  border-radius: 4px;
   font-size: 10px;
   font-weight: 700;
   color: #fff;
@@ -199,7 +187,6 @@ ul li { margin-bottom: 6px; }
 .email-logo {
   width: 18px;
   height: 18px;
-  border-radius: 4px;
   flex-shrink: 0;
   object-fit: contain;
   background: #fff;
@@ -227,7 +214,6 @@ ul li { margin-bottom: 6px; }
   font-size: 12px;
   color: var(--text);
   text-decoration: none;
-  transition: color 0.2s;
 }
 
 .icon-link svg { flex-shrink: 0; opacity: 0.7; }
@@ -236,8 +222,6 @@ ul li { margin-bottom: 6px; }
   color: var(--link);
   text-decoration: none;
 }
-
-.icon-link:hover svg { opacity: 1; }
 
 .sidebar-footer {
   margin-top: auto;
@@ -258,9 +242,7 @@ ul li { margin-bottom: 6px; }
   cursor: pointer;
   padding: 0;
   line-height: 1;
-  transition: transform 0.2s;
 }
-#darkModeToggle:hover { transform: scale(1.15); }
 
 /* ===============================
    Mobile top bar
@@ -288,7 +270,6 @@ ul li { margin-bottom: 6px; }
 .mobile-topbar-identity img {
   width: 38px;
   height: 38px;
-  border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
   border: 1px solid var(--border);
@@ -320,7 +301,6 @@ ul li { margin-bottom: 6px; }
   flex-shrink: 0;
   width: 38px;
   height: 38px;
-  border-radius: 8px;
   border: 1px solid var(--border);
   background: var(--bg);
   cursor: pointer;
@@ -335,7 +315,6 @@ ul li { margin-bottom: 6px; }
   width: 20px;
   height: 2px;
   background: var(--text);
-  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .sidebar-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -376,7 +355,7 @@ h2.section-title {
 }
 
 .news-box::-webkit-scrollbar { width: 4px; }
-.news-box::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+.news-box::-webkit-scrollbar-thumb { background: var(--border); }
 
 .news-content { display: flex; flex-direction: column; gap: 2px; }
 
@@ -405,16 +384,9 @@ h2.section-title {
   padding: 10px 12px 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid var(--border);
-  border-radius: 6px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .work-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-
-.work-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px var(--shadow);
-}
 
 .work-main {
   display: flex;
@@ -446,7 +418,6 @@ h2.section-title {
 .work-expandable {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.35s ease;
 }
 
 .work-item.expanded .work-expandable {
@@ -479,12 +450,8 @@ h2.section-title {
   height: 140px;
   width: auto;
   max-width: 100%;
-  border-radius: 4px;
   object-fit: cover;
-  transition: transform 0.2s;
 }
-
-.work-media img:hover { transform: scale(1.03); }
 
 .work-subproject-title {
   font-weight: 600;
@@ -524,7 +491,6 @@ h2.section-title {
 .subproject-expandable {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.35s ease;
 }
 
 .work-subproject.expanded .subproject-expandable {
@@ -556,10 +522,6 @@ h2.section-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: #fff;
-  padding: 6px;
   overflow: hidden;
 }
 
@@ -569,10 +531,7 @@ h2.section-title {
   width: auto;
   height: auto;
   object-fit: contain;
-  transition: transform 0.2s;
 }
-
-.work-logo img:hover { transform: scale(1.08); }
 
 /* ===============================
    Publications
@@ -584,16 +543,9 @@ h2.section-title {
   padding: 10px 12px 24px;
   margin-bottom: 24px;
   border-bottom: 1px solid var(--border);
-  border-radius: 6px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .pub-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-
-.pub-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px var(--shadow);
-}
 
 .pub-img {
   display: flex;
@@ -607,9 +559,7 @@ h2.section-title {
   font-size: 11px;
   font-weight: 600;
   text-align: center;
-  background: var(--pub-tag-bg);
   color: var(--text);
-  border: 1px solid var(--pub-tag-border);
   letter-spacing: 0.02em;
 }
 
@@ -618,12 +568,7 @@ h2.section-title {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   display: block;
-  border-radius: 4px;
-  box-shadow: 0 2px 8px var(--shadow);
-  transition: transform 0.2s;
 }
-
-.pub-img img:hover { transform: translateY(-2px); }
 
 .pub-info { flex: 1; min-width: 0; }
 
@@ -669,11 +614,7 @@ h2.section-title {
   font-family: 'JetBrains Mono', 'Courier New', monospace;
   font-size: 11px;
   color: var(--link);
-  background: var(--pub-tag-bg);
-  border: 1px solid var(--pub-tag-border);
-  border-radius: 4px;
   padding: 4px 9px;
-  transition: color 0.2s, background 0.2s, border-color 0.2s;
 }
 
 .pub-link svg { flex-shrink: 0; }
@@ -686,24 +627,19 @@ h2.section-title {
   font-family: inherit;
   font-weight: 500;
   color: var(--link);
-  background: var(--pub-tag-bg);
-  border: 1px solid var(--pub-tag-border);
-  border-radius: 6px;
+  background: none;
+  border: none;
   cursor: pointer;
-  transition: color 0.2s, background 0.2s, border-color 0.2s;
 }
 
 .pub-show-more-btn:hover {
-  color: #fff;
-  background: var(--link);
-  border-color: var(--link);
+  color: var(--link-hover);
+  text-decoration: underline;
 }
 
 .pub-link:hover {
-  color: #fff;
-  background: var(--link);
-  border-color: var(--link);
-  text-decoration: none;
+  color: var(--link-hover);
+  text-decoration: underline;
 }
 
 /* ===============================
@@ -713,16 +649,9 @@ h2.section-title {
   padding: 10px 12px 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid var(--border);
-  border-radius: 6px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .edu-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-
-.edu-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 16px var(--shadow);
-}
 
 .edu-main {
   display: flex;
@@ -763,7 +692,6 @@ h2.section-title {
   top: 6px;
   width: 7px;
   height: 7px;
-  border-radius: 50%;
   background: var(--link);
 }
 
@@ -808,10 +736,6 @@ h2.section-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: #fff;
-  padding: 6px;
   overflow: hidden;
 }
 
@@ -821,10 +745,7 @@ h2.section-title {
   width: auto;
   height: auto;
   object-fit: contain;
-  transition: transform 0.2s;
 }
-
-.edu-img img:hover { transform: scale(1.08); }
 
 /* ===============================
    Activities
@@ -846,21 +767,12 @@ h2.section-title {
 .activity-detail li { margin-bottom: 4px; font-size: 13px; }
 
 /* ===============================
-   Scroll reveal
-================================= */
-.pub-item, .edu-item, .activity-item, section {
-  transition: opacity 0.5s ease, transform 0.5s ease,
-              box-shadow 0.25s ease !important;
-}
-
-/* ===============================
    Visitor Map
 ================================= */
 #visitor-map svg {
   display: block;
   background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: 8px;
 }
 
 .map-tooltip {
@@ -869,10 +781,8 @@ h2.section-title {
   color: var(--bg);
   font-size: 12px;
   padding: 6px 10px;
-  border-radius: 5px;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.15s;
   z-index: 9999;
   white-space: nowrap;
   line-height: 1.5;
@@ -902,7 +812,6 @@ h2.section-title {
 .legend-bar {
   flex: 1;
   height: 6px;
-  border-radius: 3px;
   background: linear-gradient(to right,
     #dbeafe,
     #93c5fd,
@@ -945,15 +854,12 @@ footer {
     height: 100vh;
     border-right: 1px solid var(--border);
     padding: 88px 24px 24px;
-    transform: translateX(-100%);
-    transition: transform 0.25s ease;
+    display: none;
     z-index: 1000;
-    box-shadow: 0 0 0 rgba(0,0,0,0);
   }
 
   .sidebar.open {
-    transform: translateX(0);
-    box-shadow: 0 0 30px var(--shadow);
+    display: flex;
   }
 
   /* identity is already shown in the mobile top bar */
