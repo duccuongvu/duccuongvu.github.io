@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://duccuongvu.github.io/sitemap.xml
