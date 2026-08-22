@@ -32,7 +32,7 @@ body.dark-mode {
 img { max-width: 100%; }
 
 body {
-  font-family: 'Inter', 'Source Serif 4', -apple-system, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 15.5px;
   line-height: 1.7;
   background: var(--bg);
@@ -91,7 +91,7 @@ ul li { margin-bottom: 6px; }
 }
 
 .sidebar-name {
-  font-family: 'Source Serif 4', Georgia, serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 20px;
   font-weight: 600;
   color: var(--text);
@@ -176,7 +176,7 @@ ul li { margin-bottom: 6px; }
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .email-badge.gmail  { background: #EA4335; }
@@ -276,7 +276,7 @@ ul li { margin-bottom: 6px; }
 }
 
 .mobile-topbar-name {
-  font-family: 'Source Serif 4', Georgia, serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 15.5px;
   font-weight: 600;
   color: var(--text);
@@ -328,16 +328,18 @@ ul li { margin-bottom: 6px; }
   margin-left: var(--sidebar-w);
   flex: 1;
   padding: 56px 72px;
-  max-width: 900px;
+  max-width: 1100px;
 }
 
-section { margin-bottom: 56px; }
+section { margin-bottom: 34px; }
+
+#about p + p { margin-top: 14px; }
 
 h2.section-title {
-  font-family: 'Source Serif 4', Georgia, serif;
+  font-family: 'Times New Roman', Times, serif;
   font-size: 22.5px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--border);
   color: var(--text);
@@ -554,15 +556,6 @@ h2.section-title {
   flex-shrink: 0;
 }
 
-.pub-journal {
-  padding: 4px 6px;
-  font-size: 12.5px;
-  font-weight: 600;
-  text-align: center;
-  color: var(--text);
-  letter-spacing: 0.02em;
-}
-
 .pub-img img {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -596,6 +589,7 @@ h2.section-title {
 .pub-venue {
   font-size: 13.5px;
   color: var(--muted);
+  font-style: italic;
 }
 
 .pub-links {
