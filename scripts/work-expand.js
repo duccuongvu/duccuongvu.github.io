@@ -8,17 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     btn.addEventListener("click", () => {
       const wasExpanded = item.classList.contains("expanded");
-
-      workItems.forEach(other => {
-        other.classList.remove("expanded");
-        const otherBtn = other.querySelector(".work-expand-btn");
-        if (otherBtn) otherBtn.textContent = "Show details";
-      });
-
-      if (!wasExpanded) {
-        item.classList.add("expanded");
-        btn.textContent = "Hide details";
-      }
+      item.classList.toggle("expanded", !wasExpanded);
+      btn.textContent = wasExpanded ? "Show details" : "Hide details";
     });
   });
 
@@ -32,17 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       btn.addEventListener("click", () => {
         const wasExpanded = sub.classList.contains("expanded");
-
-        subs.forEach(other => {
-          other.classList.remove("expanded");
-          const otherBtn = other.querySelector(".subproject-expand-btn");
-          if (otherBtn) otherBtn.textContent = "Show details";
-        });
-
-        if (!wasExpanded) {
-          sub.classList.add("expanded");
-          btn.textContent = "Hide details";
-        }
+        sub.classList.toggle("expanded", !wasExpanded);
+        btn.textContent = wasExpanded ? "Show details" : "Hide details";
       });
     });
   });
