@@ -57,6 +57,21 @@
 </head>
 <body>
 
+  <!-- Shared icon sprite: define each icon once, reuse everywhere via <use href="#icon-...">. -->
+  <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+    <defs>
+      <symbol id="icon-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+      </symbol>
+      <symbol id="icon-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+      </symbol>
+      <symbol id="icon-github" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+      </symbol>
+    </defs>
+  </svg>
+
   <!-- ── Mobile top bar ── -->
   <div class="mobile-topbar">
     <div class="mobile-topbar-identity">
@@ -106,7 +121,7 @@
           Google Scholar
         </a>
         <a href="https://github.com/duccuongvu" target="_blank" class="icon-link">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          <svg width="16" height="16"><use href="#icon-github"/></svg>
           GitHub
         </a>
         <a href="https://www.linkedin.com/in/duccuongvu/" target="_blank" class="icon-link">
@@ -398,7 +413,7 @@
           <h3 class="pub-year">2026</h3>
 
           <div class="pub-item">
-            <p class="pub-citation">Nguyen, T. T. H., <strong>Vu, D. C.</strong>, Pham, M. D., Nguyen, T. L., &amp; Nguyen, T. V. A. (2026). Unifying hierarchical sliding mode control and control barrier function for tilt angle constraint of a ball-balancing robot. <em>IET Cyber-Systems and Robotics</em>. <a href="https://doi.org/10.1049/csy2.70045" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>paper</a></p>
+            <p class="pub-citation">Nguyen, T. T. H., <strong>Vu, D. C.</strong>, Pham, M. D., Nguyen, T. L., &amp; Nguyen, T. V. A. (2026). Unifying hierarchical sliding mode control and control barrier function for tilt angle constraint of a ball-balancing robot. <em>IET Cyber-Systems and Robotics</em>. <a href="https://doi.org/10.1049/csy2.70045" target="_blank" class="pub-link"><svg width="12" height="12"><use href="#icon-link"/></svg>paper</a></p>
           </div>
         </div>
 
@@ -406,15 +421,15 @@
           <h3 class="pub-year">2025</h3>
 
           <div class="pub-item">
-            <p class="pub-citation"><strong>Vu, D. C.</strong>*, Tran, S.*, Nguyen, T. L., &amp; Hoang, D. C. (2025). Glocal trajectory generation and tracking control for AUVs with optimal coverage sensor networks. <em>Ocean Engineering</em>. <a href="https://www.sciencedirect.com/science/article/pii/S0029801825025855" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>paper</a> <a href="https://drive.google.com/file/d/1GN7qNn0eF9i9D0e4s4YdCC4POIGcKyAi/view?usp=drive_link" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>pdf</a> <a href="https://github.com/duccuongvu/AUV-ODIN-mujoco" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>code</a></p>
+            <p class="pub-citation"><strong>Vu, D. C.</strong>*, Tran, S.*, Nguyen, T. L., &amp; Hoang, D. C. (2025). Glocal trajectory generation and tracking control for AUVs with optimal coverage sensor networks. <em>Ocean Engineering</em>. <a href="https://www.sciencedirect.com/science/article/pii/S0029801825025855" target="_blank" class="pub-link"><svg width="12" height="12"><use href="#icon-link"/></svg>paper</a> <a href="https://drive.google.com/file/d/1GN7qNn0eF9i9D0e4s4YdCC4POIGcKyAi/view?usp=drive_link" target="_blank" class="pub-link"><svg width="12" height="12"><use href="#icon-file"/></svg>pdf</a> <a href="https://github.com/duccuongvu/AUV-ODIN-mujoco" target="_blank" class="pub-link"><svg width="12" height="12"><use href="#icon-github"/></svg>code</a></p>
           </div>
 
           <div class="pub-item">
-            <p class="pub-citation"><strong>Vu, D. C.</strong>, Nguyen, D. H., Vu, M. N., &amp; Nguyen, T. L. (2025). Lagrangian-based modeling and safety-critical controls for Stewart platforms under marine operations. <em>Ocean Engineering</em>, <em>340</em>, 122142. <a href="https://www.sciencedirect.com/science/article/pii/S0029801825018268" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>paper</a> <a href="https://drive.google.com/file/d/1j4Le1ceRAjrDXLOKi8MW3s1x3ZWVnzEc/view?usp=drive_link" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>pdf</a></p>
+            <p class="pub-citation"><strong>Vu, D. C.</strong>, Nguyen, D. H., Vu, M. N., &amp; Nguyen, T. L. (2025). Lagrangian-based modeling and safety-critical controls for Stewart platforms under marine operations. <em>Ocean Engineering</em>, <em>340</em>, 122142. <a href="https://www.sciencedirect.com/science/article/pii/S0029801825018268" target="_blank" class="pub-link"><svg width="12" height="12"><use href="#icon-link"/></svg>paper</a> <a href="https://drive.google.com/file/d/1j4Le1ceRAjrDXLOKi8MW3s1x3ZWVnzEc/view?usp=drive_link" target="_blank" class="pub-link"><svg width="12" height="12"><use href="#icon-file"/></svg>pdf</a></p>
           </div>
 
           <div class="pub-item">
-            <p class="pub-citation">Pham, M. D., <strong>Vu, D. C.</strong>, Nguyen, T. T. H., Nguyen, T. V. A., Vu, M. N., &amp; Nguyen, T. L. (2025). CBFs-based model predictive control for obstacle avoidance with tilt angle limitation for ball-balancing robots. <em>IEEE Access</em>. <a href="https://ieeexplore.ieee.org/abstract/document/10988790/" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>paper</a> <a href="https://drive.google.com/file/d/1pmVraFZr0_TKOEBgPxYvASX9Bd9Q4gtW/view?usp=drive_link" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>pdf</a></p>
+            <p class="pub-citation">Pham, M. D., <strong>Vu, D. C.</strong>, Nguyen, T. T. H., Nguyen, T. V. A., Vu, M. N., &amp; Nguyen, T. L. (2025). CBFs-based model predictive control for obstacle avoidance with tilt angle limitation for ball-balancing robots. <em>IEEE Access</em>. <a href="https://ieeexplore.ieee.org/abstract/document/10988790/" target="_blank" class="pub-link"><svg width="12" height="12"><use href="#icon-link"/></svg>paper</a> <a href="https://drive.google.com/file/d/1pmVraFZr0_TKOEBgPxYvASX9Bd9Q4gtW/view?usp=drive_link" target="_blank" class="pub-link"><svg width="12" height="12"><use href="#icon-file"/></svg>pdf</a></p>
           </div>
         </div>
 
@@ -422,11 +437,11 @@
           <h3 class="pub-year">2024</h3>
 
           <div class="pub-item">
-            <p class="pub-citation"><strong>Vu, D. C.</strong>, Nguyen, D. H., &amp; Nguyen, T. L. (2024). A novel approach of consensus-based finite-time distributed sliding mode control for Stewart platform manipulators motion tracking. <em>Results in Engineering</em>. <a href="https://doi.org/10.1016/j.rineng.2024.103872" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>paper</a> <a href="https://drive.google.com/file/d/18KpTObaeMACcZNy26OZon25hHLPXHA4p/view?usp=drive_link" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>pdf</a></p>
+            <p class="pub-citation"><strong>Vu, D. C.</strong>, Nguyen, D. H., &amp; Nguyen, T. L. (2024). A novel approach of consensus-based finite-time distributed sliding mode control for Stewart platform manipulators motion tracking. <em>Results in Engineering</em>. <a href="https://doi.org/10.1016/j.rineng.2024.103872" target="_blank" class="pub-link"><svg width="12" height="12"><use href="#icon-link"/></svg>paper</a> <a href="https://drive.google.com/file/d/18KpTObaeMACcZNy26OZon25hHLPXHA4p/view?usp=drive_link" target="_blank" class="pub-link"><svg width="12" height="12"><use href="#icon-file"/></svg>pdf</a></p>
           </div>
 
           <div class="pub-item">
-            <p class="pub-citation"><strong>Vu, D. C.</strong>, Pham, M. D., Nguyen, T. T. H., Nguyen, T. V. A., &amp; Nguyen, T. L. (2024). Time-optimal trajectory generation and observer-based hierarchical sliding mode control for ballbots with system constraints. <em>International Journal of Robust and Nonlinear Control</em>. <a href="https://onlinelibrary.wiley.com/doi/10.1002/rnc.7358" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>paper</a> <a href="https://drive.google.com/file/d/18HqWPhsNbvWf8t5ZYXYBOsqK-H8hTmdf/view?usp=drive_link" target="_blank" class="pub-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>pdf</a></p>
+            <p class="pub-citation"><strong>Vu, D. C.</strong>, Pham, M. D., Nguyen, T. T. H., Nguyen, T. V. A., &amp; Nguyen, T. L. (2024). Time-optimal trajectory generation and observer-based hierarchical sliding mode control for ballbots with system constraints. <em>International Journal of Robust and Nonlinear Control</em>. <a href="https://onlinelibrary.wiley.com/doi/10.1002/rnc.7358" target="_blank" class="pub-link"><svg width="12" height="12"><use href="#icon-link"/></svg>paper</a> <a href="https://drive.google.com/file/d/18HqWPhsNbvWf8t5ZYXYBOsqK-H8hTmdf/view?usp=drive_link" target="_blank" class="pub-link"><svg width="12" height="12"><use href="#icon-file"/></svg>pdf</a></p>
           </div>
         </div>
 

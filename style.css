@@ -387,12 +387,11 @@ h2.section-title {
   display: flex;
   flex-direction: column;
   gap: 0;
-  padding: 10px 12px 20px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--border);
+  padding: 10px 12px;
+  margin-bottom: 28px;
 }
 
-.work-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.work-item:last-child { margin-bottom: 0; }
 
 .work-main {
   display: flex;
@@ -628,12 +627,11 @@ h2.section-title {
    Education
 ================================= */
 .edu-item {
-  padding: 10px 12px 20px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--border);
+  padding: 10px 12px;
+  margin-bottom: 28px;
 }
 
-.edu-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.edu-item:last-child { margin-bottom: 0; }
 
 .edu-main {
   display: flex;
