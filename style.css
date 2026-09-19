@@ -542,62 +542,61 @@ h2.section-title {
 /* ===============================
    Publications
 ================================= */
+/* Numbering counts down: the highest number (--pub-list-total, set inline on
+   #pubList) is the newest paper. Adding a new one only means bumping that one
+   value and adding an item at the top -- nothing else needs renumbering. */
 .pub-list {
-  list-style: none;
-  counter-reset: pub;
+  counter-reset: pub var(--pub-list-total, 0);
 }
+
+.pub-year {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 22px 0 12px;
+}
+
+.pub-year-group:first-child .pub-year { margin-top: 0; }
 
 .pub-item {
   position: relative;
-  counter-increment: pub;
-  padding: 10px 12px 20px 32px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--border);
+  counter-increment: pub -1;
+  padding: 6px 0 6px 30px;
 }
 
-.pub-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+/* the very first item keeps the starting (highest) count as-is */
+.pub-year-group:first-child .pub-item:first-of-type {
+  counter-increment: pub 0;
+}
 
 .pub-item::before {
   content: counter(pub) ".";
   position: absolute;
   left: 0;
-  top: 10px;
-  font-family: var(--font-sans);
+  top: 6px;
   font-size: 13.5px;
   color: var(--muted);
 }
 
 .pub-citation {
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 1.65;
   color: var(--text);
 }
 
 .pub-citation strong { font-weight: 600; }
 
-.pub-note {
-  font-style: italic;
-  opacity: 0.65;
-  font-size: 13px;
-}
-
-.pub-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 8px;
-}
-
-.pub-links a { text-decoration: none; }
-
 .pub-link {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
   font-family: var(--font-mono);
   font-size: 12.5px;
   color: var(--link);
-  padding: 4px 9px;
+  margin-left: 6px;
+  text-decoration: none;
 }
 
 .pub-link svg { flex-shrink: 0; }
@@ -866,10 +865,6 @@ footer {
 
   .work-img { align-self: flex-start; }
 
-  .pub-item { flex-direction: column; }
-  .pub-img { width: 100%; flex-direction: row; align-items: center; gap: 10px; }
-  .pub-img img { width: 90px; flex-shrink: 0; }
-
   .news-item { grid-template-columns: 1fr; gap: 2px; }
   .news-date { min-width: unset; }
 
@@ -881,6 +876,4 @@ footer {
 @media (max-width: 420px) {
   .main-content { padding: 60px 16px 40px; }
   h2.section-title { font-size: 20px; }
-  .pub-img { flex-direction: column; }
-  .pub-img img { width: 100%; }
 }
