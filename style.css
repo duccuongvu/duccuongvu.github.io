@@ -401,10 +401,6 @@ h2.section-title {
 
 .work-info { flex: 1; min-width: 0; }
 
-.work-role { font-weight: 600; font-size: 15.5px; }
-.work-institute { font-size: 14.5px; color: var(--muted); margin-top: 3px; }
-.work-date { font-size: 13.5px; color: var(--muted); margin-top: 2px; font-style: italic; }
-
 .work-expand-btn {
   display: inline-block;
   margin-top: 6px;
