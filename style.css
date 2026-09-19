@@ -401,35 +401,7 @@ h2.section-title {
 
 .work-info { flex: 1; min-width: 0; }
 
-.work-expand-btn {
-  display: inline-block;
-  margin-top: 6px;
-  font-size: 13.5px;
-  color: var(--accent);
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  font-family: inherit;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.work-expandable {
-  display: grid;
-  grid-template-rows: 0fr;
-}
-
-.work-item.expanded .work-expandable {
-  grid-template-rows: 1fr;
-}
-
-.work-expandable-inner {
-  overflow: hidden;
-  min-height: 0;
-}
-
-.work-expandable ul {
+.work-subprojects ul {
   margin: 10px 0 0 0;
   padding-left: 18px;
   font-size: 14.5px;
@@ -437,7 +409,7 @@ h2.section-title {
   line-height: 1.6;
 }
 
-.work-expandable ul li { margin-bottom: 4px; }
+.work-subprojects ul li { margin-bottom: 4px; }
 
 .work-media {
   display: flex;
@@ -453,10 +425,17 @@ h2.section-title {
   object-fit: cover;
 }
 
+.work-subproject-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 4px;
+}
+
 .work-subproject-title {
   font-weight: 600;
   font-size: 14.5px;
-  margin-top: 4px;
 }
 
 .work-subproject-meta {
@@ -476,7 +455,8 @@ h2.section-title {
 
 .subproject-expand-btn {
   display: inline-block;
-  margin-top: 6px;
+  flex-shrink: 0;
+  white-space: nowrap;
   font-size: 13.5px;
   color: var(--accent);
   background: none;
