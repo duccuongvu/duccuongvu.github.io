@@ -401,7 +401,21 @@ h2.section-title {
 
 .work-info { flex: 1; min-width: 0; }
 
-.work-subprojects ul {
+.work-expandable {
+  display: grid;
+  grid-template-rows: 0fr;
+}
+
+.work-item.expanded .work-expandable {
+  grid-template-rows: 1fr;
+}
+
+.work-expandable-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.work-expandable ul {
   margin: 10px 0 0 0;
   padding-left: 18px;
   font-size: 14.5px;
@@ -409,7 +423,7 @@ h2.section-title {
   line-height: 1.6;
 }
 
-.work-subprojects ul li { margin-bottom: 4px; }
+.work-expandable ul li { margin-bottom: 4px; }
 
 .work-media {
   display: flex;
@@ -453,6 +467,7 @@ h2.section-title {
   border-left: 2px solid var(--border);
 }
 
+.work-expand-btn,
 .subproject-expand-btn {
   display: inline-block;
   flex-shrink: 0;
