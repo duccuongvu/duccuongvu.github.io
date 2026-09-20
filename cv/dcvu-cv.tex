@@ -1,5 +1,5 @@
 % CV in LaTeX
-\documentclass[9pt]{extarticle}
+\documentclass[10pt]{extarticle}
 
 %% PACKAGES %%
 \usepackage[english]{babel}
@@ -12,8 +12,8 @@
 	a4paper,
 	left=15mm,
 	right=15mm,
-	top=10mm,
-	bottom=10mm
+	top=15mm,
+	bottom=15mm
 }
 
 %\geometry{
@@ -76,6 +76,20 @@
 	itemsep=4pt,
 	left=2pt,
 	label=$\star$,
+}
+
+\newlist{dashitemize}{itemize}{1}
+\setlist[dashitemize]{
+	nosep,
+	topsep=0pt,
+	itemsep=2pt,
+	leftmargin=1em,
+	label=--,
+}
+
+% Numbered publication entry (countdown numbering, APA-style citation)
+\newcommand{\pubitem}[2]{%
+	\noindent\hangindent=2em\hangafter=1 \textbf{[#1]}~#2\par\vspace{0.6em}%
 }
 
 % For positioning and boxes
@@ -210,9 +224,15 @@
 	\noindent \textit{#2} \par
 }
 
+\newlength{\awardlabelwidth}
+\settowidth{\awardlabelwidth}{\textbf{Master, PhD Scholarship Programme}}
+
 \newcommand{\award}[2]{%
-	\noindent \textbf{#1} \quad 
-	\noindent \textit{#2} \par
+	\noindent
+	\parbox[t]{\awardlabelwidth}{\raggedright\textbf{#1}}%
+	\hspace{0.75em}%
+	\parbox[t]{\dimexpr\linewidth-\awardlabelwidth-0.75em\relax}{\textit{#2}}\par
+	\vspace{0.5em}
 }
 
 \newcommand{\activities}[2]{%
@@ -233,189 +253,67 @@
 
 
 \begin{document}
-	\begin{textblock*}{5cm}(15.5cm,0.2cm) 
-		\centering
-		\begin{tcolorbox}[colframe=white, colback=white, sharp corners]
-			\fontfamily{phv}\selectfont \centering\footnotesize \textit{Last update: Jul 2026} \normalsize\normalfont
-		\end{tcolorbox}
-	\end{textblock*}
+%	\begin{textblock*}{5cm}(15.5cm,0.2cm) 
+%		\centering
+%		\begin{tcolorbox}[colframe=white, colback=white, sharp corners]
+%			\fontfamily{phv}\selectfont \centering\footnotesize \textit{Last update: Jul 2026} \normalsize\normalfont
+%		\end{tcolorbox}
+%	\end{textblock*}
 	
 	
 	\name{Duc-Cuong Vu}{\href{mailto:vdcuong2002@gmail.com}{vdcuong2002@gmail.com}}{\href{https://duccuongvu.github.io}{https://duccuongvu.github.io}}
 	
 
-	\sepspace
+	
+	\vspace{0.5em}\par
 	
 	
-	\textit{First-year PhD student at Nanyang Technological University (NTU), Singapore, researching nonlinear control and robotics, with a focus on safety-critical control, model predictive control, and dynamic robotic systems.}
-	
-	\vspace{0.2em}\par
-	
-	
-	\section*{Education}
+	\section*{Educations}
 
-	\education{Ph.D. in Electrical and Electronic Engineering}{Aug 2026 - present}{Nanyang Technological University (\href{https://www.ntu.edu.sg/}{NTU}), Singapore
-	}
-	{
-		{Funded by:} \textit{NTU Research Scholarship}
-	}
+	\work{Ph.D. in Electrical and Electronic Engineering}
+	{Aug 2026 - present}
+	{\textit{Supervised by \href{https://scholar.google.com/citations?user=Fmrv3J8AAAAJ&hl=en}{\textit{Prof. Lihua Xie}}} \hfill {Nanyang Technological University (\href{https://www.ntu.edu.sg/}{NTU})}, Singapore}
+	{}
 
-	\sepspace
+	\work{Master Degree in Control Engineering and Automation}
+	{Jul 2024 - Jul 2026}
+	{\textit{Supervised by \href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{\textit{Prof. Tung Lam Nguyen}}} \hfill Hanoi Univ of Science and Technology (\href{https://hust.edu.vn/en/}{HUST}), Hanoi, Vietnam}
+	{}
 
-	\education{Master of Sci. in Control Engineering and Automation}{Jul 2024 - Jul 2026}{%School of Electrical - Electronics Engineering,
-		Hanoi University of Science and Technology (\href{https://hust.edu.vn/en/}{HUST}),
-		%\hfill Hanoi, Vietnam
-	}
-	{
-		% \begin{soloitemize}
-			\textbf{Thesis:} \textit{Design control structures for parallel platforms in maritime applications} \\
-			{Funded by:} \textit{Master, PhD Scholarship Programme of Vingroup Innovation Foundation (\href{https://vinif.org/en/}{VinIF})}
-		% \end{soloitemize}
-	}
-
-	\sepspace
-
-	\education{Bachelor of Sci. in Control Engineering and Automation}
-	{Oct 2020 - Apr 2024}{
-		%School of Electrical - Electronics Engineering,
-		Hanoi University of Science and Technology (\href{https://hust.edu.vn/en/}{HUST}),
-		%\hfill Hanoi, Vietnam
-	}
-	{
-	% {\begin{soloitemize}
-			{Excellent degree}, GPA: 3.71/4 (Rank: 22/499, top 5\%). Finished the 4-year BSc program in {just 3.5 years}.
-			%\item \textbf{Thesis:} \textit{Balancing, motion planning, and tracking control for ballbot systems} [\href{https://drive.google.com/file/d/14nDBzQam5qdcvj9y6AuS6N0fQ292AwWj/view?usp=sharing}{pdf}] (The best thesis defense)
-		% \end{soloitemize}
-	}
+	\work{Bachelor Degree in Control Engineering and Automation}
+	{Oct 2020 - Apr 2024}
+	{\textit{Supervised by \href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{\textit{Prof. Tung Lam Nguyen}}} \hfill Hanoi Univ of Science and Technology (\href{https://hust.edu.vn/en/}{HUST}), Hanoi, Vietnam}
+	{}
 	
+		
+	\section*{Work experiences}
+	\work{R\&D Robotics Engineer at VinRobotics, Vingroup}
+	{Sep 2025 - Jul 2026}
+	{Full-time, supervised by \href{https://scholar.google.com/citations?user=qyExc4QAAAAJ&hl=en}{\textit{Dr. Minh Nhat Vu}}\hfill Hanoi, Vietnam}
+	{}
+	
+	\work{Research Project Assistant at HUST}
+	{Oct 2021 - Dec 2026}
+	{Contract (Hybrid), supervised by \href{https://scholar.google.com/citations?user=mI561CkAAAAJ&hl=en}{\textit{PhD. Chinh Hoang Duc}} and \href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{\textit{Assoc.Prof.PhD. Tung Lam Nguyen}}\hfill Hanoi, Vietnam}
+	{}
 	
 
 	
 	\section*{Selected publications}
 	
-	\begin{soloitemize}
-		\item Glocal trajectory generation and tracking control for AUVs with optimal coverage sensor networks
-			\par\vspace{0.3em}
-			\noindent\textit{Ocean Engineering (SCIE Q1) (2025)} [\href{https://doi.org/10.1016/j.oceaneng.2025.122902}{pdf}]
-			\par\vspace{0.3em}
-			\noindent\textit{\hl{\textbf{D.C. Vu}}$^\dagger$, S. Tran$^\dagger$, T.L. Nguyen, and D.C. Hoang \hfill$^\dagger$: equally contribution}
-		\sepspace
-		\item Lagrangian-based modeling and safety-critical controls for Stewart platforms under marine operations
-			\par\vspace{0.3em}
-			\noindent\textit{Ocean Engineering (SCIE Q1) (2025)} [\href{https://doi.org/10.1016/j.oceaneng.2025.122142}{pdf}]
-			\par\vspace{0.3em}
-			\noindent\textit{\hl{\textbf{D.C. Vu}}, D.H. Nguyen, M.N. Vu, and T.L. Nguyen}
-		\sepspace
-		\item CBFs-based Model Predictive Control for Obstacle Avoidance with Tilt Angle Limitation for Ball-Balancing Robots
-			\par\vspace{0.3em}
-			\noindent\textit{IEEE Acess (SCIE Q2) (2025)} [\href{https://doi.org/10.1109/ACCESS.2025.3567474}{pdf}]
-			\par\vspace{0.3em}
-			\noindent\textit{M.D. Pham, \hl{\textbf{D.C. Vu}}, T.T.H. Nguyen, T.V.A. Nguyen, M.N. Vu, and T.L. Nguyen}
-		\sepspace
-		\item A novel approach of Consensus-based Finite-time DSMC for Stewart platform manipulators motion tracking
-			\par\vspace{0.3em}
-			\noindent\textit{Results in Engineering (ESCI Q1) (2025)} [\href{https://doi.org/10.1016/j.rineng.2024.103872}{pdf}]
-			\par\vspace{0.3em}
-			\noindent\textit{\hl{\textbf{D.C. Vu}}, D.H. Nguyen, and T.L. Nguyen}
-		\sepspace
-		\item Unifying Hierarchical Sliding Mode Control and Control Barrier Function for Tilt Angle Constraint of a Ball-Balancing Robot
-			\par\vspace{0.3em}
-			\noindent\textit{IET Cyber-Systems and Robotics (SCIE Q3) (2025)} [\href{https://doi.org/10.1049/csy2.70045}{pdf}]
-			\par\vspace{0.3em}
-			\noindent\textit{T.T.H. Nguyen, \hl{\textbf{D.C. Vu}}, M.D. Pham, T.V.A. Nguyen, and T.L. Nguyen}
-		\sepspace
-		\item Time-optimal trajectory generation and observer-based hierarchical sliding mode control for ballbots with system constraints
-			\par\vspace{0.3em}
-			\noindent\textit{International Journal of Robust and Nonlinear Control - IJRNC (SCIE Q1) (2024)} [\href{https://doi.org/10.1002/rnc.7358}{pdf}]
-			\par\vspace{0.3em}
-			\noindent\textit{\hl{\textbf{D.C. Vu}}, M.D. Pham, T.T.H. Nguyen, T.V.A. Nguyen, and T.L. Nguyen}
-	\end{soloitemize}
+	\pubitem{6}{Nguyen, T. T. H., {\textbf{Vu, D. C.}}, Pham, M. D., Nguyen, T. L., \& Nguyen, T. V. A. (2026). Unifying hierarchical sliding mode control and control barrier function for tilt angle constraint of a ball-balancing robot. \textit{IET Cyber-Systems and Robotics}. [\href{https://doi.org/10.1049/csy2.70045}{pdf}]}
+
+	\pubitem{5}{{\textbf{Vu, D. C.}}$^\dagger$, Tran, S.$^\dagger$, Nguyen, T. L., \& Hoang, D. C. (2025). Glocal trajectory generation and tracking control for AUVs with optimal coverage sensor networks. \textit{Ocean Engineering}. [\href{https://doi.org/10.1016/j.oceaneng.2025.122902}{pdf}] \hfill{\footnotesize $^\dagger$equal contribution}}
+
+	\pubitem{4}{{\textbf{Vu, D. C.}}, Nguyen, D. H., Vu, M. N., \& Nguyen, T. L. (2025). Lagrangian-based modeling and safety-critical controls for Stewart platforms under marine operations. \textit{Ocean Engineering}, 340, 122142. [\href{https://doi.org/10.1016/j.oceaneng.2025.122142}{pdf}]}
+
+	\pubitem{3}{Pham, M. D., {\textbf{Vu, D. C.}}, Nguyen, T. T. H., Nguyen, T. V. A., Vu, M. N., \& Nguyen, T. L. (2025). CBFs-based model predictive control for obstacle avoidance with tilt angle limitation for ball-balancing robots. \textit{IEEE Access}. [\href{https://doi.org/10.1109/ACCESS.2025.3567474}{pdf}]}
+
+	\pubitem{2}{{\textbf{Vu, D. C.}}, Nguyen, D. H., \& Nguyen, T. L. (2024). A novel approach of consensus-based finite-time distributed sliding mode control for Stewart platform manipulators motion tracking. \textit{Results in Engineering}. [\href{https://doi.org/10.1016/j.rineng.2024.103872}{pdf}]}
+
+	\pubitem{1}{{\textbf{Vu, D. C.}}, Pham, M. D., Nguyen, T. T. H., Nguyen, T. V. A., \& Nguyen, T. L. (2024). Time-optimal trajectory generation and observer-based hierarchical sliding mode control for ballbots with system constraints. \textit{International Journal of Robust and Nonlinear Control}. [\href{https://doi.org/10.1002/rnc.7358}{pdf}]}
 
 
-	
-	\subsection*{Other manuscripts}
-	
-	\begin{soloitemize}
-		\item Decentralized Control Strategy with Consistent Joint-to-Actuator Control Law for Parallel Mechanisms on a Humanoid Platform
-			\par\vspace{0.3em}
-			\noindent\textit{Submitted manuscript} [\href{https://doi.org/10.1002/rnc.7358}{pdf}]
-			\par\vspace{0.3em}
-			\noindent\textit{T.V. Trung, V.T. Nguyen, \hl{\textbf{D.C. Vu}}, D.H. Nguyen, M.C. Nguyen, and M.N. Vu}
-		\sepspace
-		\item Adaptive Whole-Body MPC with Optimal Posture Planning for Humanoid Robots under Unknown Payloads
-			\par\vspace{0.3em}
-			\noindent\textit{Submitted manuscript}
-			\par\vspace{0.3em}
-			\noindent\textit{M.C. Nguyen$^\dagger$, \hl{\textbf{D.C. Vu$^\dagger$}}, V.A. Vu, T. Nguyen, D.T. Pham, M.H. Phung, A.V. Ngo, and M.N. Vu \hfill$^\dagger$: equally contribution}
-		\sepspace
-		\item Real-time Conformal-Seeded Hybrid Inverse Kinematics for Offset Redundant Manipulators
-			\par\vspace{0.3em}
-			\noindent\textit{Submitted manuscript}
-			\par\vspace{0.3em}
-			\noindent\textit{\hl{\textbf{D.C. Vu}}, V.T. Nguyen, D.H. Nguyen, M.C. Nguyen, T.V. Trung, and M.N. Vu}
-	\end{soloitemize}
-		% work experience
-		
-	
-	\section*{Experience}
-	\work{R\&D Robotics Engineer at VinRobotics, Vingroup}
-	{Sep 2025 - Jul 2026}
-	{Full-time, supervised by \href{https://scholar.google.com/citations?user=qyExc4QAAAAJ&hl=en}{\textit{Dr. Minh Nhat Vu}}\hfill Hanoi, Vietnam}
-	{\begin{soloitemize}
-			\item Led dynamic parameter identification for robotic manipulators: system identification, kinematic calibration, and friction modeling.
-			\item Designed a real-time inverse kinematics solver achieving 100\% success rate with execution time below 40~\textmu s.
-			\item Developed moDrdel-based control for dual-arm humanoid robots: fuzzy-based adaptive compliant control, computed torque control, gravity/friction compensation, and singular perturbation-based methods.
-			\item Implemented MPC-based motion planning for dual-arm coordination using receding horizon optimization with Acados and CasADi (C++/Python/MATLAB).
-			\item Designed time-optimal motion planning and trajectory generation, including Rubik's cube planning for single-arm manipulation.
-			\item Designed motion planning for humanoid standup/sitdown motions for object lifting.
-			\item Contributed to research activities, with papers submitted to \textit{IROS 2026}, \textit{IEEE-TASE}, and \textit{IEEE RA-L}.
-	\end{soloitemize}}
-
-	\sepspace
-
-	\work{Research Project Assistant at HUST}
-	{Jan 2025 - Dec 2026}
-	{Contract (Hybrid), supervised by \href{https://scholar.google.com/citations?user=mI561CkAAAAJ&hl=en}{\textit{PhD. Chinh Hoang Duc}} and \href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{\textit{Assoc.Prof.PhD. Tung Lam Nguyen}}\hfill Hanoi, Vietnam}
-	{\begin{soloitemize}
-			\item Contributed to a project on autonomous robot navigation integrating sensor networks and wireless communication.
-			\item Developed a MuJoCo-based simulation framework for AUVs, incorporating underwater dynamics, sensing, disturbances, and communication constraints.
-			\item Implemented and validated control algorithms for navigation, obstacle avoidance, and trajectory tracking.
-			\item Collaborated on system integration and co-authored a peer-reviewed scientific publication.
-	\end{soloitemize}}
-
-	\sepspace
-
-	\work{Research Project Assistant at HUST}
-	{Mar 2025 - Dec 2025}
-	{Contract (Hybrid), supervised by \href{https://scholar.google.com/citations?user=qyExc4QAAAAJ&hl=en}{\textit{PhD. Minh Nhat Vu}} and \href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{\textit{Assoc.Prof.PhD. Tung Lam Nguyen}}\hfill Hanoi, Vietnam}
-	{\begin{soloitemize}
-			\item Worked on advanced control of a ship-mounted Stewart platform for marine applications (funded by KIST).
-			\item Designed robust and safety-critical control strategies for parallel robotic systems under disturbances.
-			\item Conducted modeling, simulation, and validation for nonlinear dynamic systems.
-	\end{soloitemize}}
-
-	\sepspace
-
-	\work{Graduate Researcher at HUST}
-	{May 2024 - Jul 2026}
-	{Part-time (Hybrid), supervised by \href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{\textit{Assoc.Prof.PhD. Tung Lam Nguyen}}\hfill Hanoi, Vietnam}
-	{\begin{soloitemize}
-			\item Conducted research on control of parallel robotic systems for maritime applications.
-			\item Designed and implemented advanced control algorithms for a Stewart platform, validated through high-fidelity simulations (Simscape, MuJoCo).
-			\item Built experimental setups including mechanical assembly, hardware integration, Linux real-time systems, and EtherCAT communication.
-			\item Collaborated on publications and presented results to academic and industrial partners.
-	\end{soloitemize}}
-
-	\sepspace
-
-	\work{Student Intern at HUST}
-	{Oct 2021 - Apr 2024}
-	{Internship (Hybrid), supervised by \href{https://scholar.google.com/citations?user=MlJ_2-wAAAAJ&hl=en}{\textit{Assoc.Prof.PhD. Tung Lam Nguyen}}\hfill Hanoi, Vietnam}
-	{\begin{soloitemize}
-			\item Developed mathematical models and simulation environments for 3D ballbot systems, focusing on nonlinear dynamics and trajectory generation.
-			\item Investigated advanced control strategies and implemented them in simulation and experimental setups.
-			\item Authored and co-authored peer-reviewed journal papers, including publications in International Journal of Robust and Nonlinear Control and IEEE Access.
-	\end{soloitemize}}
 
 	
 
@@ -468,25 +366,7 @@
 %		}
 
 	
-	\section*{Academic activities}
-	\activities{Invited review for}
-		{
-			\begin{soloitemize}
-				\item \textit{Nonlinear Dynamics}
-				\item \textit{International Conference on Intelligent Robots and Systems (IROS, 2026)}
-				\item \textit{IEEE Robotics and Automation Letters (RA-L)}
-				\item \textit{IEEE RO-MAN2026}
-				\item \textit{Humanoid 2026}
-			\end{soloitemize}}
-	
-	\sepspace
-	
-	\activities{Teaching, Seminars and Talks}
-	{
-		\textit{2025: Talk "MuJoCo for Advanced Physics Simulation: From manipulators to autonomous vehicles" for "Motion Control" master course at HUST and MoCAR seminar} [\href{https://drive.google.com/file/d/10EOLlFqleqqPBXlAqDkhnFmAycjfnl9E/view?usp=drive_link}{pdf}] \\
-		
-		\noindent\textit{2025: Seminar "Underwater Vehicles" for modeling training of Autonomous Underwarter Vehicle at MEG-MoCAR} [\href{https://drive.google.com/file/d/13BD5C82OyaQ9N83s5FF_MnSdGozZ3Q1_/view?usp=drive_link}{pdf}]
-	}
+
 
 
 %	\section*{Conferences}
@@ -508,45 +388,24 @@
 
 	\award{NTU Research Scholarship}{Nanyang Technological University (NTU), Singapore}
 
-	\sepspace
-
 	\award{Master, PhD Scholarship Programme}{Vingroup Innovation Foundation (VINIF)}
-
-	\sepspace
 
 	\award{Best Thesis Defense Award}{Hanoi University of Science and Technology}
 	
-	
-	% ================= Skills Section =================
-	\section*{Skills}
-	\skill{Programming}{Python, C/C++, MATLAB}
-	
-	\skill{Robotics \& Control}{Nonlinear control, Model Predictive Control (MPC), Control Barrier Functions (CBF), motion planning, system modeling and identification}
-	
-	\skill{Tools \& Frameworks}{ROS2, MuJoCo, Simulink/Simscape, Pinocchio, CasADi, Acados, VAMP, CAPT, Git}
-	
-	\skill{Systems \& Implementation}{Real-time Linux, IgH EtherCAT, hardware integration, motion capture systems}
-	
-	\skill{Research}{Scientific writing, peer-reviewed publications, technical presentations, literature review, experimental validation}
-			
-%	\section*{Languages}
-%	\skill{Vietnamese} {Mother tongue.}
-%	\skill{English} {IELTS Academic: Overall 6.5 (L:6.0, R:8.0, W:6.5, S:5.5)}
-%	\section*{Skills}
-%	
-%	\skill{Programming}{Proficient in Python, C/C++, and MATLAB for algorithm development, numerical computation, and embedded system applications.}
-%	
-%	\skill{Simulation}{Experienced with Simulink, Simscape, and MuJoCo for multi-domain physical modeling, robot dynamics simulation, and virtual prototyping.}
-%	
-%	\skill{Control \& Math}{Solid foundation in rigid body dynamics, control theories, motion control, optimization, and Guidance–Navigation–Control (GNC) systems.}
-%	
-%	\skill{Engineering}{Hands-on experience with version control (Git), PCB design and debugging, 3D CAD modeling using SolidWorks, and designing experimental platforms for validation.}
-%	
-%	\skill{Systems}{Familiar with EtherCAT-based Linux kernel development, real-time control architectures, and embedded systems programming for robotics and automation.}
-%	
-%	\skill{Research}{Capable of conducting scientific research, writing academic publications, and presenting technical findings at international conferences. Experienced in literature review, hypothesis formulation, and experimental validation.}
-%	
-	
 
+		\section*{Academic activities}
+	\activities{Invited review for}
+	{%
+		\begin{dashitemize}
+			\item \textit{Nonlinear Dynamics}
+			\item \textit{Ocean Engineering}
+			\item \textit{IEEE Access}
+			\item \textit{IEEE Robotics and Automation Letters (RA-L)}
+			\item \textit{International Conference on Intelligent Robots and Systems (IROS 2026)}
+			\item \textit{IEEE RO-MAN 2026}
+			\item \textit{Humanoid 2026}
+		\end{dashitemize}
+	}
+	
 	
 \end{document}
