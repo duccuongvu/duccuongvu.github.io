@@ -407,9 +407,9 @@ h2.section-title {
 /* ===============================
    Publications
 ================================= */
-/* Numbering counts down: the highest number (--pub-list-total, set inline on
-   #pubList) is the newest paper. Adding a new one only means bumping that one
-   value and adding an item at the top -- nothing else needs renumbering. */
+/* Numbering counts down: the highest number (--pub-list-total, set by an inline
+   script on #pubList from the item count) is the newest paper, so new items can
+   just be added at the top. */
 .pub-list {
   counter-reset: pub var(--pub-list-total, 0);
 }
