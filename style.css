@@ -10,7 +10,7 @@
   --link-hover: #1e40af;
   --accent: var(--link);
   --sidebar-bg: #fafafa;
-  --sidebar-w: 340px;
+  --sidebar-w: 280px;
   --pub-tag-bg: rgba(29, 78, 216, 0.07);
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono', 'Courier New', monospace;
@@ -33,13 +33,12 @@ body.dark-mode {
 ================================= */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { zoom: 0.8; }
 
 img { max-width: 100%; }
 
 body {
   font-family: var(--font-sans);
-  font-size: 15.5px;
+  font-size: 14px;
   line-height: 1.7;
   background: var(--bg);
   color: var(--text);
@@ -70,10 +69,10 @@ ul li { margin-bottom: 6px; }
   position: fixed;
   top: 0; left: 0; bottom: 0;
   overflow-y: auto;
-  padding: 40px 28px;
+  padding: 32px 24px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 24px;
 }
 
 .sidebar-header {
@@ -97,7 +96,7 @@ ul li { margin-bottom: 6px; }
 
 .sidebar-name {
   font-family: var(--font-sans);
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
   color: var(--text);
   line-height: 1.2;
@@ -106,7 +105,7 @@ ul li { margin-bottom: 6px; }
 .sidebar-fields {
   margin-top: 6px;
   padding-left: 16px;
-  font-size: 12px;
+  font-size: 11px;
   color: var(--muted);
   line-height: 1.7;
 }
@@ -114,7 +113,7 @@ ul li { margin-bottom: 6px; }
 .sidebar-fields li { margin-bottom: 0; }
 
 .sidebar-block-title {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -129,7 +128,7 @@ ul li { margin-bottom: 6px; }
 }
 
 .sidebar-links a {
-  font-size: 13.5px;
+  font-size: 12px;
   color: var(--link);
   text-decoration: none;
 }
@@ -155,7 +154,7 @@ ul li { margin-bottom: 6px; }
 .email-badge {
   width: 18px;
   height: 18px;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
   color: #fff;
   display: flex;
@@ -180,7 +179,7 @@ ul li { margin-bottom: 6px; }
 
 .email-addr {
   font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-size: 11px;
   color: var(--link);
   line-height: 1.3;
   word-break: break-all;
@@ -197,7 +196,7 @@ ul li { margin-bottom: 6px; }
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 13.5px;
+  font-size: 12px;
   color: var(--text);
   text-decoration: none;
 }
@@ -214,7 +213,7 @@ ul li { margin-bottom: 6px; }
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 12.5px;
+  font-size: 11px;
   color: var(--muted);
 }
 
@@ -224,7 +223,7 @@ ul li { margin-bottom: 6px; }
 #darkModeToggle {
   background: none;
   border: none;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
   padding: 0;
   line-height: 1;
@@ -263,7 +262,7 @@ ul li { margin-bottom: 6px; }
 
 .mobile-topbar-name {
   font-family: var(--font-sans);
-  font-size: 15.5px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--text);
   white-space: nowrap;
@@ -272,7 +271,7 @@ ul li { margin-bottom: 6px; }
 }
 
 .mobile-topbar-role {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--muted);
   white-space: nowrap;
   overflow: hidden;
@@ -313,14 +312,14 @@ ul li { margin-bottom: 6px; }
 .main-content {
   margin-left: var(--sidebar-w);
   flex: 1;
-  padding: 56px 72px;
-  max-width: 1100px;
+  padding: 48px 56px;
+  max-width: 1040px;
 }
 
 section { margin-bottom: 34px; }
 
 #about p {
-  font-size: 14.5px;
+  font-size: 13px;
   line-height: 1.65;
 }
 
@@ -328,7 +327,7 @@ section { margin-bottom: 34px; }
 
 h2.section-title {
   font-family: var(--font-sans);
-  font-size: 22.5px;
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 14px;
   padding-bottom: 10px;
@@ -358,13 +357,13 @@ h2.section-title {
   gap: 20px;
   padding: 7px 0;
   border-bottom: 1px solid var(--border);
-  font-size: 14.5px;
+  font-size: 13px;
   line-height: 1.5;
 }
 
 .news-item:last-child { border-bottom: none; }
 
-.news-date { color: var(--muted); font-size: 13.5px; white-space: nowrap; padding-top: 1px; }
+.news-date { color: var(--muted); font-size: 12px; white-space: nowrap; padding-top: 1px; }
 .news-text { color: var(--text); }
 
 /* ===============================
@@ -383,7 +382,7 @@ h2.section-title {
 
 .cv-date {
   flex: 0 0 150px;
-  font-size: 13.5px;
+  font-size: 12px;
   color: var(--muted);
   white-space: nowrap;
   padding-top: 1px;
@@ -393,13 +392,13 @@ h2.section-title {
 
 .cv-title {
   font-weight: 600;
-  font-size: 15px;
+  font-size: 13.5px;
   color: var(--text);
   line-height: 1.4;
 }
 
 .cv-note {
-  font-size: 13.5px;
+  font-size: 12px;
   color: var(--muted);
   margin-top: 4px;
 }
@@ -407,60 +406,93 @@ h2.section-title {
 /* ===============================
    Publications
 ================================= */
-/* Numbering counts down: the highest number (--pub-list-total, set by an inline
-   script on #pubList from the item count) is the newest paper, so new items can
-   just be added at the top. */
-.pub-list {
-  counter-reset: pub var(--pub-list-total, 0);
+.pub-note {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin: -6px 0 14px;
 }
 
 .pub-year {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
-  margin: 22px 0 12px;
+  margin: 22px 0 6px;
 }
 
 .pub-year-group:first-child .pub-year { margin-top: 0; }
 
 .pub-item {
-  position: relative;
-  counter-increment: pub -1;
-  padding: 6px 0 6px 30px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
 }
 
-/* the very first item keeps the starting (highest) count as-is */
-.pub-year-group:first-child .pub-item:first-of-type {
-  counter-increment: pub 0;
+.pub-year-group:last-child .pub-item:last-child { border-bottom: none; }
+
+.pub-thumb {
+  width: 150px;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  flex-shrink: 0;
+  background: #fff;
+  border: 1px solid var(--border);
 }
 
-.pub-item::before {
-  content: counter(pub) ".";
-  position: absolute;
-  left: 0;
-  top: 6px;
-  font-size: 13.5px;
-  color: var(--muted);
-}
+.pub-body { flex: 1; min-width: 0; }
 
-.pub-citation {
-  font-size: 15px;
-  line-height: 1.65;
+.pub-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
   color: var(--text);
 }
 
-.pub-citation strong { font-weight: 600; }
+.pub-authors {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--text);
+  margin-top: 4px;
+}
+
+.pub-authors strong { font-weight: 600; }
+
+.pub-venue {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.pub-tag {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 3px 6px;
+  margin-right: 8px;
+  color: var(--link);
+  background: var(--pub-tag-bg);
+  vertical-align: 1px;
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 6px;
+}
 
 .pub-link {
   display: inline-flex;
   align-items: center;
   gap: 4px;
   font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-size: 11px;
   color: var(--link);
-  margin-left: 6px;
   text-decoration: none;
 }
 
@@ -470,7 +502,7 @@ h2.section-title {
   display: block;
   margin: 4px auto 0;
   padding: 8px 20px;
-  font-size: 14px;
+  font-size: 12.5px;
   font-family: inherit;
   font-weight: 500;
   color: var(--link);
@@ -506,7 +538,7 @@ h2.section-title {
 }
 
 .activity-detail ul { margin-top: 4px; }
-.activity-detail li { margin-bottom: 4px; font-size: 14.5px; }
+.activity-detail li { margin-bottom: 4px; font-size: 13px; }
 
 /* ===============================
    Visitor Map
@@ -521,7 +553,7 @@ h2.section-title {
   position: fixed;
   background: var(--text);
   color: var(--bg);
-  font-size: 13.5px;
+  font-size: 12px;
   padding: 6px 10px;
   pointer-events: none;
   opacity: 0;
@@ -535,12 +567,12 @@ h2.section-title {
   flex-direction: column;
   gap: 4px;
   margin-top: 10px;
-  font-size: 13.5px;
+  font-size: 12px;
   color: var(--muted);
 }
 
 .map-total { color: var(--text); }
-.map-top { font-size: 12.5px; }
+.map-top { font-size: 11px; }
 
 .map-legend {
   display: flex;
@@ -549,7 +581,7 @@ h2.section-title {
   margin-top: 10px;
 }
 
-.legend-label { font-size: 12.5px; color: var(--muted); }
+.legend-label { font-size: 11px; color: var(--muted); }
 
 .legend-bar {
   flex: 1;
@@ -570,11 +602,11 @@ footer {
   border-top: 1px solid var(--border);
   padding-top: 20px;
   margin-top: 20px;
-  font-size: 13.5px;
+  font-size: 12px;
   color: var(--muted);
   text-align: center;
 }
-.visitor-count { font-size: 12.5px; color: var(--border); margin-top: 4px; }
+.visitor-count { font-size: 11px; color: var(--border); margin-top: 4px; }
 
 /* ===============================
    Responsive
@@ -621,9 +653,11 @@ footer {
 
   .cv-item { flex-direction: column; gap: 2px; }
   .cv-date { flex: none; }
+  .pub-item { flex-direction: column; gap: 10px; }
+  .pub-thumb { width: 100%; max-width: 320px; }
 }
 
 @media (max-width: 420px) {
   .main-content { padding: 60px 16px 40px; }
-  h2.section-title { font-size: 20px; }
+  h2.section-title { font-size: 18px; }
 }
