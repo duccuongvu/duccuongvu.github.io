@@ -654,7 +654,7 @@ footer {
   .cv-item { flex-direction: column; gap: 2px; }
   .cv-date { flex: none; }
   .pub-item { flex-direction: column; gap: 10px; }
-  .pub-thumb { width: 100%; max-width: 320px; }
+  .pub-thumb { width: 100%; max-width: 220px; }
 }
 
 @media (max-width: 420px) {
