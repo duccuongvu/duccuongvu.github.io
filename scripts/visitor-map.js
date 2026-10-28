@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       .attr('preserveAspectRatio', 'xMidYMid meet')
       .style('border-radius', '8px');
 
-    const top5 = Object.entries(visits).sort((a,b) => b[1]-a[1]).slice(0,5)
+    const top5 = Object.entries(visits).sort((a,b) => b[1]-a[1]).slice(0,3)
       .map(([c,n]) => `${countryNames[c]||c} (${n})`);
     d3.select('#visitor-map').append('div').attr('class','map-stats').html(`
       <span class="map-total"><strong>${total.toLocaleString()}</strong> visits from <strong>${Object.keys(visits).length}</strong> countries</span>
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         hoverPath.style('display',null).attr('d',path(d));
         tooltip.style('opacity',1).html(`<strong>${(a2&&countryNames[a2])||a2||'—'}</strong><br/>${n?n+' visit'+(n>1?'s':''):'no visits yet'}`);
       })
-      .on('mousemove', e => tooltip.style('left',e.pageX+12+'px').style('top',e.pageY-36+'px'))
+      .on('mousemove', e => tooltip.style('left',e.clientX+12+'px').style('top',e.clientY-36+'px'))
       .on('mouseout', () => { hoverPath.style('display','none'); tooltip.style('opacity',0); });
 
     document.getElementById('darkModeToggle')?.addEventListener('click', () => {
