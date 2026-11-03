@@ -439,7 +439,6 @@ h2.section-title {
   object-fit: contain;
   flex-shrink: 0;
   background: #fff;
-  border: 1px solid var(--border);
 }
 
 .pub-body { flex: 1; min-width: 0; }
